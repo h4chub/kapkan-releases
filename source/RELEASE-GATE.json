@@ -1,7 +1,7 @@
 {
   "version": "1.0.6",
   "build_id": "client-release-1.0.6",
-  "publication": "READY_FOR_PUBLICATION",
+  "publication": "HOLD_PERFORMANCE_INVESTIGATION",
   "exact_target_builds": {
     "26.1": "PASS",
     "26.1.1": "PASS",
@@ -15,7 +15,7 @@
   "windows_authenticode": "NOT_SIGNED",
   "macos_developer_id_notarization": "NOT_NOTARIZED; actual ad-hoc app seal+audio-input verified",
   "performance_boost_claims": "NONE",
-  "candidate_artifacts_ready": true,
+  "candidate_artifacts_ready": false,
   "native_payload_upgrade": "PASS real built Windows payload fixture",
-  "game_performance_claim": "NONE; overlapping-load/setup samples excluded, controlled-scene evidence separate"
+  "game_performance_claim": "NONE;31.6% regression in one initial corrected scene requires controlled ablation; focus/scene sampling issues also under review"
 }
