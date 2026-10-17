@@ -1,10 +1,10 @@
 {
   "version": "1.0.5",
-  "status": "BRANCH_PREPARATION",
+  "status": "PUBLIC_BETA_RELEASED",
   "repo": "h4chub/kapkan-releases",
   "review_branch": "codex/kapkan-1.0.5",
-  "public_release_published": false,
-  "website_deployed": false,
+  "public_release_published": true,
+  "website_deployed": true,
   "presence_service_deployed": false,
   "delivery_metadata": "../releases/1.0.5/Delivery.json",
   "qa_report": "QA-REPORT.md",
@@ -26,7 +26,14 @@
     ],
     "native_macos_windows_installation_tested": false,
     "native_macos_windows_gameplay_tested": false,
-    "mod_jar_hashes_recomputed_during_import": true
+    "mod_jar_hashes_recomputed_during_import": true,
+    "live_release_asset_hashes_verified": true,
+    "live_updater_discovery": "PASS: 1.0.5 checker against live feed with installed beta tags 1.0.2, 1.0.3 and 1.0.4 on Windows and macOS; older checker binaries not rerun"
   },
-  "historical_metadata_note": "Prior 1.0.4 publication/build status is preserved as history. Publication/access statements in retained QA evidence describe the session in which those tests were recorded."
+  "historical_metadata_note": "Prior 1.0.4 publication/build status is preserved as history. Publication/access statements in retained QA evidence describe the session in which those tests were recorded.",
+  "release_url": "https://github.com/h4chub/kapkan-releases/releases/tag/v1.0.5-beta.1",
+  "website_url": "https://kapkan-website.vercel.app",
+  "release_tag": "v1.0.5-beta.1",
+  "release_id": 415857928,
+  "release_source_commit": "7bbff8057199938034eb69b77afac30104ffcae9"
 }

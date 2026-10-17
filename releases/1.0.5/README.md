@@ -1,6 +1,6 @@
 # KapKan 1.0.5
 
-Source and QA import prepared for review on `codex/kapkan-1.0.5`. No public GitHub release, website deployment or public cosmetic service is created by this change.
+[Public beta downloads](https://github.com/h4chub/kapkan-releases/releases/tag/v1.0.5-beta.1) are live, and the [KapKan website](https://kapkan-website.vercel.app) serves 1.0.5. Public assets include the Windows setup, portable ZIP, macOS ZIP, three exact-version Fabric mods and `SHA256SUMS.txt`. No public cosmetic service has been deployed.
 
 ## Included source and mod builds
 
