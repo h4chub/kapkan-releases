@@ -1,0 +1,36 @@
+{
+  "status": "READY",
+  "target": "production",
+  "siteUrl": "https://kapkan-website.vercel.app",
+  "deploymentUrl": "https://kapkan-website-kz457t3n1-nexushub00s-projects.vercel.app",
+  "deploymentId": "dpl_4k67GbrFn1Vg1qLaNYaP8hfwRmPt",
+  "projectId": "prj_bHurM30CwdE6Ri4P9h9NchSlwa6x",
+  "teamId": "team_WELZHK3VSmYvvKfSWGF0qPBT",
+  "previousDeploymentId": "dpl_HmsV7ycorDLPS1wvmCuCmPt248Cj",
+  "buildDurationMs": 1602,
+  "sourceReleaseCommit": "e4eea6d5f2d825f5be5d4e861e1155a4f555a66d",
+  "publicReleaseId": 415971987,
+  "releaseTag": "v1.0.6-beta.1",
+  "submittedDeliverySha256": "7aec1a5032f6c78df6dbe7303396a40a934f18a702a23e281a2e5edbc8ec3336",
+  "publishedDeliverySha256": "d3d2b32b921d6b609add09a70e187825f40e313039c7e6d06ee82f071ee1e259",
+  "deliveryStatusNote": "Authoritative Delivery.json acquired publication status/receipt metadata after deployment preparation; its complete seven-asset list is identical.",
+  "publicVerification": "PASS: all7 download HEADs200/exact byte sizes and GitHub SHA256 digests; exact live HTML/app/config bytes",
+  "browserVerification": "PASS: all5 live viewports, correct platform selection and labels, no overflow or JavaScript runtime errors",
+  "postDeployErrorScan": "No error/fatal function/daemon logs found for this deployment; static site has no app functions.",
+  "receipts": [
+    "live-http-verification.json",
+    "live-verification.json",
+    "deployment-create-response.json",
+    "deployment-ready-response.json",
+    "deployment-build-events.json",
+    "deployment-error-scan.json"
+  ],
+  "proofScreenshots": [
+    "live-mac-desktop.png",
+    "live-windows-desktop.png",
+    "live-tablet.png",
+    "live-mobile-small.png",
+    "live-mobile.png"
+  ],
+  "verifiedUTC": "2026-10-17T18:01:48.367486+00:00"
+}

@@ -1,0 +1,381 @@
+{
+  "status": "PASS",
+  "verifiedUTC": "2026-10-17T17:59:31.312047+00:00",
+  "repository": "h4chub/kapkan-releases",
+  "expectedSourceCommit": "e4eea6d5f2d825f5be5d4e861e1155a4f555a66d",
+  "assets": [
+    {
+      "filename": "KapKan-1.0.6-Setup.exe",
+      "bytes": 39312896,
+      "sha256": "d1e3d91587a712adb9d217b98b373e15e665186031c8a07f1131215efbc7dffa",
+      "githubAssetId": 651165588,
+      "githubDigestMatchesFinalUpload": true
+    },
+    {
+      "filename": "KapKan-macOS-1.0.6.zip",
+      "bytes": 37541503,
+      "sha256": "9d1ae37217deda1069485baf2e391cb4b524ffdbf06e75e915ccb9eab06e62dd",
+      "githubAssetId": 651167839,
+      "githubDigestMatchesFinalUpload": true
+    },
+    {
+      "filename": "KapKan-Windows-Portable-1.0.6.zip",
+      "bytes": 34209042,
+      "sha256": "9089b322f7e64c83828e9c7ecd5ba9f3499d600513e7ac49a9fab1f498300d5b",
+      "githubAssetId": 651168938,
+      "githubDigestMatchesFinalUpload": true
+    },
+    {
+      "filename": "KapKan-1.0.6-mc26.1-fabric.jar",
+      "bytes": 1720053,
+      "sha256": "c01579a31379f567eb19afb03969a888367bb91517d9652e9622851c1f194210",
+      "githubAssetId": 651165151,
+      "githubDigestMatchesFinalUpload": true
+    },
+    {
+      "filename": "KapKan-1.0.6-mc26.1.1-fabric.jar",
+      "bytes": 1720057,
+      "sha256": "3d447a99b1c3bf190e9af3864f1d82a3c3978e141fa16a47fa64193d9f2c75da",
+      "githubAssetId": 651165317,
+      "githubDigestMatchesFinalUpload": true
+    },
+    {
+      "filename": "KapKan-1.0.6-mc26.1.2-fabric.jar",
+      "bytes": 1725921,
+      "sha256": "a747bff50be125397a77fc4be7155f98485a049676c2a8616d8ce03aeb2f5f41",
+      "githubAssetId": 651165416,
+      "githubDigestMatchesFinalUpload": true
+    },
+    {
+      "filename": "SHA256SUMS.txt",
+      "bytes": 573,
+      "sha256": "488501514e2c6d8e3b297cf4db3b79a87bb73f4a973eb01a162f5b697ffa38ec",
+      "githubAssetId": 651170632,
+      "githubDigestMatchesFinalUpload": true
+    }
+  ],
+  "downloads": [
+    {
+      "filename": "KapKan-1.0.6-Setup.exe",
+      "url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.6-beta.1/KapKan-1.0.6-Setup.exe",
+      "status": "PASS",
+      "authentication": "none",
+      "expectedSize": 39312896,
+      "head": {
+        "status": "PASS",
+        "httpStatus": 200,
+        "contentLength": 39312896,
+        "contentType": "application/octet-stream"
+      },
+      "ranges": [
+        {
+          "status": "PASS",
+          "requestedRange": "bytes=0-63",
+          "httpStatus": 206,
+          "contentRange": "bytes 0-63/39312896",
+          "sampleBytes": 64,
+          "sampleSha256": "7be6712bcd49d6264a293b02684cbadeb956768686077085b11db7cd23dcb614",
+          "matchesStagedFile": true,
+          "filenameHeader": "KapKan-1.0.6-Setup.exe",
+          "finalHost": "release-assets.githubusercontent.com",
+          "finalPath": "/github-production-release-asset/1395887119/8a6629c3-b8b8-4683-af81-90d701d4d9b0"
+        },
+        {
+          "status": "PASS",
+          "requestedRange": "bytes=39312832-39312895",
+          "httpStatus": 206,
+          "contentRange": "bytes 39312832-39312895/39312896",
+          "sampleBytes": 64,
+          "sampleSha256": "f5a5fd42d16a20302798ef6ed309979b43003d2320d9f0e8ea9831a92759fb4b",
+          "matchesStagedFile": true,
+          "filenameHeader": "KapKan-1.0.6-Setup.exe",
+          "finalHost": "release-assets.githubusercontent.com",
+          "finalPath": "/github-production-release-asset/1395887119/8a6629c3-b8b8-4683-af81-90d701d4d9b0"
+        }
+      ]
+    },
+    {
+      "filename": "KapKan-macOS-1.0.6.zip",
+      "url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.6-beta.1/KapKan-macOS-1.0.6.zip",
+      "status": "PASS",
+      "authentication": "none",
+      "expectedSize": 37541503,
+      "head": {
+        "status": "PASS",
+        "httpStatus": 200,
+        "contentLength": 37541503,
+        "contentType": "application/octet-stream"
+      },
+      "ranges": [
+        {
+          "status": "PASS",
+          "requestedRange": "bytes=0-63",
+          "httpStatus": 206,
+          "contentRange": "bytes 0-63/37541503",
+          "sampleBytes": 64,
+          "sampleSha256": "d6a442cdd59ddcb04d831965d03b23fc2d89c49b65da70aaeab946e554bd735f",
+          "matchesStagedFile": true,
+          "filenameHeader": "KapKan-macOS-1.0.6.zip",
+          "finalHost": "release-assets.githubusercontent.com",
+          "finalPath": "/github-production-release-asset/1395887119/75239622-e40b-4965-b130-bb211536882d"
+        },
+        {
+          "status": "PASS",
+          "requestedRange": "bytes=37541439-37541502",
+          "httpStatus": 206,
+          "contentRange": "bytes 37541439-37541502/37541503",
+          "sampleBytes": 64,
+          "sampleSha256": "12a0e723aaa7b19f9ed007ad32881d6b8ddb08ee240bd2832a89630d101d4fe2",
+          "matchesStagedFile": true,
+          "filenameHeader": "KapKan-macOS-1.0.6.zip",
+          "finalHost": "release-assets.githubusercontent.com",
+          "finalPath": "/github-production-release-asset/1395887119/75239622-e40b-4965-b130-bb211536882d"
+        }
+      ]
+    },
+    {
+      "filename": "KapKan-Windows-Portable-1.0.6.zip",
+      "url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.6-beta.1/KapKan-Windows-Portable-1.0.6.zip",
+      "status": "PASS",
+      "authentication": "none",
+      "expectedSize": 34209042,
+      "head": {
+        "status": "PASS",
+        "httpStatus": 200,
+        "contentLength": 34209042,
+        "contentType": "application/octet-stream"
+      },
+      "ranges": [
+        {
+          "status": "PASS",
+          "requestedRange": "bytes=0-63",
+          "httpStatus": 206,
+          "contentRange": "bytes 0-63/34209042",
+          "sampleBytes": 64,
+          "sampleSha256": "e525d86394cbf61d2de91e39044242916ae9f8e107ee9221887dc17401469772",
+          "matchesStagedFile": true,
+          "filenameHeader": "KapKan-Windows-Portable-1.0.6.zip",
+          "finalHost": "release-assets.githubusercontent.com",
+          "finalPath": "/github-production-release-asset/1395887119/59dc53e1-3f3e-4366-bea0-c3096546a5c4"
+        },
+        {
+          "status": "PASS",
+          "requestedRange": "bytes=34208978-34209041",
+          "httpStatus": 206,
+          "contentRange": "bytes 34208978-34209041/34209042",
+          "sampleBytes": 64,
+          "sampleSha256": "1aca81e63441546ba72321ea9c1d740504dbcdf81399750f80286276a9aa28b1",
+          "matchesStagedFile": true,
+          "filenameHeader": "KapKan-Windows-Portable-1.0.6.zip",
+          "finalHost": "release-assets.githubusercontent.com",
+          "finalPath": "/github-production-release-asset/1395887119/59dc53e1-3f3e-4366-bea0-c3096546a5c4"
+        }
+      ]
+    },
+    {
+      "filename": "KapKan-1.0.6-mc26.1-fabric.jar",
+      "url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.6-beta.1/KapKan-1.0.6-mc26.1-fabric.jar",
+      "status": "PASS",
+      "authentication": "none",
+      "expectedSize": 1720053,
+      "head": {
+        "status": "PASS",
+        "httpStatus": 200,
+        "contentLength": 1720053,
+        "contentType": "application/octet-stream"
+      },
+      "ranges": [
+        {
+          "status": "PASS",
+          "requestedRange": "bytes=0-63",
+          "httpStatus": 206,
+          "contentRange": "bytes 0-63/1720053",
+          "sampleBytes": 64,
+          "sampleSha256": "10d7b946aa6a11a50f95a00b06e7710aaec83d5ebf3e9d3aec585b430722eee4",
+          "matchesStagedFile": true,
+          "filenameHeader": "KapKan-1.0.6-mc26.1-fabric.jar",
+          "finalHost": "release-assets.githubusercontent.com",
+          "finalPath": "/github-production-release-asset/1395887119/283a31bb-9576-4d8b-8afc-c0c660f23a62"
+        },
+        {
+          "status": "PASS",
+          "requestedRange": "bytes=1719989-1720052",
+          "httpStatus": 206,
+          "contentRange": "bytes 1719989-1720052/1720053",
+          "sampleBytes": 64,
+          "sampleSha256": "ccdc3491f784d5b26d8cd289fd7574c868f2145f30db99eab85f9a75e6d739f7",
+          "matchesStagedFile": true,
+          "filenameHeader": "KapKan-1.0.6-mc26.1-fabric.jar",
+          "finalHost": "release-assets.githubusercontent.com",
+          "finalPath": "/github-production-release-asset/1395887119/283a31bb-9576-4d8b-8afc-c0c660f23a62"
+        }
+      ]
+    },
+    {
+      "filename": "KapKan-1.0.6-mc26.1.1-fabric.jar",
+      "url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.6-beta.1/KapKan-1.0.6-mc26.1.1-fabric.jar",
+      "status": "PASS",
+      "authentication": "none",
+      "expectedSize": 1720057,
+      "head": {
+        "status": "PASS",
+        "httpStatus": 200,
+        "contentLength": 1720057,
+        "contentType": "application/octet-stream"
+      },
+      "ranges": [
+        {
+          "status": "PASS",
+          "requestedRange": "bytes=0-63",
+          "httpStatus": 206,
+          "contentRange": "bytes 0-63/1720057",
+          "sampleBytes": 64,
+          "sampleSha256": "10d7b946aa6a11a50f95a00b06e7710aaec83d5ebf3e9d3aec585b430722eee4",
+          "matchesStagedFile": true,
+          "filenameHeader": "KapKan-1.0.6-mc26.1.1-fabric.jar",
+          "finalHost": "release-assets.githubusercontent.com",
+          "finalPath": "/github-production-release-asset/1395887119/3d8ca9a2-dde3-4a88-9c86-dcb507969624"
+        },
+        {
+          "status": "PASS",
+          "requestedRange": "bytes=1719993-1720056",
+          "httpStatus": 206,
+          "contentRange": "bytes 1719993-1720056/1720057",
+          "sampleBytes": 64,
+          "sampleSha256": "8d14652634087295198af0b87f01f1b9e4128b41fdbf984ede30a53e41f56632",
+          "matchesStagedFile": true,
+          "filenameHeader": "KapKan-1.0.6-mc26.1.1-fabric.jar",
+          "finalHost": "release-assets.githubusercontent.com",
+          "finalPath": "/github-production-release-asset/1395887119/3d8ca9a2-dde3-4a88-9c86-dcb507969624"
+        }
+      ]
+    },
+    {
+      "filename": "KapKan-1.0.6-mc26.1.2-fabric.jar",
+      "url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.6-beta.1/KapKan-1.0.6-mc26.1.2-fabric.jar",
+      "status": "PASS",
+      "authentication": "none",
+      "expectedSize": 1725921,
+      "head": {
+        "status": "PASS",
+        "httpStatus": 200,
+        "contentLength": 1725921,
+        "contentType": "application/octet-stream"
+      },
+      "ranges": [
+        {
+          "status": "PASS",
+          "requestedRange": "bytes=0-63",
+          "httpStatus": 206,
+          "contentRange": "bytes 0-63/1725921",
+          "sampleBytes": 64,
+          "sampleSha256": "10d7b946aa6a11a50f95a00b06e7710aaec83d5ebf3e9d3aec585b430722eee4",
+          "matchesStagedFile": true,
+          "filenameHeader": "KapKan-1.0.6-mc26.1.2-fabric.jar",
+          "finalHost": "release-assets.githubusercontent.com",
+          "finalPath": "/github-production-release-asset/1395887119/8670cc9b-a6f4-4f0c-81d9-3863a152df3e"
+        },
+        {
+          "status": "PASS",
+          "requestedRange": "bytes=1725857-1725920",
+          "httpStatus": 206,
+          "contentRange": "bytes 1725857-1725920/1725921",
+          "sampleBytes": 64,
+          "sampleSha256": "9d9af6fda3c179b43ef107c25a0de81355aa9745361d9b829c33d50482f702f6",
+          "matchesStagedFile": true,
+          "filenameHeader": "KapKan-1.0.6-mc26.1.2-fabric.jar",
+          "finalHost": "release-assets.githubusercontent.com",
+          "finalPath": "/github-production-release-asset/1395887119/8670cc9b-a6f4-4f0c-81d9-3863a152df3e"
+        }
+      ]
+    },
+    {
+      "filename": "SHA256SUMS.txt",
+      "url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.6-beta.1/SHA256SUMS.txt",
+      "status": "PASS",
+      "authentication": "none",
+      "expectedSize": 573,
+      "head": {
+        "status": "PASS",
+        "httpStatus": 200,
+        "contentLength": 573,
+        "contentType": "application/octet-stream"
+      },
+      "ranges": [
+        {
+          "status": "PASS",
+          "requestedRange": "bytes=0-63",
+          "httpStatus": 206,
+          "contentRange": "bytes 0-63/573",
+          "sampleBytes": 64,
+          "sampleSha256": "acb75db19536d3a464c3cf76cce01792c054549423b2162890723e0893020aaf",
+          "matchesStagedFile": true,
+          "filenameHeader": "SHA256SUMS.txt",
+          "finalHost": "release-assets.githubusercontent.com",
+          "finalPath": "/github-production-release-asset/1395887119/e343fa89-efc2-422a-991d-3f2de638dd94"
+        },
+        {
+          "status": "PASS",
+          "requestedRange": "bytes=509-572",
+          "httpStatus": 206,
+          "contentRange": "bytes 509-572/573",
+          "sampleBytes": 64,
+          "sampleSha256": "44e998a64773dd137111de0cdd6ea991e59af55bec42a0e224df3bdb910a6eb0",
+          "matchesStagedFile": true,
+          "filenameHeader": "SHA256SUMS.txt",
+          "finalHost": "release-assets.githubusercontent.com",
+          "finalPath": "/github-production-release-asset/1395887119/e343fa89-efc2-422a-991d-3f2de638dd94"
+        }
+      ]
+    }
+  ],
+  "externalMutationsPerformed": false,
+  "scope": "public metadata, bounded unauthenticated download ranges, and the exact shared published launcher UpdateChecker",
+  "version": "1.0.6",
+  "tag": "v1.0.6-beta.1",
+  "releaseId": 415971987,
+  "releaseUrl": "https://github.com/h4chub/kapkan-releases/releases/tag/v1.0.6-beta.1",
+  "draft": false,
+  "prerelease": true,
+  "tagCommit": "e4eea6d5f2d825f5be5d4e861e1155a4f555a66d",
+  "tagResolution": [
+    {
+      "type": "commit",
+      "sha": "e4eea6d5f2d825f5be5d4e861e1155a4f555a66d"
+    }
+  ],
+  "updater": {
+    "status": "PASS",
+    "publishedLauncherSha256": "320c172e968123faf0454c9927a610f811524ef70b0401ca37a389b7e63948f1",
+    "sharedMacWindowsImplementation": true,
+    "installedTags": [
+      "v1.0.2-beta.1",
+      "v1.0.3-beta.1",
+      "v1.0.4-beta.1",
+      "v1.0.5-beta.1",
+      "v1.0.6-beta.1"
+    ],
+    "platformVersionCases": 10,
+    "expectedOlderUpdate": "v1.0.6-beta.1",
+    "expectedCurrentUpdate": "none",
+    "directLiveFetch": true,
+    "actualCheckMethod": true,
+    "scope": "Exact published current JAR, unchanged saved live feed and live fetch; installed-version tags are simulated. Historical launcher binaries were not executed.",
+    "log": [
+      "PASS snapshot select: MACOS / v1.0.2-beta.1 -> v1.0.6-beta.1",
+      "PASS snapshot select: WINDOWS / v1.0.2-beta.1 -> v1.0.6-beta.1",
+      "PASS snapshot select: MACOS / v1.0.3-beta.1 -> v1.0.6-beta.1",
+      "PASS snapshot select: WINDOWS / v1.0.3-beta.1 -> v1.0.6-beta.1",
+      "PASS snapshot select: MACOS / v1.0.4-beta.1 -> v1.0.6-beta.1",
+      "PASS snapshot select: WINDOWS / v1.0.4-beta.1 -> v1.0.6-beta.1",
+      "PASS snapshot select: MACOS / v1.0.5-beta.1 -> v1.0.6-beta.1",
+      "PASS snapshot select: WINDOWS / v1.0.5-beta.1 -> v1.0.6-beta.1",
+      "PASS snapshot select: MACOS / v1.0.6-beta.1 -> none",
+      "PASS snapshot select: WINDOWS / v1.0.6-beta.1 -> none",
+      "PASS direct live fetch: MACOS / v1.0.5-beta.1 -> v1.0.6-beta.1",
+      "PASS actual check(): MACOS / v1.0.6-beta.1 -> none",
+      "Live release discovery: PASS (10 platform/version cases; direct fetch and current-platform check)"
+    ]
+  },
+  "finishedUTC": "2026-10-17T17:59:53.449083+00:00"
+}

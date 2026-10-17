@@ -1,6 +1,6 @@
 # KapKan 1.0.6 build status
 
-The selected rendering-only build is ready for publication after final package and delivery verification. The public release remains [1.0.5](https://github.com/h4chub/kapkan-releases/releases/tag/v1.0.5-beta.1) until PUBLICATION.json records the new release.
+[KapKan 1.0.6 Public Beta](https://github.com/h4chub/kapkan-releases/releases/tag/v1.0.6-beta.1) is published. All seven exact asset digests/sizes, public download byte ranges and live updater discovery pass. The tag targets tested source commit e4eea6d5f2d825f5be5d4e861e1155a4f555a66d. The production website also serves 1.0.6; its exact resources, download metadata and all five responsive views pass. See PUBLICATION.json and releases/1.0.6/verification for receipts.
 
 All three exact Minecraft targets compile and pass 1,209 deterministic checks each. Final native macOS arm64 smoke runs load KapKan + ImmediatelyFast, exclude the two removed candidate modules, and enter fresh single-player worlds on 26.1, 26.1.1 and 26.1.2 using verified Zulu25. The final integration passes 56 checks. Launcher/Fabric/recovery and actual 1.0.5 migration checks pass. Actual app signing, archive and built Windows payload checks are recorded under qa/1.0.6. Clean official Mac Java 21/25 runtime installation and cache migration pass; Zulu21 opens the final launcher UI.
 

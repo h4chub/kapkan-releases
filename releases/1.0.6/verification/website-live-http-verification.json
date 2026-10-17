@@ -1,0 +1,109 @@
+{
+  "status": "PASS",
+  "verifiedUTC": "2026-10-17T18:00:59.962391+00:00",
+  "siteUrl": "https://kapkan-website.vercel.app",
+  "deploymentId": "dpl_4k67GbrFn1Vg1qLaNYaP8hfwRmPt",
+  "releaseId": 415971987,
+  "releaseTag": "v1.0.6-beta.1",
+  "releaseDraft": false,
+  "releasePrerelease": true,
+  "kapkanSourceCommit": "e4eea6d5f2d825f5be5d4e861e1155a4f555a66d",
+  "deliverySha256": "d3d2b32b921d6b609add09a70e187825f40e313039c7e6d06ee82f071ee1e259",
+  "liveResources": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 13916,
+      "sha256": "d4213af827eee3f19ef2615a8f5778f736f713f51e37c529916386921f466a3e",
+      "cacheControl": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "app.js",
+      "status": 200,
+      "bytes": 5492,
+      "sha256": "cbbd2fa7797ad7123a3aae95e293545ef237d023032d8cdc8b86bc76b0cbbd44",
+      "cacheControl": "public, max-age=0, must-revalidate"
+    },
+    {
+      "path": "config/releases.js",
+      "status": 200,
+      "bytes": 3936,
+      "sha256": "032a2fc316aee583557f443ec71e7ecb7c022623b396f3e3942d10d0c2842347",
+      "cacheControl": "public, max-age=0, must-revalidate"
+    }
+  ],
+  "publicAssets": [
+    {
+      "filename": "KapKan-1.0.6-Setup.exe",
+      "url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.6-beta.1/KapKan-1.0.6-Setup.exe",
+      "publicStatus": 200,
+      "contentLength": 39312896,
+      "sha256": "d1e3d91587a712adb9d217b98b373e15e665186031c8a07f1131215efbc7dffa",
+      "githubDigest": "sha256:d1e3d91587a712adb9d217b98b373e15e665186031c8a07f1131215efbc7dffa",
+      "githubAssetId": 651165588
+    },
+    {
+      "filename": "KapKan-macOS-1.0.6.zip",
+      "url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.6-beta.1/KapKan-macOS-1.0.6.zip",
+      "publicStatus": 200,
+      "contentLength": 37541503,
+      "sha256": "9d1ae37217deda1069485baf2e391cb4b524ffdbf06e75e915ccb9eab06e62dd",
+      "githubDigest": "sha256:9d1ae37217deda1069485baf2e391cb4b524ffdbf06e75e915ccb9eab06e62dd",
+      "githubAssetId": 651167839
+    },
+    {
+      "filename": "KapKan-Windows-Portable-1.0.6.zip",
+      "url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.6-beta.1/KapKan-Windows-Portable-1.0.6.zip",
+      "publicStatus": 200,
+      "contentLength": 34209042,
+      "sha256": "9089b322f7e64c83828e9c7ecd5ba9f3499d600513e7ac49a9fab1f498300d5b",
+      "githubDigest": "sha256:9089b322f7e64c83828e9c7ecd5ba9f3499d600513e7ac49a9fab1f498300d5b",
+      "githubAssetId": 651168938
+    },
+    {
+      "filename": "KapKan-1.0.6-mc26.1-fabric.jar",
+      "url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.6-beta.1/KapKan-1.0.6-mc26.1-fabric.jar",
+      "publicStatus": 200,
+      "contentLength": 1720053,
+      "sha256": "c01579a31379f567eb19afb03969a888367bb91517d9652e9622851c1f194210",
+      "githubDigest": "sha256:c01579a31379f567eb19afb03969a888367bb91517d9652e9622851c1f194210",
+      "githubAssetId": 651165151
+    },
+    {
+      "filename": "KapKan-1.0.6-mc26.1.1-fabric.jar",
+      "url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.6-beta.1/KapKan-1.0.6-mc26.1.1-fabric.jar",
+      "publicStatus": 200,
+      "contentLength": 1720057,
+      "sha256": "3d447a99b1c3bf190e9af3864f1d82a3c3978e141fa16a47fa64193d9f2c75da",
+      "githubDigest": "sha256:3d447a99b1c3bf190e9af3864f1d82a3c3978e141fa16a47fa64193d9f2c75da",
+      "githubAssetId": 651165317
+    },
+    {
+      "filename": "KapKan-1.0.6-mc26.1.2-fabric.jar",
+      "url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.6-beta.1/KapKan-1.0.6-mc26.1.2-fabric.jar",
+      "publicStatus": 200,
+      "contentLength": 1725921,
+      "sha256": "a747bff50be125397a77fc4be7155f98485a049676c2a8616d8ce03aeb2f5f41",
+      "githubDigest": "sha256:a747bff50be125397a77fc4be7155f98485a049676c2a8616d8ce03aeb2f5f41",
+      "githubAssetId": 651165416
+    },
+    {
+      "filename": "SHA256SUMS.txt",
+      "url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.6-beta.1/SHA256SUMS.txt",
+      "publicStatus": 200,
+      "contentLength": 573,
+      "sha256": "488501514e2c6d8e3b297cf4db3b79a87bb73f4a973eb01a162f5b697ffa38ec",
+      "githubDigest": "sha256:488501514e2c6d8e3b297cf4db3b79a87bb73f4a973eb01a162f5b697ffa38ec",
+      "githubAssetId": 651170632
+    }
+  ],
+  "checks": [
+    "Live HTML/application/release configuration exactly match verified local bytes",
+    "All7 public download URLs return200 with exact final byte lengths",
+    "All7 public GitHub SHA256 digests match final delivery and site metadata",
+    "Current public beta release1.0.6 has correct tag and7assets"
+  ],
+  "limits": [
+    "Public payload integrity is represented here by GitHub SHA256 digests; root separately verified final artifact content and updater discovery. No duplicate full100MB download performed."
+  ]
+}

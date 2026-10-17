@@ -1,0 +1,116 @@
+{
+  "status": "PASS",
+  "repository": "h4chub/kapkan-releases",
+  "branch": "codex/kapkan-1.0.6",
+  "commit": "e4eea6d5f2d825f5be5d4e861e1155a4f555a66d",
+  "parent": "8892e87aaacaf7cf9c923b8edb5058969c41f92b",
+  "tree": "3078261bc6154107f049ba1ed7d30b50952fa2fe",
+  "baseTree": "d4a530bd84b22cc4598904d68297ce9fa62a845c",
+  "url": "https://github.com/h4chub/kapkan-releases/commit/e4eea6d5f2d825f5be5d4e861e1155a4f555a66d",
+  "stagedScopes": [
+    "README.md",
+    "source/",
+    "releases/1.0.6/"
+  ],
+  "changedEntries": 166,
+  "deletedEntries": 6,
+  "verification": "Connector-created tree equals local git write-tree exactly. Fresh GETs confirm branch head, sole parent and tree. Branch update used expected parent SHA and force=false. No main or tag change.",
+  "launcherSha256": "320c172e968123faf0454c9927a610f811524ef70b0401ca37a389b7e63948f1",
+  "verifiedBinaryBlobs": [
+    {
+      "path": "source/app/KapKan-Launcher.jar",
+      "sha": "9ff1e8d80421b77f6dcc22d1aca2c6c3b9e92e9b",
+      "size": 25195090
+    },
+    {
+      "path": "source/qa/1.0.6/game/controlled-ablation/01-baseline105/KapKan-isolated-frame-scene.png",
+      "sha": "06fd6069abc801e6b644d34f7f2177aca0a6f8cc",
+      "size": 927856
+    },
+    {
+      "path": "source/qa/1.0.6/game/controlled-ablation/01-baseline105/KapKan-scene-check.png",
+      "sha": "a598b44f69b8a85ffaae31fb982004a3c02d96c7",
+      "size": 1045034
+    },
+    {
+      "path": "source/qa/1.0.6/game/controlled-ablation/02-bare106/KapKan-isolated-frame-scene.png",
+      "sha": "de157d7986bd0c35246b4eb148e83f47aa7fc699",
+      "size": 925630
+    },
+    {
+      "path": "source/qa/1.0.6/game/controlled-ablation/02-bare106/KapKan-scene-check.png",
+      "sha": "03b65983cb49804f9930a0827379a0dca326bac5",
+      "size": 324197
+    },
+    {
+      "path": "source/qa/1.0.6/game/controlled-ablation/03-if106/KapKan-isolated-frame-scene.png",
+      "sha": "08b8e7d9480d5911bc38df7254d78a5941f3a363",
+      "size": 927486
+    },
+    {
+      "path": "source/qa/1.0.6/game/controlled-ablation/03-if106/KapKan-scene-check.png",
+      "sha": "67bb5af07106aeaa1217f5a5757dea61b9d8b33c",
+      "size": 1155873
+    },
+    {
+      "path": "source/qa/1.0.6/game/controlled-ablation/04-bundle106/KapKan-isolated-frame-scene.png",
+      "sha": "d71f6ef2f44fcba2370167a507e1b50b2ccaa712",
+      "size": 926697
+    },
+    {
+      "path": "source/qa/1.0.6/game/controlled-ablation/04-bundle106/KapKan-scene-check.png",
+      "sha": "6d93eaa68a301cd2fea38b268f909c408fce64f2",
+      "size": 1096137
+    },
+    {
+      "path": "source/qa/1.0.6/game/controlled-ablation/05-lf106/KapKan-isolated-frame-scene.png",
+      "sha": "6de6c8de9ad5893ae9ee01cecf5e46d5e262ff07",
+      "size": 926448
+    },
+    {
+      "path": "source/qa/1.0.6/game/controlled-ablation/05-lf106/KapKan-scene-check.png",
+      "sha": "ca66473046407d09c876456496a56196d1855516",
+      "size": 978317
+    },
+    {
+      "path": "source/qa/1.0.6/game/controlled-ablation/06-bare106/KapKan-isolated-frame-scene.png",
+      "sha": "61c1de2a7a8db7e4169deeca97c13a9e14eabe0d",
+      "size": 923656
+    },
+    {
+      "path": "source/qa/1.0.6/game/controlled-ablation/06-bare106/KapKan-scene-check.png",
+      "sha": "89b6c19028d3db15448e0ac51d766cea7fd1d7f3",
+      "size": 1015596
+    },
+    {
+      "path": "source/qa/1.0.6/game/controlled-ablation/07-baseline105/KapKan-isolated-frame-scene.png",
+      "sha": "d756e503040e07b86642b6c4ef7dd3dbafce1a6b",
+      "size": 928329
+    },
+    {
+      "path": "source/qa/1.0.6/game/controlled-ablation/07-baseline105/KapKan-scene-check.png",
+      "sha": "78487c7c0de5ac62d039cbfb33cb88008ec68485",
+      "size": 745981
+    },
+    {
+      "path": "source/qa/1.0.6/game/frame-baseline/KapKan-isolated-frame-scene.png",
+      "sha": "ffbd6b858613e91a4f40cf62a907bbb747a85deb",
+      "size": 927637
+    },
+    {
+      "path": "source/qa/1.0.6/game/frame-baseline/KapKan-scene-check.png",
+      "sha": "a0071d710837d13beefefe1919334c4ae98a94e8",
+      "size": 1162580
+    },
+    {
+      "path": "source/qa/1.0.6/game/frame-candidate/KapKan-isolated-frame-scene.png",
+      "sha": "b3f61bbbd05f69a3728054fcd10194568c258a06",
+      "size": 927461
+    },
+    {
+      "path": "source/qa/1.0.6/game/frame-candidate/KapKan-scene-check.png",
+      "sha": "21566fd63d245fdf165e0407f95d11194348dd6d",
+      "size": 621618
+    }
+  ]
+}

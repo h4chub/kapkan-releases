@@ -1,1 +1,1 @@
-KapKan 1.0.6: IF-only integration and native Mac world checks pass on all three exact targets. Final package and delivery verification precede publication; see PUBLICATION.json and QA-REPORT.md. Interactive microphone capture/native Windows install untested.
+KapKan 1.0.6 Public Beta published. Exact source tag, all seven public asset digests/sizes/download ranges and current updater discovery PASS. Final IF-only native Mac worlds PASS on all three targets. Interactive microphone capture/native Windows install untested. See PUBLICATION.json and QA-REPORT.md.
