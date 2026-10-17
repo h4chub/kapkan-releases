@@ -1,0 +1,21 @@
+{
+  "product": "KapKan",
+  "version": "1.0.0",
+  "build_id": "ui-accounts-h4",
+  "publication": "HOLD",
+  "native_acceptance": "not completed",
+  "microsoft_sign_in": "not configured; user must register an owned application client ID",
+  "core_development_clock": "unchanged",
+  "source_baseline": "KapKan-1.0.0-H3-Build-Sources.zip",
+  "built_at_utc": "2026-09-28T16:23:44.600169+00:00",
+  "launcher_target_java": 21,
+  "companion_target_java": 25,
+  "companion_minecraft": "26.1.2",
+  "companion_loader": "Fabric 0.19.5",
+  "presence_service": "included, not deployed, endpoint unset",
+  "toolchain": "Amazon Corretto JDK 21.0.12.12.1 (--release 21 desktop), Go 1.23.2, Python 3.12; byte-identical H2 companion retained",
+  "gameplay_acceptance": "BLOCKED: host OpenGL context unavailable",
+  "scope": "focused desktop account trigger and popup refinement",
+  "companion_build_id": "1.0.0+h2",
+  "companion_rebuilt": false
+}

@@ -1,0 +1,27 @@
+{
+  "required": true,
+  "package": "gg.kapkan.presence.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "MinecraftMixin",
+    "TabMixin",
+    "NameMixin",
+    "SelfNameMixin",
+    "BadgePackMixin",
+    "CapeStateMixin",
+    "AvatarCapeMixin",
+    "CapeLayerMixin",
+    "ClientOptionsMixin",
+    "ClientHudMixin",
+    "ZoomMixin",
+    "LocalSkinMixin",
+    "PauseMenuMixin",
+    "EditBoxAccessor",
+    "BadgeLightMixin",
+    "RenderTypeAccess",
+    "KeyboardInputMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

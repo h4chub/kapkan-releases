@@ -1,0 +1,13 @@
+test_architecture_table_mismatch_is_rejected (test_macho_layout.LayoutTests.test_architecture_table_mismatch_is_rejected) ... ok
+test_no_tail_and_exact_slices (test_macho_layout.LayoutTests.test_no_tail_and_exact_slices) ... ok
+test_nonzero_gap_rejected (test_macho_layout.LayoutTests.test_nonzero_gap_rejected) ... ok
+test_out_of_range_is_rejected (test_macho_layout.LayoutTests.test_out_of_range_is_rejected) ... ok
+test_overlapping_slices_rejected (test_macho_layout.LayoutTests.test_overlapping_slices_rejected) ... ok
+test_rc1_regression_trailing_padding_is_rejected (test_macho_layout.LayoutTests.test_rc1_regression_trailing_padding_is_rejected) ... ok
+test_trailing_thin_slice_rejected (test_macho_layout.LayoutTests.test_trailing_thin_slice_rejected) ... ok
+test_truncated_file_rejected (test_macho_layout.LayoutTests.test_truncated_file_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.009s
+
+OK

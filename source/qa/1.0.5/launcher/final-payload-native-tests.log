@@ -1,0 +1,34 @@
+?   	kapkan.local/bootstrap/cmd/installer	[no test files]
+?   	kapkan.local/bootstrap/cmd/launcher	[no test files]
+=== RUN   TestInstallUpgradePreserveAndReject
+--- PASS: TestInstallUpgradePreserveAndReject (0.00s)
+=== RUN   TestTraversalAndSymlink
+--- PASS: TestTraversalAndSymlink (0.00s)
+=== RUN   TestBuiltPayloadUpgrade
+--- PASS: TestBuiltPayloadUpgrade (0.40s)
+PASS
+ok  	kapkan.local/bootstrap/internal/installpkg	0.412s
+=== RUN   TestArchitectureAliases
+--- PASS: TestArchitectureAliases (0.00s)
+=== RUN   TestTarTraversal
+=== RUN   TestTarTraversal/../escape
+=== RUN   TestTarTraversal//tmp/escape
+=== RUN   TestTarTraversal/C:\escape
+=== RUN   TestTarTraversal/a/../../escape
+--- PASS: TestTarTraversal (0.00s)
+    --- PASS: TestTarTraversal/../escape (0.00s)
+    --- PASS: TestTarTraversal//tmp/escape (0.00s)
+    --- PASS: TestTarTraversal/C:\escape (0.00s)
+    --- PASS: TestTarTraversal/a/../../escape (0.00s)
+=== RUN   TestTarSymlinkEscape
+--- PASS: TestTarSymlinkEscape (0.00s)
+=== RUN   TestZipTraversal
+--- PASS: TestZipTraversal (0.00s)
+=== RUN   TestArchiveLimits
+--- PASS: TestArchiveLimits (0.00s)
+=== RUN   TestInstallVerifyReuseAndRepair
+--- PASS: TestInstallVerifyReuseAndRepair (0.01s)
+=== RUN   TestCachedReceiptCannotEscape
+--- PASS: TestCachedReceiptCannotEscape (0.00s)
+PASS
+ok  	kapkan.local/bootstrap/internal/runtimeenv	0.023s

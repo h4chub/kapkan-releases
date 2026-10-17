@@ -1,0 +1,24 @@
+[
+  {
+    "draft": false,
+    "prerelease": true,
+    "tag_name": "v1.0.3-beta.1",
+    "html_url": "https://github.com/h4chub/kapkan-releases/releases/tag/v1.0.3-beta.1",
+    "assets": [
+      {
+        "name": "KapKan-macOS-1.0.3.zip",
+        "size": 32221616,
+        "digest": "sha256:aa3fc195810860490d01b4532941fbd31e731f49aeb860259617eac06af50e88",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.3-beta.1/KapKan-macOS-1.0.3.zip"
+      },
+      {
+        "name": "KapKan-1.0.3-Setup.exe",
+        "size": 33056256,
+        "digest": "sha256:2270e403268d476618763e1cef21d27e298fae3c8064c513fc124ce2f005367b",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.3-beta.1/KapKan-1.0.3-Setup.exe"
+      }
+    ]
+  }
+]

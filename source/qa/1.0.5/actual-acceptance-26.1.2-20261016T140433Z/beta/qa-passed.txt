@@ -1,0 +1,1 @@
+Actual peer Minecraft process checks: 25 assertions passed

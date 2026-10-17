@@ -1,0 +1,163 @@
+PASS incomplete install readiness, hashes, assets, controls/mod preservation
+PASS exact Forge version targeting, inheritance override, selectors, null logger
+PASS packaged logger privacy; dummy values only, launch arguments unchanged
+2026-10-05T13:59:36.402086679Z Metadata attempt 1/3 http://127.0.0.1:44935/fabric-meta [HTTP] HTTP 503 from 127.0.0.1
+gg.kapkan.release.RetryDownloader$Problem: HTTP 503 from 127.0.0.1
+	at gg.kapkan.release.RetryDownloader.transfer(RetryDownloader.java:135)
+	at gg.kapkan.release.RetryDownloader.text(RetryDownloader.java:109)
+	at gg.kapkan.release.RetryDownloader.text(RetryDownloader.java:102)
+	at gg.kapkan.release.LoaderNetwork.text(LoaderNetwork.java:15)
+	at gg.kapkan.launcher.launch.FabricInstallerService.getText(FabricInstallerService.java)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at gg.kapkan.release.HardeningSelfTest.invoke(HardeningSelfTest.java:36)
+	at gg.kapkan.release.HardeningSelfTest.network(HardeningSelfTest.java:114)
+	at gg.kapkan.release.HardeningSelfTest.main(HardeningSelfTest.java:164)
+2026-10-05T13:59:37.109043245Z Recovered metadata http://127.0.0.1:44935/fabric-meta after 2 attempts.
+2026-10-05T13:59:37.113326488Z Metadata attempt 1/3 http://127.0.0.1:44935/forge-meta [HTTP] HTTP 503 from 127.0.0.1
+gg.kapkan.release.RetryDownloader$Problem: HTTP 503 from 127.0.0.1
+	at gg.kapkan.release.RetryDownloader.transfer(RetryDownloader.java:135)
+	at gg.kapkan.release.RetryDownloader.text(RetryDownloader.java:109)
+	at gg.kapkan.release.RetryDownloader.text(RetryDownloader.java:102)
+	at gg.kapkan.release.LoaderNetwork.text(LoaderNetwork.java:15)
+	at gg.kapkan.launcher.launch.ModLoaderInstallerService.getText(ModLoaderInstallerService.java)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at gg.kapkan.release.HardeningSelfTest.invoke(HardeningSelfTest.java:36)
+	at gg.kapkan.release.HardeningSelfTest.network(HardeningSelfTest.java:115)
+	at gg.kapkan.release.HardeningSelfTest.main(HardeningSelfTest.java:164)
+2026-10-05T13:59:37.817147320Z Recovered metadata http://127.0.0.1:44935/forge-meta after 2 attempts.
+2026-10-05T13:59:37.824786234Z Attempt 1/3 http://127.0.0.1:44935/archive -> fixture.jar [INTEGRITY] Downloaded archive is invalid: ZipException: zip END header not found
+gg.kapkan.release.RetryDownloader$Problem: Downloaded archive is invalid: ZipException: zip END header not found
+	at gg.kapkan.release.RetryDownloader.download(RetryDownloader.java:80)
+	at gg.kapkan.release.RetryDownloader.downloadValidated(RetryDownloader.java:48)
+	at gg.kapkan.release.LoaderNetwork.jar(LoaderNetwork.java:24)
+	at gg.kapkan.launcher.launch.FabricInstallerService.download(FabricInstallerService.java)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at gg.kapkan.release.HardeningSelfTest.invoke(HardeningSelfTest.java:36)
+	at gg.kapkan.release.HardeningSelfTest.network(HardeningSelfTest.java:117)
+	at gg.kapkan.release.HardeningSelfTest.main(HardeningSelfTest.java:164)
+Caused by: java.util.zip.ZipException: zip END header not found
+	at java.base/java.util.zip.ZipFile$Source.findEND(ZipFile.java:1649)
+	at java.base/java.util.zip.ZipFile$Source.initCEN(ZipFile.java:1657)
+	at java.base/java.util.zip.ZipFile$Source.<init>(ZipFile.java:1495)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1458)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:724)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:251)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:180)
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:345)
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:316)
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:296)
+	at gg.kapkan.release.LoaderNetwork.validateJar(LoaderNetwork.java:33)
+	at gg.kapkan.release.LoaderNetwork.lambda$jar$0(LoaderNetwork.java:24)
+	... 9 more
+2026-10-05T13:59:38.530361478Z Recovered http://127.0.0.1:44935/archive after 2 attempts; size and hash verified.
+2026-10-05T13:59:38.578306551Z Attempt 1/3 http://127.0.0.1:44935/bad -> invalid.jar [INTEGRITY] Downloaded archive is invalid: ZipException: zip END header not found
+gg.kapkan.release.RetryDownloader$Problem: Downloaded archive is invalid: ZipException: zip END header not found
+	at gg.kapkan.release.RetryDownloader.download(RetryDownloader.java:80)
+	at gg.kapkan.release.RetryDownloader.downloadValidated(RetryDownloader.java:48)
+	at gg.kapkan.release.LoaderNetwork.jar(LoaderNetwork.java:24)
+	at gg.kapkan.launcher.launch.FabricInstallerService.download(FabricInstallerService.java)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at gg.kapkan.release.HardeningSelfTest.invoke(HardeningSelfTest.java:36)
+	at gg.kapkan.release.HardeningSelfTest.network(HardeningSelfTest.java:121)
+	at gg.kapkan.release.HardeningSelfTest.main(HardeningSelfTest.java:164)
+Caused by: java.util.zip.ZipException: zip END header not found
+	at java.base/java.util.zip.ZipFile$Source.findEND(ZipFile.java:1649)
+	at java.base/java.util.zip.ZipFile$Source.initCEN(ZipFile.java:1657)
+	at java.base/java.util.zip.ZipFile$Source.<init>(ZipFile.java:1495)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1458)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:724)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:251)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:180)
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:345)
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:316)
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:296)
+	at gg.kapkan.release.LoaderNetwork.validateJar(LoaderNetwork.java:33)
+	at gg.kapkan.release.LoaderNetwork.lambda$jar$0(LoaderNetwork.java:24)
+	... 9 more
+2026-10-05T13:59:39.283936030Z Attempt 2/3 http://127.0.0.1:44935/bad -> invalid.jar [INTEGRITY] Downloaded archive is invalid: ZipException: zip END header not found
+gg.kapkan.release.RetryDownloader$Problem: Downloaded archive is invalid: ZipException: zip END header not found
+	at gg.kapkan.release.RetryDownloader.download(RetryDownloader.java:80)
+	at gg.kapkan.release.RetryDownloader.downloadValidated(RetryDownloader.java:48)
+	at gg.kapkan.release.LoaderNetwork.jar(LoaderNetwork.java:24)
+	at gg.kapkan.launcher.launch.FabricInstallerService.download(FabricInstallerService.java)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at gg.kapkan.release.HardeningSelfTest.invoke(HardeningSelfTest.java:36)
+	at gg.kapkan.release.HardeningSelfTest.network(HardeningSelfTest.java:121)
+	at gg.kapkan.release.HardeningSelfTest.main(HardeningSelfTest.java:164)
+Caused by: java.util.zip.ZipException: zip END header not found
+	at java.base/java.util.zip.ZipFile$Source.findEND(ZipFile.java:1649)
+	at java.base/java.util.zip.ZipFile$Source.initCEN(ZipFile.java:1657)
+	at java.base/java.util.zip.ZipFile$Source.<init>(ZipFile.java:1495)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1458)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:724)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:251)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:180)
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:345)
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:316)
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:296)
+	at gg.kapkan.release.LoaderNetwork.validateJar(LoaderNetwork.java:33)
+	at gg.kapkan.release.LoaderNetwork.lambda$jar$0(LoaderNetwork.java:24)
+	... 9 more
+2026-10-05T13:59:40.689902641Z Attempt 3/3 http://127.0.0.1:44935/bad -> invalid.jar [INTEGRITY] Downloaded archive is invalid: ZipException: zip END header not found
+gg.kapkan.release.RetryDownloader$Problem: Downloaded archive is invalid: ZipException: zip END header not found
+	at gg.kapkan.release.RetryDownloader.download(RetryDownloader.java:80)
+	at gg.kapkan.release.RetryDownloader.downloadValidated(RetryDownloader.java:48)
+	at gg.kapkan.release.LoaderNetwork.jar(LoaderNetwork.java:24)
+	at gg.kapkan.launcher.launch.FabricInstallerService.download(FabricInstallerService.java)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at gg.kapkan.release.HardeningSelfTest.invoke(HardeningSelfTest.java:36)
+	at gg.kapkan.release.HardeningSelfTest.network(HardeningSelfTest.java:121)
+	at gg.kapkan.release.HardeningSelfTest.main(HardeningSelfTest.java:164)
+Caused by: java.util.zip.ZipException: zip END header not found
+	at java.base/java.util.zip.ZipFile$Source.findEND(ZipFile.java:1649)
+	at java.base/java.util.zip.ZipFile$Source.initCEN(ZipFile.java:1657)
+	at java.base/java.util.zip.ZipFile$Source.<init>(ZipFile.java:1495)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1458)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:724)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:251)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:180)
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:345)
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:316)
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:296)
+	at gg.kapkan.release.LoaderNetwork.validateJar(LoaderNetwork.java:33)
+	at gg.kapkan.release.LoaderNetwork.lambda$jar$0(LoaderNetwork.java:24)
+	... 9 more
+2026-10-05T13:59:40.691323792Z Could not download invalid.jar from 127.0.0.1 after 3 attempts.
+Downloaded archive is invalid: ZipException: zip END header not found
+The incomplete or mismatched file was not installed. Retry Play.
+Details: /tmp/kapkan-hardening-fixtures-4128287184308474852/home/.kapkan/logs/downloads.log
+gg.kapkan.release.RetryDownloader$Problem: Downloaded archive is invalid: ZipException: zip END header not found
+	at gg.kapkan.release.RetryDownloader.download(RetryDownloader.java:80)
+	at gg.kapkan.release.RetryDownloader.downloadValidated(RetryDownloader.java:48)
+	at gg.kapkan.release.LoaderNetwork.jar(LoaderNetwork.java:24)
+	at gg.kapkan.launcher.launch.FabricInstallerService.download(FabricInstallerService.java)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at gg.kapkan.release.HardeningSelfTest.invoke(HardeningSelfTest.java:36)
+	at gg.kapkan.release.HardeningSelfTest.network(HardeningSelfTest.java:121)
+	at gg.kapkan.release.HardeningSelfTest.main(HardeningSelfTest.java:164)
+Caused by: java.util.zip.ZipException: zip END header not found
+	at java.base/java.util.zip.ZipFile$Source.findEND(ZipFile.java:1649)
+	at java.base/java.util.zip.ZipFile$Source.initCEN(ZipFile.java:1657)
+	at java.base/java.util.zip.ZipFile$Source.<init>(ZipFile.java:1495)
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1458)
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:724)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:251)
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:180)
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:345)
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:316)
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:296)
+	at gg.kapkan.release.LoaderNetwork.validateJar(LoaderNetwork.java:33)
+	at gg.kapkan.release.LoaderNetwork.lambda$jar$0(LoaderNetwork.java:24)
+	... 9 more
+PASS actual loader transport routing, transient failures, JAR integrity, cache and failed-repair preservation
+KapKan: preparing Java 25 / x64 for 26.1.2
+KapKan: preparing Java 25 / x64 for 26.1.2
+PASS actual Forge/Neo installer method, managed-Java request, correct flags, bounded subprocess, profile preservation
+HARDENING SELF-TEST: PASS (47 assertions)

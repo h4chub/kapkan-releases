@@ -1,0 +1,36 @@
+2026-10-05T13:58:05.992393049Z Attempt 1/3 http://127.0.0.1:42619/repo/net/fabricmc/fabric-loader/0.19.5/fabric-loader-0.19.5.jar -> fabric-loader-0.19.5.jar [HTTP] HTTP 503 from 127.0.0.1
+gg.kapkan.release.RetryDownloader$Problem: HTTP 503 from 127.0.0.1
+	at gg.kapkan.release.RetryDownloader.transfer(RetryDownloader.java:135)
+	at gg.kapkan.release.RetryDownloader.download(RetryDownloader.java:76)
+	at gg.kapkan.release.RetryDownloader.downloadValidated(RetryDownloader.java:48)
+	at gg.kapkan.release.FabricLaunchSupport.verify(FabricLaunchSupport.java:72)
+	at gg.kapkan.release.FabricPreflightTest.rejects(FabricPreflightTest.java:17)
+	at gg.kapkan.release.FabricPreflightTest.main(FabricPreflightTest.java:58)
+2026-10-05T13:58:06.701042822Z Attempt 2/3 http://127.0.0.1:42619/repo/net/fabricmc/fabric-loader/0.19.5/fabric-loader-0.19.5.jar -> fabric-loader-0.19.5.jar [HTTP] HTTP 503 from 127.0.0.1
+gg.kapkan.release.RetryDownloader$Problem: HTTP 503 from 127.0.0.1
+	at gg.kapkan.release.RetryDownloader.transfer(RetryDownloader.java:135)
+	at gg.kapkan.release.RetryDownloader.download(RetryDownloader.java:76)
+	at gg.kapkan.release.RetryDownloader.downloadValidated(RetryDownloader.java:48)
+	at gg.kapkan.release.FabricLaunchSupport.verify(FabricLaunchSupport.java:72)
+	at gg.kapkan.release.FabricPreflightTest.rejects(FabricPreflightTest.java:17)
+	at gg.kapkan.release.FabricPreflightTest.main(FabricPreflightTest.java:58)
+2026-10-05T13:58:08.105090829Z Attempt 3/3 http://127.0.0.1:42619/repo/net/fabricmc/fabric-loader/0.19.5/fabric-loader-0.19.5.jar -> fabric-loader-0.19.5.jar [HTTP] HTTP 503 from 127.0.0.1
+gg.kapkan.release.RetryDownloader$Problem: HTTP 503 from 127.0.0.1
+	at gg.kapkan.release.RetryDownloader.transfer(RetryDownloader.java:135)
+	at gg.kapkan.release.RetryDownloader.download(RetryDownloader.java:76)
+	at gg.kapkan.release.RetryDownloader.downloadValidated(RetryDownloader.java:48)
+	at gg.kapkan.release.FabricLaunchSupport.verify(FabricLaunchSupport.java:72)
+	at gg.kapkan.release.FabricPreflightTest.rejects(FabricPreflightTest.java:17)
+	at gg.kapkan.release.FabricPreflightTest.main(FabricPreflightTest.java:58)
+2026-10-05T13:58:08.107383685Z Could not download fabric-loader-0.19.5.jar from 127.0.0.1 after 3 attempts.
+HTTP 503 from 127.0.0.1
+The download server rejected the request. Retry later.
+Details: /root/.kapkan/logs/downloads.log
+gg.kapkan.release.RetryDownloader$Problem: HTTP 503 from 127.0.0.1
+	at gg.kapkan.release.RetryDownloader.transfer(RetryDownloader.java:135)
+	at gg.kapkan.release.RetryDownloader.download(RetryDownloader.java:76)
+	at gg.kapkan.release.RetryDownloader.downloadValidated(RetryDownloader.java:48)
+	at gg.kapkan.release.FabricLaunchSupport.verify(FabricLaunchSupport.java:72)
+	at gg.kapkan.release.FabricPreflightTest.rejects(FabricPreflightTest.java:17)
+	at gg.kapkan.release.FabricPreflightTest.main(FabricPreflightTest.java:58)
+FABRIC PREFLIGHT TEST: PASS (17 assertions; synthetic fixtures)

@@ -1,0 +1,22 @@
+Fabric: checking compatible loader for 26.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-26.1
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:fixture
+Fabric: verified 2 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-11568022702756250308/reported/.kapkan/game
+Selected base version: 26.1
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-26.1
+Resolved Minecraft base: 26.1
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary: not required by resolved profile
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-11568022702756250308/reported/.kapkan/game/versions/26.1/26.1.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-26.1
+Exception in thread "main" gg.kapkan.launcher.launch.LaunchException: Fabric launch blocked: required Fabric libraries are missing: /tmp/kapkan-fabric-flow-with-spaces-11568022702756250308/reported/.kapkan/game/.kapkan-profiles/mc-26.1-fabric-b21e2302dcad/game-01c29341b4bf/libraries/net/fabricmc/fabric-loader/0.19.5/fabric-loader-0.19.5.jar, /tmp/kapkan-fabric-flow-with-spaces-11568022702756250308/reported/.kapkan/game/.kapkan-profiles/mc-26.1-fabric-b21e2302dcad/game-01c29341b4bf/libraries/net/fabricmc/sponge-mixin/fixture/sponge-mixin-fixture.jar
+	at gg.kapkan.launcher.launch.MinecraftProcessLauncher.verifyAndRepairFabricCommand(MinecraftProcessLauncher.java:63)
+	at gg.kapkan.launcher.launch.MinecraftProcessLauncher.launch(MinecraftProcessLauncher.java:21)
+	at gg.kapkan.release.FabricFlowTest.run(FabricFlowTest.java:71)
+	at gg.kapkan.release.FabricFlowTest.main(FabricFlowTest.java:100)

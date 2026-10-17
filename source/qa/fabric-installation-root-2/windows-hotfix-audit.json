@@ -1,0 +1,13 @@
+{
+  "platform": "Windows x64",
+  "hotfix": "fabric-installation-root-2",
+  "installer_bytes": 33058304,
+  "installer_sha256": "caaaa1fb9feb108beb4ad04e53701aa323618a555c22ddb3a4558150e0c41cb1",
+  "payload_sha256": "df247f4a025354407a5de492a2918418d751192961876302b4f3a630a00b3b4e",
+  "payload_found_inside_exe": true,
+  "launcher_entry_content_matches_mac_hotfix": true,
+  "fixture_launch_tests": "PASS 125 assertions across 26.1, 26.1.2 and 1.21.11",
+  "windows_classpath_test": "PASS 7 assertions",
+  "real_payload_upgrade_preservation_test": "PASS on Linux",
+  "native_windows_install_and_gameplay": "NOT RUN"
+}

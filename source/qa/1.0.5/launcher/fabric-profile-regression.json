@@ -1,0 +1,12 @@
+{
+  "command": "KAPKAN_JDK=JDK21 bash tools/test-fabric-profile-fix.sh",
+  "exit_code": 0,
+  "scope": "Synthetic launch fixtures, not Minecraft gameplay",
+  "preflight_assertions": 17,
+  "versions_per_flow": 34,
+  "flows": [
+    "fresh-cache",
+    "restored-json",
+    "linked-cache"
+  ]
+}

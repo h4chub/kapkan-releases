@@ -1,0 +1,1 @@
+Two actual independent Minecraft clients and actual process restarts verified on Minecraft 26.1.1 Fabric against dedicated localhost server. See logs for assertion scope.

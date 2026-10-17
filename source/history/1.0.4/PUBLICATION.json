@@ -1,0 +1,40 @@
+{
+  "version": "1.0.4",
+  "tag": "v1.0.4-beta.1",
+  "status": "NOT_PUBLISHED",
+  "repo": "h4chub/kapkan-releases",
+  "github_access": "connected account has no push permission",
+  "website": "https://kapkan-website.vercel.app",
+  "vercel_access": "403 project scope access denied",
+  "assets": {
+    "macos": {
+      "label": "macOS",
+      "version": "1.0.4",
+      "minimumOs": "macOS 12+ target",
+      "note": "Apple Silicon + Intel \u00b7 unsigned",
+      "primary": {
+        "format": "ZIP",
+        "filename": "KapKan-macOS-1.0.4.zip",
+        "url": "https://kapkan-website.vercel.app/downloads/KapKan-macOS-1.0.4.zip",
+        "fileSize": "30.7 MiB",
+        "sizeBytes": 32225113,
+        "sha256": "473c06b2e4f29c22b6c9d165b7f3738b56e74ff8c6486bd388010f46a245b38f"
+      }
+    },
+    "windows": {
+      "label": "Windows",
+      "version": "1.0.4",
+      "minimumOs": "Windows 10/11 x64 target",
+      "note": "64-bit Intel + AMD \u00b7 unsigned",
+      "primary": {
+        "format": "EXE",
+        "filename": "KapKan-1.0.4-Setup.exe",
+        "url": "https://kapkan-website.vercel.app/downloads/KapKan-1.0.4-Setup.exe",
+        "fileSize": "31.5 MiB",
+        "sizeBytes": 33059840,
+        "sha256": "764e57394d6b23820b4a31b1a91b2ad815222327021ad56e8ad5e20f3b974143"
+      }
+    }
+  },
+  "updater_verification": "previous 1.0.3 JAR selects both candidate assets; current 1.0.4 JAR is up to date against candidate fixture; not live discovery"
+}

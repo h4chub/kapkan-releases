@@ -1,0 +1,98 @@
+{
+  "candidate_discovery": [
+    {
+      "jar": "work/KapKan-1.0.2-Sources/app/KapKan-Launcher.jar",
+      "result": "Release discovery: PASS (2 platforms; v1.0.2-beta.1 -> v1.0.3-beta.1)",
+      "feed": "candidate fixture, not a published release"
+    },
+    {
+      "jar": "KapKan-1.0.3-Sources/app/KapKan-Launcher.jar",
+      "result": "Release discovery: PASS (2 platforms; v1.0.2-beta.1 -> v1.0.3-beta.1)",
+      "feed": "candidate fixture, not a published release"
+    },
+    {
+      "jar": "KapKan-1.0.3-Sources/app/KapKan-Launcher.jar",
+      "result": "Release discovery: PASS (2 platforms; v1.0.3-beta.1 -> none)",
+      "feed": "candidate fixture, not a published release"
+    }
+  ],
+  "removed_entries": [],
+  "changed_entries_vs_1_0_2": [
+    "META-INF/MANIFEST.MF",
+    "gg/kapkan/release/LauncherMaintenance.class",
+    "gg/kapkan/release/ReleaseMain.class",
+    "gg/kapkan/release/UpdateChecker.class",
+    "gg/kapkan/v23/KapKanH2Launcher$1.class",
+    "gg/kapkan/v23/KapKanH2Launcher$2.class",
+    "gg/kapkan/v23/KapKanH2Launcher$3.class",
+    "gg/kapkan/v23/KapKanH2Launcher$4.class",
+    "gg/kapkan/v23/KapKanH2Launcher$5.class",
+    "gg/kapkan/v23/KapKanH2Launcher$6.class",
+    "gg/kapkan/v23/KapKanH2Launcher$ButtonPainter.class",
+    "gg/kapkan/v23/KapKanH2Launcher$ChoiceRenderer.class",
+    "gg/kapkan/v23/KapKanH2Launcher$ChoiceUI$1.class",
+    "gg/kapkan/v23/KapKanH2Launcher$ChoiceUI.class",
+    "gg/kapkan/v23/KapKanH2Launcher$DarkScroll.class",
+    "gg/kapkan/v23/KapKanH2Launcher$LineIcon.class",
+    "gg/kapkan/v23/KapKanH2Launcher$WidthColumn.class",
+    "gg/kapkan/v23/KapKanH2Launcher.class",
+    "gg/kapkan/v23/LauncherPages$1.class",
+    "gg/kapkan/v23/LauncherPages$2.class",
+    "gg/kapkan/v23/LauncherPages$3.class",
+    "gg/kapkan/v23/LauncherPages$4.class",
+    "gg/kapkan/v23/LauncherPages$5.class",
+    "gg/kapkan/v23/LauncherPages.class",
+    "gg/kapkan/v23/LauncherUpdates.class"
+  ],
+  "preserved_images": [
+    "gg/kapkan/h2/double-k-white.png",
+    "gg/kapkan/launcher/ui/assets/kapkan-background.png",
+    "gg/kapkan/v23/assets/appicon.png",
+    "gg/kapkan/v23/assets/bg1.png",
+    "gg/kapkan/v23/assets/bg2.png",
+    "gg/kapkan/v23/assets/bg3.png"
+  ],
+  "unchanged_files_sha256": {
+    "KapKan-Presence-26.1.2.jar": "0f3f428c54b883b1f5659abbeab0a9cf1665f0c27eece73f16378dcd73fb77ff",
+    "KapKan-AppIcon.png": "60ebade9a1b8989bf661b5e889574d9770993f5681fc6ab58fc1f4d321668192",
+    "KapKan.ico": "810b104e169e9dbdf2d9719059299a14e614abe567dd4b760293ff128c429101",
+    "KapKan.icns": "4a4730737963ae8b3b45bb2aff8fd9801ac48491dac2e1c8ad435c1e47600b74"
+  },
+  "native_go_tests": "PASS installpkg and runtimeenv",
+  "macho_tests": "PASS 8",
+  "mod_profile_checks": 61,
+  "ui_checks_per_scale": 24,
+  "ui_scales": [
+    1,
+    2
+  ],
+  "public_release": "PUBLISHED_PUBLIC_BETA",
+  "public_release_url": "https://github.com/h4chub/kapkan-releases/releases/tag/v1.0.3-beta.1",
+  "public_asset_verification": [
+    {
+      "name": "KapKan-macOS-1.0.3.zip",
+      "url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.3-beta.1/KapKan-macOS-1.0.3.zip",
+      "size": 32221616,
+      "sha256": "aa3fc195810860490d01b4532941fbd31e731f49aeb860259617eac06af50e88",
+      "verifiedPublicDownload": true
+    },
+    {
+      "name": "KapKan-1.0.3-Setup.exe",
+      "url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.3-beta.1/KapKan-1.0.3-Setup.exe",
+      "size": 33056256,
+      "sha256": "2270e403268d476618763e1cef21d27e298fae3c8064c513fc124ce2f005367b",
+      "verifiedPublicDownload": true
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.3-beta.1/SHA256SUMS.txt",
+      "size": 178,
+      "sha256": "cadbd7744bce40cd42b6cbecf03503a6f47815216328b8ddde505a10a1bf6b68",
+      "verifiedPublicDownload": true
+    }
+  ],
+  "live_feed_selection_checks": [
+    "Release discovery: PASS (2 platforms; v1.0.2-beta.1 -> v1.0.3-beta.1)",
+    "Release discovery: PASS (2 platforms; v1.0.3-beta.1 -> none)"
+  ]
+}

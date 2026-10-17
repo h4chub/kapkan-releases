@@ -1,0 +1,32 @@
+{
+  "version": "1.0.5",
+  "status": "BRANCH_PREPARATION",
+  "repo": "h4chub/kapkan-releases",
+  "review_branch": "codex/kapkan-1.0.5",
+  "public_release_published": false,
+  "website_deployed": false,
+  "presence_service_deployed": false,
+  "delivery_metadata": "../releases/1.0.5/Delivery.json",
+  "qa_report": "QA-REPORT.md",
+  "actual_game_evidence": "qa/1.0.5/final-results.json",
+  "source_provenance": {
+    "archive": "KapKan-1.0.5-Sources.zip",
+    "size_bytes": 74653902,
+    "sha256": "78182887c6080c521cb5a034b107e068e3fb915477ec1c4efe3ff6c5be30eec3",
+    "archive_hash_verified_before_extraction": true,
+    "note": "Original archive is preserved; current review-tree metadata is additional."
+  },
+  "verification": {
+    "origin": "Inherited completed 1.0.5 QA evidence",
+    "gameplay_platform": "Linux x86_64, Java 25, Fabric 0.19.5, Xvfb and Mesa llvmpipe",
+    "gameplay_targets": [
+      "26.1",
+      "26.1.1",
+      "26.1.2"
+    ],
+    "native_macos_windows_installation_tested": false,
+    "native_macos_windows_gameplay_tested": false,
+    "mod_jar_hashes_recomputed_during_import": true
+  },
+  "historical_metadata_note": "Prior 1.0.4 publication/build status is preserved as history. Publication/access statements in retained QA evidence describe the session in which those tests were recorded."
+}

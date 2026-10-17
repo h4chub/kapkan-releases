@@ -1,0 +1,31 @@
+# Local OS/editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Reproducible build output and downloaded game/runtime inputs
+__pycache__/
+*.py[cod]
+*.class
+source/companion/build/
+source/companion/qa105/runtime/
+source/qa/1.0.5/runtime/
+source/build/
+source/dist/
+source/native/bin/
+source/native/cmd/installer/payload.zip
+source/native/.cache/
+
+# Keep shipped JARs, native resources and original QA evidence tracked.

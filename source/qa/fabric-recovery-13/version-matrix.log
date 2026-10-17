@@ -1,0 +1,2199 @@
+Fabric: checking compatible loader for 26.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-26.2
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 7 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/26.2/.kapkan/game
+Selected base version: 26.2
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-26.2
+Resolved Minecraft base: 26.2
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary: not required by resolved profile
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/26.2/.kapkan/game/versions/26.2/26.2.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-26.2
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 26.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-26.2
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 26.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-26.2
+Fabric: ready
+Fabric: checking compatible loader for 26.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-26.2
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 26.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-26.2
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 7 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/26.2/.kapkan/game
+Selected base version: 26.2
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-26.2
+Resolved Minecraft base: 26.2
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary: not required by resolved profile
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/26.2/.kapkan/game/versions/26.2/26.2.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-26.2
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 26.2: PASS; intermediary=false. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 26.1.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-26.1.2
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 7 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/26.1.2/.kapkan/game
+Selected base version: 26.1.2
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-26.1.2
+Resolved Minecraft base: 26.1.2
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary: not required by resolved profile
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/26.1.2/.kapkan/game/versions/26.1.2/26.1.2.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-26.1.2
+KapKan companion prepared for 26.1.2 (cape-sharing-9)
+Fabric: checking compatible loader for 26.1.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-26.1.2
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 26.1.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-26.1.2
+Fabric: ready
+Fabric: checking compatible loader for 26.1.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-26.1.2
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 26.1.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-26.1.2
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 7 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/26.1.2/.kapkan/game
+Selected base version: 26.1.2
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-26.1.2
+Resolved Minecraft base: 26.1.2
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary: not required by resolved profile
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/26.1.2/.kapkan/game/versions/26.1.2/26.1.2.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-26.1.2
+KapKan companion prepared for 26.1.2 (cape-sharing-9)
+FABRIC FLOW FIXTURE 26.1.2: PASS; intermediary=false. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 26.1.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-26.1.1
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 7 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/26.1.1/.kapkan/game
+Selected base version: 26.1.1
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-26.1.1
+Resolved Minecraft base: 26.1.1
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary: not required by resolved profile
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/26.1.1/.kapkan/game/versions/26.1.1/26.1.1.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-26.1.1
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 26.1.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-26.1.1
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 26.1.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-26.1.1
+Fabric: ready
+Fabric: checking compatible loader for 26.1.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-26.1.1
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 26.1.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-26.1.1
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 7 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/26.1.1/.kapkan/game
+Selected base version: 26.1.1
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-26.1.1
+Resolved Minecraft base: 26.1.1
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary: not required by resolved profile
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/26.1.1/.kapkan/game/versions/26.1.1/26.1.1.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-26.1.1
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 26.1.1: PASS; intermediary=false. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 26.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-26.1
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 7 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/26.1/.kapkan/game
+Selected base version: 26.1
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-26.1
+Resolved Minecraft base: 26.1
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary: not required by resolved profile
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/26.1/.kapkan/game/versions/26.1/26.1.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-26.1
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 26.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-26.1
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 26.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-26.1
+Fabric: ready
+Fabric: checking compatible loader for 26.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-26.1
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 26.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-26.1
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 7 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/26.1/.kapkan/game
+Selected base version: 26.1
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-26.1
+Resolved Minecraft base: 26.1
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary: not required by resolved profile
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/26.1/.kapkan/game/versions/26.1/26.1.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-26.1
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 26.1: PASS; intermediary=false. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 1.21.11…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.11
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.21.11
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.11/.kapkan/game
+Selected base version: 1.21.11
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.21.11
+Resolved Minecraft base: 1.21.11
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.11/.kapkan/game/versions/1.21.11/1.21.11.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.21.11
+Fabric: checking compatible loader for 1.21.11…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.11
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.21.11…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.11
+Fabric: ready
+Fabric: checking compatible loader for 1.21.11…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.11
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.21.11…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.11
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.21.11
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.11/.kapkan/game
+Selected base version: 1.21.11
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.21.11
+Resolved Minecraft base: 1.21.11
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.11/.kapkan/game/versions/1.21.11/1.21.11.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.21.11
+FABRIC FLOW FIXTURE 1.21.11: PASS; intermediary=true. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 1.21.10…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.10
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.21.10
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.10/.kapkan/game
+Selected base version: 1.21.10
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.21.10
+Resolved Minecraft base: 1.21.10
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.10/.kapkan/game/versions/1.21.10/1.21.10.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.21.10
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 1.21.10…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.10
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.21.10…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.10
+Fabric: ready
+Fabric: checking compatible loader for 1.21.10…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.10
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.21.10…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.10
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.21.10
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.10/.kapkan/game
+Selected base version: 1.21.10
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.21.10
+Resolved Minecraft base: 1.21.10
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.10/.kapkan/game/versions/1.21.10/1.21.10.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.21.10
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 1.21.10: PASS; intermediary=true. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 1.21.9…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.9
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.21.9
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.9/.kapkan/game
+Selected base version: 1.21.9
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.21.9
+Resolved Minecraft base: 1.21.9
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.9/.kapkan/game/versions/1.21.9/1.21.9.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.21.9
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 1.21.9…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.9
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.21.9…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.9
+Fabric: ready
+Fabric: checking compatible loader for 1.21.9…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.9
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.21.9…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.9
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.21.9
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.9/.kapkan/game
+Selected base version: 1.21.9
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.21.9
+Resolved Minecraft base: 1.21.9
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.9/.kapkan/game/versions/1.21.9/1.21.9.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.21.9
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 1.21.9: PASS; intermediary=true. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 1.21.8…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.8
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.21.8
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.8/.kapkan/game
+Selected base version: 1.21.8
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.21.8
+Resolved Minecraft base: 1.21.8
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.8/.kapkan/game/versions/1.21.8/1.21.8.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.21.8
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 1.21.8…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.8
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.21.8…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.8
+Fabric: ready
+Fabric: checking compatible loader for 1.21.8…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.8
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.21.8…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.8
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.21.8
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.8/.kapkan/game
+Selected base version: 1.21.8
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.21.8
+Resolved Minecraft base: 1.21.8
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.8/.kapkan/game/versions/1.21.8/1.21.8.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.21.8
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 1.21.8: PASS; intermediary=true. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 1.21.7…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.7
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.21.7
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.7/.kapkan/game
+Selected base version: 1.21.7
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.21.7
+Resolved Minecraft base: 1.21.7
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.7/.kapkan/game/versions/1.21.7/1.21.7.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.21.7
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 1.21.7…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.7
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.21.7…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.7
+Fabric: ready
+Fabric: checking compatible loader for 1.21.7…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.7
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.21.7…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.7
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.21.7
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.7/.kapkan/game
+Selected base version: 1.21.7
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.21.7
+Resolved Minecraft base: 1.21.7
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.7/.kapkan/game/versions/1.21.7/1.21.7.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.21.7
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 1.21.7: PASS; intermediary=true. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 1.21.6…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.6
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.21.6
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.6/.kapkan/game
+Selected base version: 1.21.6
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.21.6
+Resolved Minecraft base: 1.21.6
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.6/.kapkan/game/versions/1.21.6/1.21.6.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.21.6
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 1.21.6…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.6
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.21.6…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.6
+Fabric: ready
+Fabric: checking compatible loader for 1.21.6…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.6
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.21.6…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.6
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.21.6
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.6/.kapkan/game
+Selected base version: 1.21.6
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.21.6
+Resolved Minecraft base: 1.21.6
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.6/.kapkan/game/versions/1.21.6/1.21.6.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.21.6
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 1.21.6: PASS; intermediary=true. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 1.21.5…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.5
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.21.5
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.5/.kapkan/game
+Selected base version: 1.21.5
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.21.5
+Resolved Minecraft base: 1.21.5
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.5/.kapkan/game/versions/1.21.5/1.21.5.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.21.5
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 1.21.5…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.21.5…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.5
+Fabric: ready
+Fabric: checking compatible loader for 1.21.5…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.5
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.21.5…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.5
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.21.5
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.5/.kapkan/game
+Selected base version: 1.21.5
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.21.5
+Resolved Minecraft base: 1.21.5
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.5/.kapkan/game/versions/1.21.5/1.21.5.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.21.5
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 1.21.5: PASS; intermediary=true. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 1.21.4…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.4
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.21.4
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.4/.kapkan/game
+Selected base version: 1.21.4
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.21.4
+Resolved Minecraft base: 1.21.4
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.4/.kapkan/game/versions/1.21.4/1.21.4.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.21.4
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 1.21.4…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.4
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.21.4…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.4
+Fabric: ready
+Fabric: checking compatible loader for 1.21.4…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.4
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.21.4…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.4
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.21.4
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.4/.kapkan/game
+Selected base version: 1.21.4
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.21.4
+Resolved Minecraft base: 1.21.4
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.4/.kapkan/game/versions/1.21.4/1.21.4.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.21.4
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 1.21.4: PASS; intermediary=true. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 1.21.3…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.3
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.21.3
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.3/.kapkan/game
+Selected base version: 1.21.3
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.21.3
+Resolved Minecraft base: 1.21.3
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.3/.kapkan/game/versions/1.21.3/1.21.3.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.21.3
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 1.21.3…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.3
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.21.3…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.3
+Fabric: ready
+Fabric: checking compatible loader for 1.21.3…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.3
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.21.3…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.3
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.21.3
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.3/.kapkan/game
+Selected base version: 1.21.3
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.21.3
+Resolved Minecraft base: 1.21.3
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.3/.kapkan/game/versions/1.21.3/1.21.3.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.21.3
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 1.21.3: PASS; intermediary=true. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 1.21.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.2
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.21.2
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.2/.kapkan/game
+Selected base version: 1.21.2
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.21.2
+Resolved Minecraft base: 1.21.2
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.2/.kapkan/game/versions/1.21.2/1.21.2.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.21.2
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 1.21.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.2
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.21.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.2
+Fabric: ready
+Fabric: checking compatible loader for 1.21.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.2
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.21.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.2
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.21.2
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.2/.kapkan/game
+Selected base version: 1.21.2
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.21.2
+Resolved Minecraft base: 1.21.2
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.2/.kapkan/game/versions/1.21.2/1.21.2.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.21.2
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 1.21.2: PASS; intermediary=true. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 1.21.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.1
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.21.1
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.1/.kapkan/game
+Selected base version: 1.21.1
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.21.1
+Resolved Minecraft base: 1.21.1
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.1/.kapkan/game/versions/1.21.1/1.21.1.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.21.1
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 1.21.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.1
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.21.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.1
+Fabric: ready
+Fabric: checking compatible loader for 1.21.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.1
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.21.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21.1
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.21.1
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.1/.kapkan/game
+Selected base version: 1.21.1
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.21.1
+Resolved Minecraft base: 1.21.1
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21.1/.kapkan/game/versions/1.21.1/1.21.1.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.21.1
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 1.21.1: PASS; intermediary=true. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 1.21…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.21
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21/.kapkan/game
+Selected base version: 1.21
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.21
+Resolved Minecraft base: 1.21
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21/.kapkan/game/versions/1.21/1.21.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.21
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 1.21…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.21…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21
+Fabric: ready
+Fabric: checking compatible loader for 1.21…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.21…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.21
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.21
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21/.kapkan/game
+Selected base version: 1.21
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.21
+Resolved Minecraft base: 1.21
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.21/.kapkan/game/versions/1.21/1.21.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.21
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 1.21: PASS; intermediary=true. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 1.20.6…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.6
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.20.6
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.20.6/.kapkan/game
+Selected base version: 1.20.6
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.20.6
+Resolved Minecraft base: 1.20.6
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.20.6/.kapkan/game/versions/1.20.6/1.20.6.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.20.6
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 1.20.6…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.6
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.20.6…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.6
+Fabric: ready
+Fabric: checking compatible loader for 1.20.6…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.6
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.20.6…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.6
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.20.6
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.20.6/.kapkan/game
+Selected base version: 1.20.6
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.20.6
+Resolved Minecraft base: 1.20.6
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.20.6/.kapkan/game/versions/1.20.6/1.20.6.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.20.6
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 1.20.6: PASS; intermediary=true. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 1.20.5…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.5
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.20.5
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.20.5/.kapkan/game
+Selected base version: 1.20.5
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.20.5
+Resolved Minecraft base: 1.20.5
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.20.5/.kapkan/game/versions/1.20.5/1.20.5.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.20.5
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 1.20.5…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.20.5…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.5
+Fabric: ready
+Fabric: checking compatible loader for 1.20.5…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.5
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.20.5…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.5
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.20.5
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.20.5/.kapkan/game
+Selected base version: 1.20.5
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.20.5
+Resolved Minecraft base: 1.20.5
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.20.5/.kapkan/game/versions/1.20.5/1.20.5.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.20.5
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 1.20.5: PASS; intermediary=true. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 1.20.4…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.4
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.20.4
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.20.4/.kapkan/game
+Selected base version: 1.20.4
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.20.4
+Resolved Minecraft base: 1.20.4
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.20.4/.kapkan/game/versions/1.20.4/1.20.4.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.20.4
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 1.20.4…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.4
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.20.4…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.4
+Fabric: ready
+Fabric: checking compatible loader for 1.20.4…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.4
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.20.4…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.4
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.20.4
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.20.4/.kapkan/game
+Selected base version: 1.20.4
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.20.4
+Resolved Minecraft base: 1.20.4
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.20.4/.kapkan/game/versions/1.20.4/1.20.4.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.20.4
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 1.20.4: PASS; intermediary=true. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 1.20.3…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.3
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.20.3
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.20.3/.kapkan/game
+Selected base version: 1.20.3
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.20.3
+Resolved Minecraft base: 1.20.3
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.20.3/.kapkan/game/versions/1.20.3/1.20.3.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.20.3
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 1.20.3…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.3
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.20.3…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.3
+Fabric: ready
+Fabric: checking compatible loader for 1.20.3…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.3
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.20.3…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.3
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.20.3
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.20.3/.kapkan/game
+Selected base version: 1.20.3
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.20.3
+Resolved Minecraft base: 1.20.3
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.20.3/.kapkan/game/versions/1.20.3/1.20.3.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.20.3
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 1.20.3: PASS; intermediary=true. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 1.20.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.2
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.20.2
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.20.2/.kapkan/game
+Selected base version: 1.20.2
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.20.2
+Resolved Minecraft base: 1.20.2
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.20.2/.kapkan/game/versions/1.20.2/1.20.2.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.20.2
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 1.20.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.2
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.20.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.2
+Fabric: ready
+Fabric: checking compatible loader for 1.20.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.2
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.20.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.2
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.20.2
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.20.2/.kapkan/game
+Selected base version: 1.20.2
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.20.2
+Resolved Minecraft base: 1.20.2
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.20.2/.kapkan/game/versions/1.20.2/1.20.2.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.20.2
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 1.20.2: PASS; intermediary=true. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 1.20.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.1
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.20.1
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.20.1/.kapkan/game
+Selected base version: 1.20.1
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.20.1
+Resolved Minecraft base: 1.20.1
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.20.1/.kapkan/game/versions/1.20.1/1.20.1.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.20.1
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 1.20.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.1
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.20.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.1
+Fabric: ready
+Fabric: checking compatible loader for 1.20.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.1
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.20.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20.1
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.20.1
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.20.1/.kapkan/game
+Selected base version: 1.20.1
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.20.1
+Resolved Minecraft base: 1.20.1
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.20.1/.kapkan/game/versions/1.20.1/1.20.1.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.20.1
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 1.20.1: PASS; intermediary=true. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 1.20…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.20
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.20/.kapkan/game
+Selected base version: 1.20
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.20
+Resolved Minecraft base: 1.20
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.20/.kapkan/game/versions/1.20/1.20.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.20
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 1.20…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.20…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20
+Fabric: ready
+Fabric: checking compatible loader for 1.20…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.20…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.20
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.20
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.20/.kapkan/game
+Selected base version: 1.20
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.20
+Resolved Minecraft base: 1.20
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.20/.kapkan/game/versions/1.20/1.20.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.20
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 1.20: PASS; intermediary=true. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 1.19.4…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.19.4
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.19.4
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.19.4/.kapkan/game
+Selected base version: 1.19.4
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.19.4
+Resolved Minecraft base: 1.19.4
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.19.4/.kapkan/game/versions/1.19.4/1.19.4.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.19.4
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 1.19.4…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.19.4
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.19.4…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.19.4
+Fabric: ready
+Fabric: checking compatible loader for 1.19.4…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.19.4
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.19.4…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.19.4
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.19.4
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.19.4/.kapkan/game
+Selected base version: 1.19.4
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.19.4
+Resolved Minecraft base: 1.19.4
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.19.4/.kapkan/game/versions/1.19.4/1.19.4.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.19.4
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 1.19.4: PASS; intermediary=true. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 1.19.3…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.19.3
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.19.3
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.19.3/.kapkan/game
+Selected base version: 1.19.3
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.19.3
+Resolved Minecraft base: 1.19.3
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.19.3/.kapkan/game/versions/1.19.3/1.19.3.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.19.3
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 1.19.3…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.19.3
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.19.3…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.19.3
+Fabric: ready
+Fabric: checking compatible loader for 1.19.3…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.19.3
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.19.3…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.19.3
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.19.3
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.19.3/.kapkan/game
+Selected base version: 1.19.3
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.19.3
+Resolved Minecraft base: 1.19.3
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.19.3/.kapkan/game/versions/1.19.3/1.19.3.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.19.3
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 1.19.3: PASS; intermediary=true. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 1.19.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.19.2
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.19.2
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.19.2/.kapkan/game
+Selected base version: 1.19.2
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.19.2
+Resolved Minecraft base: 1.19.2
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.19.2/.kapkan/game/versions/1.19.2/1.19.2.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.19.2
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 1.19.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.19.2
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.19.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.19.2
+Fabric: ready
+Fabric: checking compatible loader for 1.19.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.19.2
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.19.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.19.2
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.19.2
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.19.2/.kapkan/game
+Selected base version: 1.19.2
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.19.2
+Resolved Minecraft base: 1.19.2
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.19.2/.kapkan/game/versions/1.19.2/1.19.2.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.19.2
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 1.19.2: PASS; intermediary=true. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 1.19.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.19.1
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.19.1
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.19.1/.kapkan/game
+Selected base version: 1.19.1
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.19.1
+Resolved Minecraft base: 1.19.1
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.19.1/.kapkan/game/versions/1.19.1/1.19.1.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.19.1
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 1.19.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.19.1
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.19.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.19.1
+Fabric: ready
+Fabric: checking compatible loader for 1.19.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.19.1
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.19.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.19.1
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.19.1
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.19.1/.kapkan/game
+Selected base version: 1.19.1
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.19.1
+Resolved Minecraft base: 1.19.1
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.19.1/.kapkan/game/versions/1.19.1/1.19.1.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.19.1
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 1.19.1: PASS; intermediary=true. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 1.19…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.19
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.19
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.19/.kapkan/game
+Selected base version: 1.19
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.19
+Resolved Minecraft base: 1.19
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.19/.kapkan/game/versions/1.19/1.19.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.19
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 1.19…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.19
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.19…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.19
+Fabric: ready
+Fabric: checking compatible loader for 1.19…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.19
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.19…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.19
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.19
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.19/.kapkan/game
+Selected base version: 1.19
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.19
+Resolved Minecraft base: 1.19
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.19/.kapkan/game/versions/1.19/1.19.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.19
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 1.19: PASS; intermediary=true. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 1.18.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.18.2
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.18.2
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.18.2/.kapkan/game
+Selected base version: 1.18.2
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.18.2
+Resolved Minecraft base: 1.18.2
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.18.2/.kapkan/game/versions/1.18.2/1.18.2.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.18.2
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 1.18.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.18.2
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.18.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.18.2
+Fabric: ready
+Fabric: checking compatible loader for 1.18.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.18.2
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.18.2…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.18.2
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.18.2
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.18.2/.kapkan/game
+Selected base version: 1.18.2
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.18.2
+Resolved Minecraft base: 1.18.2
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.18.2/.kapkan/game/versions/1.18.2/1.18.2.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.18.2
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 1.18.2: PASS; intermediary=true. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 1.18.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.18.1
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.18.1
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.18.1/.kapkan/game
+Selected base version: 1.18.1
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.18.1
+Resolved Minecraft base: 1.18.1
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.18.1/.kapkan/game/versions/1.18.1/1.18.1.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.18.1
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 1.18.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.18.1
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.18.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.18.1
+Fabric: ready
+Fabric: checking compatible loader for 1.18.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.18.1
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.18.1…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.18.1
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.18.1
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.18.1/.kapkan/game
+Selected base version: 1.18.1
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.18.1
+Resolved Minecraft base: 1.18.1
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.18.1/.kapkan/game/versions/1.18.1/1.18.1.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.18.1
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 1.18.1: PASS; intermediary=true. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 1.18…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.18
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.18
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.18/.kapkan/game
+Selected base version: 1.18
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.18
+Resolved Minecraft base: 1.18
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.18/.kapkan/game/versions/1.18/1.18.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.18
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 1.18…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.18
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.18…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.18
+Fabric: ready
+Fabric: checking compatible loader for 1.18…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.18
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 1.18…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-1.18
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:1.18
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.18/.kapkan/game
+Selected base version: 1.18
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-1.18
+Resolved Minecraft base: 1.18
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/1.18/.kapkan/game/versions/1.18/1.18.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-1.18
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 1.18: PASS; intermediary=true. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 26.1-snapshot-5…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-26.1-snapshot-5
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 7 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/26.1-snapshot-5/.kapkan/game
+Selected base version: 26.1-snapshot-5
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-26.1-snapshot-5
+Resolved Minecraft base: 26.1-snapshot-5
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary: not required by resolved profile
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/26.1-snapshot-5/.kapkan/game/versions/26.1-snapshot-5/26.1-snapshot-5.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-26.1-snapshot-5
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 26.1-snapshot-5…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-26.1-snapshot-5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 26.1-snapshot-5…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-26.1-snapshot-5
+Fabric: ready
+Fabric: checking compatible loader for 26.1-snapshot-5…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-26.1-snapshot-5
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 26.1-snapshot-5…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-26.1-snapshot-5
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 7 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/26.1-snapshot-5/.kapkan/game
+Selected base version: 26.1-snapshot-5
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-26.1-snapshot-5
+Resolved Minecraft base: 26.1-snapshot-5
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary: not required by resolved profile
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/26.1-snapshot-5/.kapkan/game/versions/26.1-snapshot-5/26.1-snapshot-5.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-26.1-snapshot-5
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 26.1-snapshot-5: PASS; intermediary=false. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 25w14a…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-25w14a
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:25w14a
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/25w14a/.kapkan/game
+Selected base version: 25w14a
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-25w14a
+Resolved Minecraft base: 25w14a
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/25w14a/.kapkan/game/versions/25w14a/25w14a.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-25w14a
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 25w14a…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-25w14a
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 25w14a…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-25w14a
+Fabric: ready
+Fabric: checking compatible loader for 25w14a…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-25w14a
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 25w14a…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-25w14a
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:25w14a
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/25w14a/.kapkan/game
+Selected base version: 25w14a
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-25w14a
+Resolved Minecraft base: 25w14a
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/25w14a/.kapkan/game/versions/25w14a/25w14a.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-25w14a
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 25w14a: PASS; intermediary=true. NOT a Minecraft gameplay test.
+Fabric: checking compatible loader for 21w40a…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-21w40a
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:21w40a
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/21w40a/.kapkan/game
+Selected base version: 21w40a
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-21w40a
+Resolved Minecraft base: 21w40a
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/21w40a/.kapkan/game/versions/21w40a/21w40a.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-21w40a
+KapKan badges: this version is not supported; continuing normal launch.
+Fabric: checking compatible loader for 21w40a…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-21w40a
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 21w40a…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-21w40a
+Fabric: ready
+Fabric: checking compatible loader for 21w40a…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-21w40a
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: verified 1 downloaded libraries
+Fabric: ready
+Fabric: checking compatible loader for 21w40a…
+Fabric: using loader 0.19.5
+Fabric: installing launcher profile fabric-loader-0.19.5-21w40a
+Fabric: downloading net.fabricmc:fabric-loader:0.19.5
+Fabric: downloading net.fabricmc:sponge-mixin:0.17.4+mixin.0.8.7
+Fabric: downloading net.fabricmc:intermediary:21w40a
+Fabric: downloading org.ow2.asm:asm:9.10.1
+Fabric: downloading org.ow2.asm:asm-analysis:9.10.1
+Fabric: downloading org.ow2.asm:asm-commons:9.10.1
+Fabric: downloading org.ow2.asm:asm-tree:9.10.1
+Fabric: downloading org.ow2.asm:asm-util:9.10.1
+Fabric: verified 8 downloaded libraries
+Fabric: ready
+Fabric root: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/21w40a/.kapkan/game
+Selected base version: 21w40a
+Loader: Fabric
+Resolved launch profile: fabric-loader-0.19.5-21w40a
+Resolved Minecraft base: 21w40a
+Fabric profile valid: yes
+Fabric loader valid: yes
+Fabric intermediary valid: yes
+Base client jar: /tmp/kapkan-fabric-flow-with-spaces-6192511079091459762/21w40a/.kapkan/game/versions/21w40a/21w40a.jar
+KapKan: preparing Java 21 / x64 for fabric-loader-0.19.5-21w40a
+KapKan badges: this version is not supported; continuing normal launch.
+FABRIC FLOW FIXTURE 21w40a: PASS; intermediary=true. NOT a Minecraft gameplay test.
+FABRIC FLOW TEST: PASS (1594 assertions; 34 version-ID fixtures)

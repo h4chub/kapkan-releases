@@ -1,0 +1,38 @@
+{
+  "release": "1.0.3",
+  "build_id": "mod-folders-12",
+  "publication": "HOLD",
+  "changed_baseline_classes": [
+    "gg/kapkan/launcher/install/BaseGameInstallerService.class",
+    "gg/kapkan/launcher/launch/FabricDetector.class",
+    "gg/kapkan/launcher/launch/FabricInstallerService.class",
+    "gg/kapkan/launcher/launch/LaunchPlan.class",
+    "gg/kapkan/launcher/launch/LaunchPlanBuilder.class",
+    "gg/kapkan/launcher/launch/MinecraftProcessLauncher.class",
+    "gg/kapkan/launcher/launch/ModLoaderInstallerService.class",
+    "gg/kapkan/launcher/launch/VersionProfileLoader.class",
+    "gg/kapkan/launcher/system/HardwareProbe.class",
+    "gg/kapkan/v23/KapKanAutoTunePolicy.class",
+    "gg/kapkan/v23/KapKanV23Launcher$App$4.class",
+    "gg/kapkan/v23/KapKanV23Launcher$MicrosoftAuthService.class"
+  ],
+  "preserved_image_assets": [
+    "gg/kapkan/launcher/ui/assets/kapkan-background.png",
+    "gg/kapkan/v23/assets/appicon.png",
+    "gg/kapkan/v23/assets/bg1.png",
+    "gg/kapkan/v23/assets/bg2.png",
+    "gg/kapkan/v23/assets/bg3.png"
+  ],
+  "application_entries": 269,
+  "native_device_tests": "not performed",
+  "artifacts": {
+    "KapKan-Windows-1.0.3.zip": {
+      "bytes": 29422965,
+      "sha256": "df247f4a025354407a5de492a2918418d751192961876302b4f3a630a00b3b4e"
+    },
+    "KapKan-1.0.3-Setup.exe": {
+      "bytes": 33058304,
+      "sha256": "caaaa1fb9feb108beb4ad04e53701aa323618a555c22ddb3a4558150e0c41cb1"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+KapKan 1.0.4 release candidate: built and checked. Public push blocked by connected GitHub/Vercel account access. Native Mac/Windows installation and real Minecraft gameplay not run for this exact build. See QA-REPORT.md.

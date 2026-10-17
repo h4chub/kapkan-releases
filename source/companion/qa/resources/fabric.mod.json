@@ -1,0 +1,1 @@
+{"schemaVersion": 1, "id": "kapkan-live-qa", "version": "1.0.0", "name": "TEST ONLY KapKan live QA", "environment": "client", "mixins": ["kapkan-live-qa.mixins.json"], "depends": {"fabricloader": ">=0.19.5", "minecraft": "26.1.2", "java": ">=25"}, "entrypoints": {"preLaunch": ["gg.kapkan.qaloader.LoadHooks"]}}

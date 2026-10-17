@@ -1,0 +1,46 @@
+{
+  "version": "1.0.3",
+  "tag": "v1.0.3-beta.1",
+  "repository": "h4chub/kapkan-releases",
+  "status": "PUBLISHED_PUBLIC_BETA",
+  "authorized_by": "User: does that work? if yes, then push",
+  "public_assets": [
+    "KapKan-1.0.3-Setup.exe",
+    "KapKan-macOS-1.0.3.zip",
+    "SHA256SUMS.txt"
+  ],
+  "private_source_archive": "KapKan-1.0.3-Sources.zip",
+  "website": "https://kapkan-website.vercel.app/",
+  "release_url": "https://github.com/h4chub/kapkan-releases/releases/tag/v1.0.3-beta.1",
+  "published_at": "2026-10-03T16:29:54Z",
+  "verified_at": "2026-10-03T16:31:09.838393+00:00",
+  "assets": [
+    {
+      "name": "KapKan-macOS-1.0.3.zip",
+      "url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.3-beta.1/KapKan-macOS-1.0.3.zip",
+      "size": 32221616,
+      "sha256": "aa3fc195810860490d01b4532941fbd31e731f49aeb860259617eac06af50e88",
+      "verifiedPublicDownload": true
+    },
+    {
+      "name": "KapKan-1.0.3-Setup.exe",
+      "url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.3-beta.1/KapKan-1.0.3-Setup.exe",
+      "size": 33056256,
+      "sha256": "2270e403268d476618763e1cef21d27e298fae3c8064c513fc124ce2f005367b",
+      "verifiedPublicDownload": true
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.3-beta.1/SHA256SUMS.txt",
+      "size": 178,
+      "sha256": "cadbd7744bce40cd42b6cbecf03503a6f47815216328b8ddde505a10a1bf6b68",
+      "verifiedPublicDownload": true
+    }
+  ],
+  "live_feed_selection_checks": [
+    "Release discovery: PASS (2 platforms; v1.0.2-beta.1 -> v1.0.3-beta.1)",
+    "Release discovery: PASS (2 platforms; v1.0.3-beta.1 -> none)"
+  ],
+  "website_deployed": false,
+  "website_blocker": "Vercel connector 403: re-authentication to nexushub00s-projects scope required."
+}

@@ -1,0 +1,19 @@
+Mod profile tests: PASS (61 checks)
+Release policy/architecture tests: PASS (33 assertions)
+Windows Fabric classpath regression: PASS (7 assertions)
+PASS incomplete install readiness, hashes, assets, controls/mod preservation
+PASS exact Forge version targeting, inheritance override, selectors, null logger
+PASS packaged logger privacy; dummy values only, launch arguments unchanged
+Exception in thread "main" java.net.SocketException: Operation not permitted
+	at java.base/sun.nio.ch.Net.socket0(Native Method)
+	at java.base/sun.nio.ch.Net.serverSocket(Net.java:556)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.<init>(ServerSocketChannelImpl.java:135)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.<init>(ServerSocketChannelImpl.java:116)
+	at java.base/sun.nio.ch.SelectorProviderImpl.openServerSocketChannel(SelectorProviderImpl.java:72)
+	at java.base/java.nio.channels.ServerSocketChannel.open(ServerSocketChannel.java:145)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl.<init>(ServerImpl.java:143)
+	at jdk.httpserver/sun.net.httpserver.HttpServerImpl.<init>(HttpServerImpl.java:50)
+	at jdk.httpserver/sun.net.httpserver.DefaultHttpServerProvider.createHttpServer(DefaultHttpServerProvider.java:35)
+	at jdk.httpserver/com.sun.net.httpserver.HttpServer.create(HttpServer.java:152)
+	at gg.kapkan.release.HardeningSelfTest.network(HardeningSelfTest.java:102)
+	at gg.kapkan.release.HardeningSelfTest.main(HardeningSelfTest.java:164)

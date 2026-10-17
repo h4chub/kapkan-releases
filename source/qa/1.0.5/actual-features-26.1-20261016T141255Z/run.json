@@ -1,0 +1,14 @@
+{
+  "minecraft": "26.1",
+  "module": "/workspace/scratch/d3a6b894bee6/kapkan105/KapKan-1.0.4-Sources/app/KapKan-1.0.5-mc26.1-fabric.jar",
+  "moduleSha256": "38a34fbece91c1cb197a842f8543224cf4f2c736181431060ee73e60f7c5cdb8",
+  "java": "/workspace/scratch/d3a6b894bee6/toolchains105/jdk25/bin/java",
+  "runtime": "Linux Mesa llvmpipe software OpenGL / Xvfb",
+  "clients": 1,
+  "server": "Private localhost Fabric server; isolated offline QA identities",
+  "scope": "Actual client processes, no fixture players",
+  "serverPort": "25579",
+  "display": "106",
+  "clientHeap": "900m",
+  "serverHeap": "700m"
+}

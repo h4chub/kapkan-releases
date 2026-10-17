@@ -1,0 +1,14 @@
+[
+  {
+    "log": "qa/1.0.5/launcher/CompanionIntegrationTest-synthetic.log",
+    "result": "Companion integration: 82 checks passed (synthetic game-folder fixtures).",
+    "passed": true,
+    "scope": "launcher migration fixtures with custom mods directory link, not in-game Minecraft"
+  },
+  {
+    "log": "qa/1.0.5/launcher/CompanionIntegrationTest-built-jar-fixtures.log",
+    "result": "Companion integration: 82 checks passed (synthetic game-folder fixtures).",
+    "passed": true,
+    "scope": "launcher migration fixtures with custom mods directory link, not in-game Minecraft"
+  }
+]

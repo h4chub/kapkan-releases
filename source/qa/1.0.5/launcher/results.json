@@ -1,0 +1,44 @@
+[
+  {
+    "test": "gg.kapkan.v23.ReleaseSelfTest",
+    "exit_code": 0,
+    "seconds": 0.114,
+    "log": "qa/1.0.5/launcher/ReleaseSelfTest.log"
+  },
+  {
+    "test": "gg.kapkan.release.FirstInstallTest",
+    "exit_code": 0,
+    "seconds": 3.197,
+    "log": "qa/1.0.5/launcher/FirstInstallTest.log"
+  },
+  {
+    "test": "gg.kapkan.release.DownloadRecoveryTest",
+    "exit_code": 0,
+    "seconds": 4.125,
+    "log": "qa/1.0.5/launcher/DownloadRecoveryTest.log"
+  },
+  {
+    "test": "gg.kapkan.release.ModProfilesTest",
+    "exit_code": 0,
+    "seconds": 0.226,
+    "log": "qa/1.0.5/launcher/ModProfilesTest.log"
+  },
+  {
+    "test": "gg.kapkan.release.WindowsFabricClasspathTest",
+    "exit_code": 0,
+    "seconds": 0.053,
+    "log": "qa/1.0.5/launcher/WindowsFabricClasspathTest.log"
+  },
+  {
+    "test": "gg.kapkan.release.HardeningSelfTest",
+    "exit_code": 0,
+    "seconds": 5.878,
+    "log": "qa/1.0.5/launcher/HardeningSelfTest.log"
+  },
+  {
+    "test": "gg.kapkan.release.LauncherMaintenanceTest",
+    "exit_code": 0,
+    "seconds": 0.212,
+    "log": "qa/1.0.5/launcher/LauncherMaintenanceTest.log"
+  }
+]

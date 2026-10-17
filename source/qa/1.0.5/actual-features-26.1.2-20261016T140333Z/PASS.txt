@@ -1,0 +1,1 @@
+One actual Minecraft features client verified on Minecraft 26.1.2 Fabric against dedicated localhost server. See logs for assertion scope.

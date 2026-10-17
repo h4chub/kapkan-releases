@@ -1,0 +1,118 @@
+{
+  "schema": 2,
+  "release": "1.0.5",
+  "fabric_loader": "0.19.5",
+  "loader_sha256": "93044e4dd46de5d8136701292f05e868da096d2c9fddb4793e4fdbcc63efc695",
+  "mixin": "0.17.4+mixin.0.8.7",
+  "mixin_sha256": "1f0ae44db7295f8626f33b1dc0ad7f043d8954a8d6847247875fcc5dfcecc934",
+  "targets": {
+    "26.1": {
+      "minecraft": "26.1",
+      "java": 25,
+      "metadata_url": "https://piston-meta.mojang.com/v1/packages/8667c5278895a6ae31e05ab99ba044ef33fca092/26.1.json",
+      "metadata_sha1": "8667c5278895a6ae31e05ab99ba044ef33fca092",
+      "client": {
+        "sha1": "191771837687b766537a8c4607cb6fad79c533a1",
+        "size": 38113398,
+        "url": "https://piston-data.mojang.com/v1/objects/191771837687b766537a8c4607cb6fad79c533a1/client.jar"
+      },
+      "fabric_api": {
+        "version": "0.145.1+26.1",
+        "url": "https://maven.fabricmc.net/net/fabricmc/fabric-api/fabric-api/0.145.1+26.1/fabric-api-0.145.1+26.1.jar",
+        "sha256": "f80ee0909d820649d5b1b31c74f2ebd503530a0ed163447a4a5779b9fbe8716e",
+        "modules": [
+          {
+            "id": "fabric-api-base",
+            "version": "2.0.3+ece0632347",
+            "path": "META-INF/jars/fabric-api-base-2.0.3+ece0632347.jar",
+            "sha256": "f157584798d315166ffe77797157afb3588ff99471ab005d55fa590da4380038"
+          },
+          {
+            "id": "fabric-lifecycle-events-v1",
+            "version": "4.0.6+a9b9c17647",
+            "path": "META-INF/jars/fabric-lifecycle-events-v1-4.0.6+a9b9c17647.jar",
+            "sha256": "f0efef522d3df185c432a077180018fa2f9d5a8fe611adef64c1a19ae520c11c"
+          },
+          {
+            "id": "fabric-networking-api-v1",
+            "version": "6.3.0+50a808ce47",
+            "path": "META-INF/jars/fabric-networking-api-v1-6.3.0+50a808ce47.jar",
+            "sha256": "7a2ebab66468f17f3f2fed1fbbde47b446c02604ba538885b8373334ee3641fc"
+          }
+        ]
+      }
+    },
+    "26.1.1": {
+      "minecraft": "26.1.1",
+      "java": 25,
+      "metadata_url": "https://piston-meta.mojang.com/v1/packages/3a5e8b26e76711c22ce8391be68ada73983f2b95/26.1.1.json",
+      "metadata_sha1": "3a5e8b26e76711c22ce8391be68ada73983f2b95",
+      "client": {
+        "sha1": "377031a9e733ba8ab4d355959a8f6fb8eb707556",
+        "size": 38113231,
+        "url": "https://piston-data.mojang.com/v1/objects/377031a9e733ba8ab4d355959a8f6fb8eb707556/client.jar"
+      },
+      "fabric_api": {
+        "version": "0.145.4+26.1.1",
+        "url": "https://maven.fabricmc.net/net/fabricmc/fabric-api/fabric-api/0.145.4+26.1.1/fabric-api-0.145.4+26.1.1.jar",
+        "sha256": "e4f2cb1d89efb61896eb407c3c02a46d4931e5aad64350e2d8ba2981e3f95a79",
+        "modules": [
+          {
+            "id": "fabric-api-base",
+            "version": "2.0.3+ece06323b3",
+            "path": "META-INF/jars/fabric-api-base-2.0.3+ece06323b3.jar",
+            "sha256": "42b9ecde9c65f2fe972cb1aad6f5ba8ee41ace2ae3d62bb4bbfa8539ef2c6da1"
+          },
+          {
+            "id": "fabric-lifecycle-events-v1",
+            "version": "4.0.6+a9b9c176b3",
+            "path": "META-INF/jars/fabric-lifecycle-events-v1-4.0.6+a9b9c176b3.jar",
+            "sha256": "2fbe6ede04bfcd4fa9540eeed5fc805306129eeec44bd0d759b158bb3340e1b7"
+          },
+          {
+            "id": "fabric-networking-api-v1",
+            "version": "6.3.0+50a808ceb3",
+            "path": "META-INF/jars/fabric-networking-api-v1-6.3.0+50a808ceb3.jar",
+            "sha256": "04927d2327850690e7823a4486ac2bfba9e18d9fc84f5852990d86448516e68e"
+          }
+        ]
+      }
+    },
+    "26.1.2": {
+      "minecraft": "26.1.2",
+      "java": 25,
+      "metadata_url": "https://piston-meta.mojang.com/v1/packages/8cca2c0efc47ef22351e5073bb1f5e7ab339279b/26.1.2.json",
+      "metadata_sha1": "8cca2c0efc47ef22351e5073bb1f5e7ab339279b",
+      "client": {
+        "sha1": "4e618f09a0c649dde3fdf829df443ce0b8831e65",
+        "size": 38113927,
+        "url": "https://piston-data.mojang.com/v1/objects/4e618f09a0c649dde3fdf829df443ce0b8831e65/client.jar"
+      },
+      "fabric_api": {
+        "version": "0.155.3+26.1.2",
+        "url": "https://maven.fabricmc.net/net/fabricmc/fabric-api/fabric-api/0.155.3+26.1.2/fabric-api-0.155.3+26.1.2.jar",
+        "sha256": "7fe7bea3dbb7b2e9ff998ab583130cd62fab22ab8a5229656ff14b2e648c91dd",
+        "modules": [
+          {
+            "id": "fabric-api-base",
+            "version": "2.0.3+ece063234c",
+            "path": "META-INF/jars/fabric-api-base-2.0.3+ece063234c.jar",
+            "sha256": "3fb11050311da9df335e350971b4bd40a7149c7b7552c382b01ef38088019632"
+          },
+          {
+            "id": "fabric-lifecycle-events-v1",
+            "version": "4.1.1+df84eb3d4c",
+            "path": "META-INF/jars/fabric-lifecycle-events-v1-4.1.1+df84eb3d4c.jar",
+            "sha256": "8ab0761f61d67722bdd75a56f0fd907f74feac95413d0f2d2de3a0554bf6627a"
+          },
+          {
+            "id": "fabric-networking-api-v1",
+            "version": "6.3.2+a217cccf4c",
+            "path": "META-INF/jars/fabric-networking-api-v1-6.3.2+a217cccf4c.jar",
+            "sha256": "04c7daa75dd876c7727a046d1f33d8f27f19c9aa4128c8f46a05ab60cb9aca0c"
+          }
+        ]
+      }
+    }
+  }
+}
