@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-17T17:49:50.744999+00:00",
+  "runtime": {
+    "name": "Azul Zulu JRE21.0.12.1+1-LTS, macOS aarch64",
+    "archiveSha256": "611673ab332d58e6d3a61506eaafbfb13e9f9b0e01452067a9cc8b2f470289fb",
+    "javaExecutableSha256": "27de1f0773d55b237fb6ed4288bec8a285a5b7ff973c4b6ba9c59edcc75c2d9e"
+  },
+  "launcherJarSha256": "320c172e968123faf0454c9927a610f811524ef70b0401ca37a389b7e63948f1",
+  "probeSha256": "ce23d0f5dc36bb79c8370def694c8256a78641ca0d90086e930581eb1854bd55",
+  "scope": "Final ImmediatelyFast-only launcher acceptance: real native macOS Swing UI with isolated home, game folder and Java preference roots; own-window paint only; no game or microphone access.",
+  "checks": [
+    "launcher frame visible",
+    "Play/Accounts/Settings controls present",
+    "Use rendering optimizations checkbox present",
+    "only this test process windows closed"
+  ],
+  "processExit": 0,
+  "microphoneConsentRequested": false,
+  "audioCaptured": false,
+  "existingUserProfilesModified": false,
+  "log": "zulu21-if-only-launcher-ui.log"
+}

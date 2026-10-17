@@ -1,0 +1,42 @@
+{
+  "reviewer": "recover_context",
+  "approvedPrepOnlyReuse": true,
+  "oldHarnessSha256": "edd1ca94196e6a6663b6cf841d9075a7895c145c172721a051380866301e090d",
+  "newHarnessSha256": "35cf0e9b6e4f0b635cfc529686f3597977945ff312c99e107afca8ac06bba526",
+  "rationale": "The exact frozen old source matches the prior run receipts. The only changes add mouse release after scene setup, reset a preparation flag on eligibility loss, and restore canonical current/prior player yaw and pitch only while !measuring after eligibility passes. This resets the eligibility timer and returns before a full 30-second warmup. No orientation or input mutation is reachable during a measured sample. The eligibility predicate, warmup/measurement/statistics tail, and all camera/player/entity/state helpers are byte-for-byte unchanged.",
+  "identicalSections": [
+    {
+      "section": "eligibility predicate",
+      "sha256": "016b94f3535091543bdcf813bb6fed3f8f4491dd90d405fd80500ae3285bded5"
+    },
+    {
+      "section": "from if (eligibleSince == 0) through measurement completion",
+      "sha256": "4df2f57554b3b7100a11810806ba26d1153f931bb4869ec29eb46f2d12f40f10"
+    },
+    {
+      "section": "waitLog and camera/player/near/entities/state/fail helpers",
+      "sha256": "0284ac02341083692628d90528749c158890c92ab249cc3770a6b0f64356401b"
+    }
+  ],
+  "retainedControls": [
+    {
+      "folder": "ablation-20261017T172649Z/01-baseline105",
+      "averageFps": 125.776,
+      "moduleSha256": "4671b4ea573f7e4742ff03e30eaed562d6df3d828f4f1c33463682b987cdd2c9"
+    },
+    {
+      "folder": "ablation-20261017T172936Z/02-bare106",
+      "averageFps": 144.149,
+      "moduleSha256": "a747bff50be125397a77fc4be7155f98485a049676c2a8616d8ce03aeb2f5f41"
+    }
+  ],
+  "retainedControlStateSha256": "cd568a267686b1ee62ef24dfd6ea47d8bc94ae389a83d27bdbde5d869671453d",
+  "retainedStartEndAndCrossControlStateExact": true,
+  "runtime": "macOS aarch64 native OpenGL, OracleJava25.0.2, Fabric0.19.5",
+  "conditions": [
+    "Preserve each earlier run's original harness hash and source/probe artifacts; record the prep-only revision explicitly.",
+    "New samples must pass every existing measurement guard and exact cross-run state equality.",
+    "Keep the IF-only sample rejected for its different yaw/pitch excluded.",
+    "Assess closing control drift before choosing defaults; this approval does not establish an FPS gain."
+  ]
+}

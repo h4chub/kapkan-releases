@@ -20,13 +20,7 @@ public final class PerformanceIntegration {
     private static final List<Asset> ASSETS = List.of(
         new Asset("immediatelyfast", "1.15.3+26.1", "ImmediatelyFast-Fabric-1.15.3+26.1.jar", 310057,
             "b665037aee8e76e330f068f640b340b97ce8c0c0e940dfccda8a5b00f772dfa9b2d20594bb950e4f2595b359ad3c27190a4d998da28d4507a9747ab507980d11",
-            Set.of("optifabric", "canvas", "vulkanmod")),
-        new Asset("lithium", "0.24.7+mc26.1.2", "lithium-fabric-0.24.7+mc26.1.2.jar", 912821,
-            "37240bdbf93c19fdc6aa632d89223639f0ef9d923ee1793b33d624946b0482cc972834049ed07d71db3494e16c9de68e755937aac7c4ac5d7291bd38c1425899",
-            Set.of("optifabric")),
-        new Asset("ferritecore", "9.0.0", "ferritecore-9.0.0-fabric.jar", 72677,
-            "d81fa97e11784c19d42f89c2f433831d007603dd7193cee45fa177e4a6a9c52b384b198586e04a0f7f63cd996fed713322578bde9a8db57e1188854ae5cbe584",
-            Set.of("hydrogen")));
+            Set.of("optifabric", "canvas", "vulkanmod")));
     private PerformanceIntegration() {}
 
     private static Path settings() {

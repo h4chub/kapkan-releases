@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "kapkanRelease": "1.0.6",
-  "status": "Verified official binaries and corresponding sources; all three exact targets entered native macOS single-player worlds with bundle. No general FPS claim.",
+  "status": "Selected ImmediatelyFast-only bundle: official binary/source hashes, 56 integration fixtures and native macOS Zulu25 world smoke on all three exact targets pass. No general FPS claim.",
   "upstreamMetadataRetrievedUTC": "2026-10-17T16:35:36Z",
   "targets": [
     "26.1",
@@ -60,109 +60,35 @@
         "sha512": "e58f13ef5b1bf07860bef7578612ba5596e20bcda18108e33d8a0c5a56303f099b29031e71eef5fb4f517a431bd44e6150f4c8f3a8b01c8391ef2faa025f8417",
         "sizeBytes": 188769
       }
-    },
-    {
-      "id": "lithium",
-      "name": "Lithium",
-      "version": "0.24.7+mc26.1.2",
-      "projectId": "gvQqBUqZ",
-      "versionId": "Oqq8TOAV",
-      "license": "LGPL-3.0-only",
-      "targets": [
-        "26.1",
-        "26.1.1",
-        "26.1.2"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "binary": {
-        "path": "mods/lithium-fabric-0.24.7+mc26.1.2.jar",
-        "url": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/Oqq8TOAV/lithium-fabric-0.24.7%2Bmc26.1.2.jar",
-        "sizeBytes": 912821,
-        "sha512": "37240bdbf93c19fdc6aa632d89223639f0ef9d923ee1793b33d624946b0482cc972834049ed07d71db3494e16c9de68e755937aac7c4ac5d7291bd38c1425899",
-        "sha1": "7959f418969ee8bfe50c0f21f352ed08b382f133"
-      },
-      "declaredDependencies": {
-        "fabricloader": ">=0.15.1",
-        "minecraft": "~26.1"
-      },
-      "declaredBreaks": {
-        "optifabric": "*"
-      },
-      "nestedJars": [],
-      "upstreamApiVersion": "https://api.modrinth.com/v2/version/Oqq8TOAV",
-      "source": {
-        "repository": "https://github.com/CaffeineMC/lithium",
-        "tag": "mc26.1.2-0.24.7",
-        "commit": "f230894b7f46b8f48f8ea9f7ed085a1e2d3cd59f",
-        "sourceUrl": "https://api.github.com/repos/CaffeineMC/lithium/zipball/f230894b7f46b8f48f8ea9f7ed085a1e2d3cd59f",
-        "archive": "lithium-mc26.1.2-0.24.7-source.zip",
-        "sha512": "88954c7f208337b6df94d223ddcb05abd704220db72e2418ca61318ade9eb064fba983fe39fc91afa36af2ea3f4d000a638fa11ff65cae5c40ec0cb3d3c84a9e",
-        "sizeBytes": 956872
-      }
-    },
-    {
-      "id": "ferritecore",
-      "name": "FerriteCore",
-      "version": "9.0.0",
-      "projectId": "uXXizFIs",
-      "versionId": "d5ddUdiB",
-      "license": "MIT",
-      "targets": [
-        "26.1",
-        "26.1.1",
-        "26.1.2"
-      ],
-      "loaders": [
-        "fabric"
-      ],
-      "binary": {
-        "path": "mods/ferritecore-9.0.0-fabric.jar",
-        "url": "https://cdn.modrinth.com/data/uXXizFIs/versions/d5ddUdiB/ferritecore-9.0.0-fabric.jar",
-        "sizeBytes": 72677,
-        "sha512": "d81fa97e11784c19d42f89c2f433831d007603dd7193cee45fa177e4a6a9c52b384b198586e04a0f7f63cd996fed713322578bde9a8db57e1188854ae5cbe584",
-        "sha1": "eac76ff0f3753422c61b2c44487d0d195d88d4bc"
-      },
-      "declaredDependencies": {
-        "fabricloader": ">=0.14.21",
-        "minecraft": ">=26.1 <27"
-      },
-      "declaredBreaks": {
-        "hydrogen": "<=0.3"
-      },
-      "nestedJars": [],
-      "upstreamApiVersion": "https://api.modrinth.com/v2/version/d5ddUdiB",
-      "source": {
-        "repository": "https://github.com/malte0811/FerriteCore",
-        "tag": "build-9.0.0",
-        "commit": "0cef1f2add1f1329aa6e690e8e292acd625c5c6d",
-        "sourceUrl": "https://api.github.com/repos/malte0811/FerriteCore/zipball/0cef1f2add1f1329aa6e690e8e292acd625c5c6d",
-        "archive": "ferrite-core-build-9.0.0-source.zip",
-        "sha512": "3f582b0e0c9679fcdcab5307ea1ff9ec18f6039e2497f4a6b530aea1c8a5657509b26fe2507f6f7bc86372f7eed16c68bde31f568e591b00886f8f3e103c0ec9",
-        "sizeBytes": 131741
-      }
     }
   ],
+  "verificationNotes": "The selected bundle and final exact rebuilt launcher have their own receipts. Earlier three-module candidate receipts under qa/1.0.6/macos-permissions/historical-three-module-candidate are historical evidence; they are not current narrowed-bundle acceptance.",
   "nativeRuntimeVerification": {
-    "platform": "macOS arm64 native OpenGL; Java25; Fabric0.19.5",
-    "scope": "Fresh isolated single-player worlds with all3 optimization mods loaded. Boot/world smoke, not exhaustive gameplay/modpack or native launcher installation acceptance.",
+    "platform": "macOS arm64 native OpenGL; verified unmodified vendor Azul Zulu JRE25.0.4.1+1-LTS; Fabric0.19.5",
+    "javaExecutableSha256": "038e856d3c7b8307152b5ea440f548f74fad8e0acd3d9615983173bf451290d4",
+    "scope": "Final selected ImmediatelyFast-only bundle in fresh isolated single-player worlds. At least six consecutive clear-world seconds and rendered frames; kapkan-presence and immediatelyfast loaded, lithium and ferritecore absent. Boot/world smoke, not exhaustive gameplay, arbitrary modpack or native launcher installation acceptance. No FPS measurement.",
+    "performanceMeasured": false,
+    "evidenceIndex": "qa/1.0.6/game/final-selected-subset.json",
     "targets": {
       "26.1": {
         "status": "PASS",
         "kapkanModuleSha256": "c01579a31379f567eb19afb03969a888367bb91517d9652e9622851c1f194210",
-        "evidenceRun": "smoke-26.1-20261017T165450Z"
+        "evidenceRun": "selected-smoke-26.1-20261017T174915Z",
+        "evidenceReceipt": "qa/1.0.6/game/final-selected-subset/26.1/PASS.json"
       },
       "26.1.1": {
         "status": "PASS",
         "kapkanModuleSha256": "3d447a99b1c3bf190e9af3864f1d82a3c3978e141fa16a47fa64193d9f2c75da",
-        "evidenceRun": "smoke-26.1.1-20261017T165536Z"
+        "evidenceRun": "selected-smoke-26.1.1-20261017T174944Z",
+        "evidenceReceipt": "qa/1.0.6/game/final-selected-subset/26.1.1/PASS.json"
       },
       "26.1.2": {
         "status": "PASS",
         "kapkanModuleSha256": "a747bff50be125397a77fc4be7155f98485a049676c2a8616d8ce03aeb2f5f41",
-        "evidenceRun": "native-20261017T164958Z/candidate"
+        "evidenceRun": "selected-smoke-26.1.2-20261017T175012Z",
+        "evidenceReceipt": "qa/1.0.6/game/final-selected-subset/26.1.2/PASS.json"
       }
-    }
+    },
+    "evidenceIndexSha256": "9bf4340b836e82d3bbeca8fb365c8d5f061d63ebc0f0f8d10dcbf88519074922"
   }
 }

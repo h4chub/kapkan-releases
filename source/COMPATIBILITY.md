@@ -14,9 +14,9 @@ The launcher UI requires Java 21. Minecraft 26.1/.1/.2 require Java 25. The nati
 
 [companion/dependencies.lock.json](companion/dependencies.lock.json) pins official game metadata/client hashes, Fabric 0.19.5, Mixin and each target's API modules. Only API Base, Networking API and Lifecycle Events are embedded in the companion, with original licenses. Minecraft classes, visual assets, native libraries and Fabric Loader are build inputs and are not redistributed inside the mod.
 
-The desktop launcher separately includes unmodified ImmediatelyFast 1.15.3, Lithium 0.24.7 and FerriteCore 9.0.0. Their official metadata lists all three exact game targets. [performance/manifest.json](performance/manifest.json) pins binary hashes and corresponding source commits. Binaries, complete sources and licenses travel together in Resources/performance.
+The desktop launcher includes unmodified ImmediatelyFast 1.15.3 for optional rendering optimizations. Its official metadata lists all three exact targets. [performance/manifest.json](performance/manifest.json) pins the binary and source hashes; the exact source and full licenses accompany every shipped binary. The earlier three-module candidate and its measurements remain QA history; Lithium and FerriteCore are omitted from the final bundle.
 
-Bundled modules are enabled by default for these exact Fabric targets. **Use bundled performance modules** in Game performance disables them on the next game start. Compatible existing direct/nested/provided copies take precedence; declared/known conflicts skip the corresponding module. Uninspectable active mods cause safe omission of the bundle. No user mods directory, graphics options, controls, world or JVM memory setting is changed by this integration. Unknown modpack interactions still need testing.
+**Use rendering optimizations** is enabled by default and applies on the next game start. Compatible existing direct/nested/provided copies take precedence. Declared/known conflicts skip the addition; uninspectable active mods cause safe omission. User mods, graphics, controls, worlds and JVM memory remain unchanged. Unknown modpack interactions still need testing.
 
 Automatic cosmetic sharing requires the matching KapKan JAR on the Fabric server and clients. No public cosmetic service is deployed.
 

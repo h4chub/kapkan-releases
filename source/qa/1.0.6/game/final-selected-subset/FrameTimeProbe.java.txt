@@ -1,0 +1,49 @@
+package gg.kapkan.performanceqa;
+
+import gg.kapkan.presence.cosmetics.IntroductionScreen;
+import java.nio.file.*;
+import java.util.*;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.TitleScreen;
+import net.minecraft.world.Difficulty;
+import net.minecraft.world.level.*;
+import net.minecraft.world.level.levelgen.WorldOptions;
+import net.minecraft.world.level.levelgen.presets.WorldPresets;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.*;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+/** QA ONLY: final selected-subset runtime/world compatibility, no timing measurement. */
+@Mixin(Minecraft.class)
+public abstract class FrameTimeProbe {
+    private static boolean creating, done;
+    private static int ticks, worldSeconds, renderedFrames;
+    @Inject(method="runTick",at=@At("TAIL"))
+    private void selectedSmoke$frame(boolean renderLevel,CallbackInfo ci) {
+        Minecraft mc=(Minecraft)(Object)this;
+        if(renderLevel && mc.level!=null && mc.player!=null && mc.screen==null && mc.getOverlay()==null) renderedFrames++;
+    }
+    @Inject(method="tick",at=@At("TAIL"))
+    private void selectedSmoke$tick(CallbackInfo ci) {
+        if(done || ++ticks%20!=0)return;
+        Minecraft mc=(Minecraft)(Object)this;
+        try {
+            if(mc.screen instanceof IntroductionScreen){mc.screen.onClose();return;}
+            if(mc.player==null){
+                if(!creating && mc.screen instanceof TitleScreen && mc.getOverlay()==null){
+                    creating=true;
+                    mc.createWorldOpenFlows().createFreshLevel("KapKan selected subset smoke",new LevelSettings("KapKan selected subset smoke",GameType.CREATIVE,
+                        new LevelSettings.DifficultySettings(Difficulty.PEACEFUL,false,false),true,WorldDataConfiguration.DEFAULT),
+                        new WorldOptions(1234L,false,false),WorldPresets::createNormalWorldDimensions,mc.screen);
+                }
+                return;
+            }
+            if(mc.level==null || mc.screen!=null || mc.getOverlay()!=null || mc.getSingleplayerServer()==null){worldSeconds=0;return;}
+            if(++worldSeconds<6 || renderedFrames<30)return;
+            var ids=net.fabricmc.loader.api.FabricLoader.getInstance().getAllMods().stream().map(m->m.getMetadata().getId()).collect(java.util.stream.Collectors.toSet());
+            if(!ids.containsAll(Set.of("kapkan-presence","immediatelyfast")) || ids.contains("lithium") || ids.contains("ferritecore"))throw new AssertionError("Wrong selected subset loaded: "+ids);
+            String json="{\"status\":\"PASS\",\"minecraft\":\""+System.getProperty("kapkan.qa.version")+"\",\"world\":\"fresh isolated native Mac single-player\",\"loaded\":[\"kapkan-presence\",\"immediatelyfast\"],\"excluded\":[\"lithium\",\"ferritecore\"],\"consecutiveWorldSeconds\":"+worldSeconds+",\"renderedFramesObserved\":"+renderedFrames+",\"performanceMeasured\":false}\n";
+            Files.writeString(mc.gameDirectory.toPath().resolve("world-smoke.json"),json);done=true;mc.stop();
+        }catch(Throwable t){done=true;t.printStackTrace();try{Files.writeString(mc.gameDirectory.toPath().resolve("frame-failed.txt"),t.toString());}catch(Exception ignored){}mc.stop();}
+    }
+}

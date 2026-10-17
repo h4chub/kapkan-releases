@@ -1,0 +1,20 @@
+{
+  "kind": "baseline",
+  "moduleSha256": "4671b4ea573f7e4742ff03e30eaed562d6df3d828f4f1c33463682b987cdd2c9",
+  "injectedMods": [
+    {
+      "filename": "baseline-KapKan-1.0.5-mc26.1.2-fabric.jar",
+      "sha512": "329d29af496009a53ad5827b5fa0aee79cc80ed32c0783d6f20c9203eac1a9196d9dbf45a46ef217f572b4d4a773c3db6eaa5385a9f3e8fdb90d355d0114b056"
+    },
+    {
+      "filename": "performance-qa-only.jar",
+      "sha512": "e1332a4fdb523b194c0c7be7294bde774a3125efa03ca83c6508fc290adf3e1cbe63ead662b0170985024b1316614acf4bf22d62e0a5b0d182a15c3dce2162c8"
+    }
+  ],
+  "runtime": "macOS aarch64 native OpenGL,Java25,Fabric0.19.5",
+  "world": "fresh single-player normal terrain seed1234,200 armor stands",
+  "renderDistance": 6,
+  "simulationDistance": 5,
+  "maxFps": 260,
+  "vsync": false
+}

@@ -2,7 +2,7 @@
 
 KapKan is a Fabric client mod and desktop launcher with a searchable menu, configurable HUD, smooth zoom, toggle sprint and optional server-assisted cosmetics.
 
-The current public release is [1.0.5](https://github.com/h4chub/kapkan-releases/releases/tag/v1.0.5-beta.1). The 1.0.6 update in this branch is under validation: macOS microphone capability/runtime fixes, reduced HUD/render overhead and optional exact-version performance modules. No FPS claim is made. See [build status](source/BUILD-STATUS.md) for publication state.
+The current public release is [1.0.5](https://github.com/h4chub/kapkan-releases/releases/tag/v1.0.5-beta.1). The 1.0.6 update in this branch is under validation: macOS microphone capability/runtime fixes, reduced HUD/render overhead and optional ImmediatelyFast rendering optimizations. No FPS claim is made. See [build status](source/BUILD-STATUS.md) for publication state.
 
 - [Install, controls and build](source/README.md)
 - [Compatibility](source/COMPATIBILITY.md)

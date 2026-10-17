@@ -1,0 +1,4 @@
+reason=eligible warmup
+continuousEligibleSeconds=29.174041833
+counts={}
+active=false focused=false minimized=false iconified=false visible=1 screen=null overlay=null

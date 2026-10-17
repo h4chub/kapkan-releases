@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "checks": 51,
+  "scope": "Java21-compatible filesystem/argument fixtures using verified official binaries; not Minecraft gameplay or FPS benchmark",
+  "test": "tests/PerformanceIntegrationTest.java",
+  "binaryVerification": "Official Modrinth SHA512 and SHA1 recomputed for all3 selected binaries",
+  "packagedLookup": "PASS from launcher JAR parent/performance, path with spaces",
+  "sources": "Exact official tagged source commits included, unmodified",
+  "generatedUTC": "2026-10-17T16:44:20Z",
+  "nativeRuntimeVerification": {
+    "platform": "macOS arm64 native OpenGL; Java25; Fabric0.19.5",
+    "scope": "Fresh isolated single-player worlds with all3 optimization mods loaded. Boot/world smoke, not exhaustive gameplay/modpack or native launcher installation acceptance.",
+    "targets": {
+      "26.1": {
+        "status": "PASS",
+        "kapkanModuleSha256": "c01579a31379f567eb19afb03969a888367bb91517d9652e9622851c1f194210",
+        "evidenceRun": "smoke-26.1-20261017T165450Z"
+      },
+      "26.1.1": {
+        "status": "PASS",
+        "kapkanModuleSha256": "3d447a99b1c3bf190e9af3864f1d82a3c3978e141fa16a47fa64193d9f2c75da",
+        "evidenceRun": "smoke-26.1.1-20261017T165536Z"
+      },
+      "26.1.2": {
+        "status": "PASS",
+        "kapkanModuleSha256": "a747bff50be125397a77fc4be7155f98485a049676c2a8616d8ce03aeb2f5f41",
+        "evidenceRun": "native-20261017T164958Z/candidate"
+      }
+    }
+  }
+}

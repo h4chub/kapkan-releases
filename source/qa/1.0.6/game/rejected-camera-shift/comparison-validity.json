@@ -1,0 +1,11 @@
+{
+  "crossRunComparable": false,
+  "rawWithinSampleChecksPassed": true,
+  "reason": "Camera/player orientation shifted before the sample and did not match the opening control.",
+  "expectedYaw": -180.0,
+  "expectedPitch": 8.0,
+  "actualYaw": -184.64993286132812,
+  "actualPitch": 5.299981594085693,
+  "rawMeasurementsRetained": true,
+  "performanceConclusion": "None"
+}

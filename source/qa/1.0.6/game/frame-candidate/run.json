@@ -1,0 +1,32 @@
+{
+  "kind": "candidate",
+  "moduleSha256": "a747bff50be125397a77fc4be7155f98485a049676c2a8616d8ce03aeb2f5f41",
+  "injectedMods": [
+    {
+      "filename": "candidate-KapKan-1.0.6-mc26.1.2-fabric.jar",
+      "sha512": "5bb9d982c34815e88a52e8b910a37bb965500b45713d065a5c80c4daf56d65662f4c623969ac2a962060d1a1719358cda357a48253bc8d0d74050c349eaff9fb"
+    },
+    {
+      "filename": "performance-qa-only.jar",
+      "sha512": "e1332a4fdb523b194c0c7be7294bde774a3125efa03ca83c6508fc290adf3e1cbe63ead662b0170985024b1316614acf4bf22d62e0a5b0d182a15c3dce2162c8"
+    },
+    {
+      "filename": "ImmediatelyFast-Fabric-1.15.3+26.1.jar",
+      "sha512": "b665037aee8e76e330f068f640b340b97ce8c0c0e940dfccda8a5b00f772dfa9b2d20594bb950e4f2595b359ad3c27190a4d998da28d4507a9747ab507980d11"
+    },
+    {
+      "filename": "ferritecore-9.0.0-fabric.jar",
+      "sha512": "d81fa97e11784c19d42f89c2f433831d007603dd7193cee45fa177e4a6a9c52b384b198586e04a0f7f63cd996fed713322578bde9a8db57e1188854ae5cbe584"
+    },
+    {
+      "filename": "lithium-fabric-0.24.7+mc26.1.2.jar",
+      "sha512": "37240bdbf93c19fdc6aa632d89223639f0ef9d923ee1793b33d624946b0482cc972834049ed07d71db3494e16c9de68e755937aac7c4ac5d7291bd38c1425899"
+    }
+  ],
+  "runtime": "macOS aarch64 native OpenGL,Java25,Fabric0.19.5",
+  "world": "fresh single-player normal terrain seed1234,200 armor stands",
+  "renderDistance": 6,
+  "simulationDistance": 5,
+  "maxFps": 260,
+  "vsync": false
+}

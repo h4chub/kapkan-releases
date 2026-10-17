@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "selection": "ImmediatelyFast only",
+  "kapkanRelease": "1.0.6",
+  "nativePlatform": "macOS aarch64",
+  "testedLoader": "Fabric0.19.5",
+  "runtime": "Official unmodified vendor Zulu25 JRE 25.0.4.1",
+  "javaExecutableSha256": "038e856d3c7b8307152b5ea440f548f74fad8e0acd3d9615983173bf451290d4",
+  "runtimeArchiveSha256": "1071ba0b99c46368927e4085d610271e82998767985cb9cf0318a6b673885eb8",
+  "requiredLoadedModIds": [
+    "kapkan-presence",
+    "immediatelyfast"
+  ],
+  "excludedModIds": [
+    "lithium",
+    "ferritecore"
+  ],
+  "performanceMeasured": false,
+  "scope": "Fresh isolated single-player worlds; six consecutive seconds after world/UI readiness plus real rendered frames, exact expected mods present and excluded candidates absent. No public server or user world.",
+  "runs": [
+    {
+      "minecraft": "26.1",
+      "status": "PASS",
+      "moduleSha256": "c01579a31379f567eb19afb03969a888367bb91517d9652e9622851c1f194210",
+      "evidence": "final-selected-subset/26.1/PASS.json",
+      "worldSeconds": 6,
+      "renderedFramesObserved": 1283
+    },
+    {
+      "minecraft": "26.1.1",
+      "status": "PASS",
+      "moduleSha256": "3d447a99b1c3bf190e9af3864f1d82a3c3978e141fa16a47fa64193d9f2c75da",
+      "evidence": "final-selected-subset/26.1.1/PASS.json",
+      "worldSeconds": 6,
+      "renderedFramesObserved": 1135
+    },
+    {
+      "minecraft": "26.1.2",
+      "status": "PASS",
+      "moduleSha256": "a747bff50be125397a77fc4be7155f98485a049676c2a8616d8ce03aeb2f5f41",
+      "evidence": "final-selected-subset/26.1.2/PASS.json",
+      "worldSeconds": 6,
+      "renderedFramesObserved": 1612
+    }
+  ],
+  "limits": [
+    "Compatibility smoke only, not long gameplay acceptance or performance proof.",
+    "Native Windows gameplay and other hardware are not covered.",
+    "Historical three-module candidate smokes remain separate."
+  ]
+}

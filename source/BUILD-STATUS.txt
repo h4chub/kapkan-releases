@@ -1,1 +1,1 @@
-KapKan1.0.6: build, native Mac game smoke all3 targets, package signature/archive/payload and launcher checks PASS. Ready for publication. Interactive microphone capture/native Windows install untested. See QA-REPORT.md.
+KapKan 1.0.6: IF-only integration and native Mac world checks pass on all three exact targets. Final package and delivery verification precede publication; see PUBLICATION.json and QA-REPORT.md. Interactive microphone capture/native Windows install untested.

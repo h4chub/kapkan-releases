@@ -1,0 +1,1 @@
+{"method":"release mouse after scene setup; restore canonical rotation only while unfocused before warmup","targetYaw":-180,"targetPitch":8,"restorations":1,"measurementCameraMutation":false}

@@ -1,0 +1,26 @@
+{
+  "ordinal": 3,
+  "kind": "if106",
+  "moduleSha256": "a747bff50be125397a77fc4be7155f98485a049676c2a8616d8ce03aeb2f5f41",
+  "injectedMods": [
+    {
+      "filename": "106-KapKan-1.0.6-mc26.1.2-fabric.jar",
+      "sha512": "5bb9d982c34815e88a52e8b910a37bb965500b45713d065a5c80c4daf56d65662f4c623969ac2a962060d1a1719358cda357a48253bc8d0d74050c349eaff9fb"
+    },
+    {
+      "filename": "performance-qa-only.jar",
+      "sha512": "9fd292e90fb4ab783b74f0f6a29074e5c5d9ebb69e3b265ac38dfea34290526af741a80687399d12d584f539a6bb97f55a9ab0cebbd0d8b621bbee0631fdbd38"
+    },
+    {
+      "filename": "ImmediatelyFast-Fabric-1.15.3+26.1.jar",
+      "sha512": "b665037aee8e76e330f068f640b340b97ce8c0c0e940dfccda8a5b00f772dfa9b2d20594bb950e4f2595b359ad3c27190a4d998da28d4507a9747ab507980d11"
+    }
+  ],
+  "runtime": "macOS aarch64 native OpenGL, OracleJava25.0.2, Fabric0.19.5",
+  "world": "fresh single-player normal terrain seed1234,200 fixed armor stands,time/weather frozen,ambient spawning/random ticks off",
+  "renderDistance": 6,
+  "simulationDistance": 5,
+  "maxFps": 260,
+  "vsync": false,
+  "expectedFocus": false
+}

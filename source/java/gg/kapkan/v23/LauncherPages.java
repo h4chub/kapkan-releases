@@ -165,10 +165,10 @@ final class LauncherPages {
         badges.add(Box.createVerticalStrut(14));badges.add(disclosure("Server relay & optional service",remote));addCard(rows,badges);
 
         JPanel performance=card("Game performance","Suggested starting settings for your detected hardware.");var tune=ui.a.tune();JPanel stats=panel(new GridLayout(1,3,16,0));stats.add(stat("GAME MEMORY",String.format(Locale.ROOT,"%.1f GB",tune.memoryMiB()/1024.0)));stats.add(stat("VIEW DISTANCE",tune.renderDistance()+" chunks"));stats.add(stat("FPS LIMIT",String.valueOf(tune.fps())));stats.setMaximumSize(new Dimension(Integer.MAX_VALUE,58));performance.add(stats);performance.add(Box.createVerticalStrut(16));
-        JCheckBox modules=check("Use bundled performance modules",PerformanceIntegration.enabled());
+        JCheckBox modules=check("Use rendering optimizations",PerformanceIntegration.enabled());
         JLabel moduleStatus=label("Applies when Minecraft next starts.",Font.PLAIN,12,MUTED);
         modules.addActionListener(e->{try{PerformanceIntegration.setEnabled(modules.isSelected());moduleStatus.setText("Saved. Applies when Minecraft next starts.");}catch(Exception error){modules.setSelected(PerformanceIntegration.enabled());moduleStatus.setText("Couldn't save this preference.");}});
-        performance.add(modules);performance.add(moduleStatus);performance.add(note("You can turn these off to troubleshoot mod compatibility. Your graphics settings stay unchanged."));performance.add(Box.createVerticalStrut(12));
+        performance.add(modules);performance.add(moduleStatus);performance.add(note("Turn off for graphics-mod compatibility. Changes apply the next time Minecraft starts."));performance.add(Box.createVerticalStrut(12));
         performance.add(button("Apply suggested settings",false,this::applyProfileAutoTune));performance.add(note("Applies to the selected version and loader. Your controls are preserved."));addCard(rows,performance);
 
         JPanel tidy=card("Keep KapKan tidy","Remove old launcher apps, ZIPs and extracted downloads. Your game files stay in place.");

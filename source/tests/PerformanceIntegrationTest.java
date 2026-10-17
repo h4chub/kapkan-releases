@@ -23,7 +23,7 @@ public final class PerformanceIntegrationTest {
             Path user = game.resolve("options.txt"); Files.writeString(user, "renderDistance:19\nfov:91\n"); byte[] settings = Files.readAllBytes(user);
             for (String target : List.of("26.1", "26.1.1", "26.1.2")) {
                 LaunchPlan p = plan(game, target, "Fabric", List.of()); var selected = PerformanceIntegration.prepare(p, s -> {});
-                check(added(selected).size() == 3, "Three pinned mods for exact target " + target);
+                check(added(selected).size() == 1, "One pinned mod for exact target " + target);
                 check(p.command().size() == 3, "Input command is immutable in use");
                 check(selected.command().stream().filter(x -> x.startsWith(PREFIX)).count() == 1, "One merged addMods argument");
                 check(PerformanceIntegration.prepare(selected, s -> {}).command().equals(selected.command()), "Repeated preparation is idempotent");
@@ -45,45 +45,47 @@ public final class PerformanceIntegrationTest {
 
             Path companion = fixture(temp.resolve("companion.jar"), "kapkan-presence", "", null);
             var injected = PerformanceIntegration.prepare(plan(game, "26.1.2", "Fabric", List.of(PREFIX + companion)), s -> {});
-            check(added(injected).size() == 4 && added(injected).getFirst().equals(companion.toString()), "Existing companion injection preserved and appended");
-            Path external = fixture(temp.resolve("user-lithium.jar"), "lithium", "", null); byte[] original = Files.readAllBytes(external);
+            check(added(injected).size() == 2 && added(injected).getFirst().equals(companion.toString()), "Existing companion injection preserved and appended");
+            Path external = fixture(temp.resolve("user-immediatelyfast.jar"), "immediatelyfast", "", null); byte[] original = Files.readAllBytes(external);
             var merged = PerformanceIntegration.prepare(plan(game, "26.1.2", "Fabric", List.of(PREFIX + companion, PREFIX + external)), s -> {});
-            check(added(merged).size() == 4 && added(merged).containsAll(List.of(companion.toString(), external.toString())), "Multiple existing properties combined without losing paths");
-            check(added(merged).stream().noneMatch(x -> x.contains("lithium-fabric")), "Existing injected same ID is not duplicated");
+            check(added(merged).size() == 2 && added(merged).containsAll(List.of(companion.toString(), external.toString())), "Multiple existing properties combined without losing paths");
+            check(added(merged).stream().noneMatch(x -> x.contains("ImmediatelyFast-Fabric")), "Existing injected same ID is not duplicated");
             check(Arrays.equals(original, Files.readAllBytes(external)), "Existing injected mod untouched");
             unchanged(plan(game, "26.1.2", "Fabric", List.of(PREFIX + "@mods-list.txt")), "Uninspectable Fabric list retained without additions");
 
             for (String id : List.of("immediatelyfast", "lithium", "ferritecore")) {
-                Path dir = temp.resolve("manual-" + id); fixture(dir.resolve("mods/renamed.jar"), id, "", null);
+                Path dir = temp.resolve("manual-" + id); Path existing = fixture(dir.resolve("mods/renamed.jar"), id, "", null); byte[] existingBytes = Files.readAllBytes(existing);
                 var selected = PerformanceIntegration.prepare(plan(dir, "26.1.2", "Fabric", List.of()), s -> {});
-                check(added(selected).size() == 2, "Renamed existing " + id + " preserved without duplicate");
+                check(added(selected).size() == (id.equals("immediatelyfast") ? 0 : 1), "Renamed existing " + id + " preserved without duplicate");
+                check(Arrays.equals(existingBytes, Files.readAllBytes(existing)), "Existing " + id + " file untouched");
             }
-            Path provided = temp.resolve("provided"); fixture(provided.resolve("mods/alternate.jar"), "alternate", ",\"provides\":[\"lithium\"]", null);
-            check(added(PerformanceIntegration.prepare(plan(provided, "26.1.2", "Fabric", List.of()), s -> {})).size() == 2, "Provided mod ID prevents duplicate");
+            Path provided = temp.resolve("provided"); fixture(provided.resolve("mods/alternate.jar"), "alternate", ",\"provides\":[\"immediatelyfast\"]", null);
+            check(added(PerformanceIntegration.prepare(plan(provided, "26.1.2", "Fabric", List.of()), s -> {})).size() == 0, "Provided mod ID prevents duplicate");
             for (String key : List.of("breaks", "conflicts")) {
                 Path conflict = temp.resolve(key); fixture(conflict.resolve("mods/another.jar"), "another", ",\"" + key + "\":{\"immediatelyfast\":\"*\"}", null);
-                check(added(PerformanceIntegration.prepare(plan(conflict, "26.1.2", "Fabric", List.of()), s -> {})).size() == 2, "Reverse " + key + " prevents injection");
+                check(added(PerformanceIntegration.prepare(plan(conflict, "26.1.2", "Fabric", List.of()), s -> {})).size() == 0, "Reverse " + key + " prevents injection");
             }
-            Path optifabric = temp.resolve("optifabric"); fixture(optifabric.resolve("mods/renderer.jar"), "optifabric", "", null);
-            var compatible = added(PerformanceIntegration.prepare(plan(optifabric, "26.1.2", "Fabric", List.of()), s -> {}));
-            check(compatible.size() == 1 && compatible.getFirst().contains("ferritecore"), "Known renderer conflicts skip ImmediatelyFast and Lithium");
+            for (String renderer : List.of("optifabric", "canvas", "vulkanmod")) {
+                Path conflict = temp.resolve("renderer-" + renderer); fixture(conflict.resolve("mods/renderer.jar"), renderer, "", null);
+                check(added(PerformanceIntegration.prepare(plan(conflict, "26.1.2", "Fabric", List.of()), s -> {})).isEmpty(), "Known renderer conflict skips ImmediatelyFast: " + renderer);
+            }
             Path hydrogen = temp.resolve("hydrogen"); fixture(hydrogen.resolve("mods/memory.jar"), "hydrogen", "", null);
-            check(added(PerformanceIntegration.prepare(plan(hydrogen, "26.1.2", "Fabric", List.of()), s -> {})).size() == 2, "FerriteCore memory conflict skipped");
-            Path nested = temp.resolve("nested"), child = fixture(temp.resolve("nested-lithium.jar"), "lithium", "", null);
+            check(added(PerformanceIntegration.prepare(plan(hydrogen, "26.1.2", "Fabric", List.of()), s -> {})).size() == 1, "Unrelated Hydrogen mod does not suppress ImmediatelyFast");
+            Path nested = temp.resolve("nested"), child = fixture(temp.resolve("nested-immediatelyfast.jar"), "immediatelyfast", "", null);
             fixture(nested.resolve("mods/container.jar"), "container", ",\"jars\":[{\"file\":\"META-INF/jars/child.jar\"}]", Files.readAllBytes(child));
-            check(added(PerformanceIntegration.prepare(plan(nested, "26.1.2", "Fabric", List.of()), s -> {})).size() == 2, "Nested same-ID mod is not duplicated");
+            check(added(PerformanceIntegration.prepare(plan(nested, "26.1.2", "Fabric", List.of()), s -> {})).size() == 0, "Nested same-ID mod is not duplicated");
             Path broken = temp.resolve("broken"); Files.createDirectories(broken.resolve("mods")); Files.writeString(broken.resolve("mods/user.jar"), "USER DATA");
             unchanged(plan(broken, "26.1.2", "Fabric", List.of()), "Unreadable active JAR fails safe");
             check(Files.readString(broken.resolve("mods/user.jar")).equals("USER DATA"), "Unreadable mod remains untouched");
             Path linked = temp.resolve("linked"); Files.createDirectories(linked); Files.createSymbolicLink(linked.resolve("mods"), provided.resolve("mods"));
-            check(added(PerformanceIntegration.prepare(plan(linked, "26.1.2", "Fabric", List.of()), s -> {})).size() == 2, "Linked custom mods folder inspected");
+            check(added(PerformanceIntegration.prepare(plan(linked, "26.1.2", "Fabric", List.of()), s -> {})).size() == 0, "Linked custom mods folder inspected");
             check(Files.isSymbolicLink(linked.resolve("mods")), "Custom folder link retained");
 
             Path corrupt = temp.resolve("bundle"); Files.createDirectories(corrupt.resolve("mods"));
             try (var files = Files.list(bundle.resolve("mods"))) { for (Path file : files.toList()) Files.copy(file, corrupt.resolve("mods").resolve(file.getFileName())); }
             Path bad = corrupt.resolve("mods/ImmediatelyFast-Fabric-1.15.3+26.1.jar"); byte[] bytes = Files.readAllBytes(bad); bytes[100] ^= 1; Files.write(bad, bytes);
             System.setProperty("kapkan.performanceDirectory", corrupt.toString());
-            check(added(PerformanceIntegration.prepare(plan(game, "26.1.2", "Fabric", List.of()), s -> {})).size() == 2, "Same-size tampered binary fails SHA512 and is skipped");
+            check(added(PerformanceIntegration.prepare(plan(game, "26.1.2", "Fabric", List.of()), s -> {})).size() == 0, "Same-size tampered binary fails SHA512 and is skipped");
             System.setProperty("kapkan.performanceDirectory", temp.resolve("missing").toString());
             unchanged(plan(game, "26.1.2", "Fabric", List.of()), "Missing bundle does not prevent launch");
             System.setProperty("kapkan.performanceDirectory", bundle.toString());
@@ -111,8 +113,10 @@ public final class PerformanceIntegrationTest {
     public static final class LocationProbe {
         public static void main(String[] args) {
             var plan = new LaunchPlan(List.of("java", "-cp", "game"), Path.of(args[0]), "fabric-loader-0.19.5-26.1.2", "26.1.2", "Fabric", Path.of("java"), 25);
-            String command = String.join(" ", PerformanceIntegration.prepare(plan, System.out::println).command());
-            if (!command.contains("ImmediatelyFast-Fabric") || !command.contains("lithium-fabric") || !command.contains("ferritecore-")) throw new AssertionError(command);
+            var prepared = PerformanceIntegration.prepare(plan, System.out::println);
+            String command = String.join(" ", prepared.command());
+            long injected = prepared.command().stream().filter(arg -> arg.startsWith("-Dfabric.addMods=")).mapToLong(arg -> arg.substring("-Dfabric.addMods=".length()).split(java.util.regex.Pattern.quote(File.pathSeparator)).length).sum();
+            if (!command.contains("ImmediatelyFast-Fabric") || command.contains("lithium-fabric") || command.contains("ferritecore-") || injected != 1) throw new AssertionError(command);
             System.out.println("PACKAGED LOCATION PASS");
         }
     }

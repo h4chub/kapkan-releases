@@ -1,0 +1,182 @@
+package gg.kapkan.performanceqa;
+
+import gg.kapkan.presence.cosmetics.IntroductionScreen;
+import java.nio.file.*;
+import java.util.*;
+import net.minecraft.client.*;
+import net.minecraft.client.gui.screens.TitleScreen;
+import net.minecraft.world.Difficulty;
+import net.minecraft.world.level.*;
+import net.minecraft.world.level.gamerules.GameRules;
+import net.minecraft.world.level.levelgen.WorldOptions;
+import net.minecraft.world.level.levelgen.presets.WorldPresets;
+import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.entity.decoration.ArmorStand;
+import org.lwjgl.glfw.GLFW;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.*;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+
+/** TEST ONLY. No production class or profile is modified. */
+@Mixin(Minecraft.class)
+public abstract class FrameTimeProbe {
+    private static boolean creating, prepared, failed, measuring, sceneScreenshot, canonicalRestored;
+    private static int canonicalRestorations;
+    private static volatile boolean sceneReady;
+    private static int ticks, activeFrames, inactiveFrames, smokeSeconds, interruptionsBeforeSample;
+    private static long sceneStarted, sampleStarted, previous, eligibleSince, lastSceneCheck;
+    private static long expectedTime, lastWaitLog;
+    private static final Map<String,Integer> waitReasons = new TreeMap<>();
+    private static String expectedEntities, initialState;
+    private static double[] expectedCamera, expectedPlayer;
+    private static final ArrayList<Long> frames = new ArrayList<>();
+    private static final int WARMUP = Integer.getInteger("kapkan.qa.warmupSeconds", 30);
+    private static final int SAMPLE = Integer.getInteger("kapkan.qa.sampleSeconds", 30);
+    private static final boolean EXPECTED_FOCUS = Boolean.getBoolean("kapkan.qa.expectedFocus");
+    @Inject(method="tick", at=@At("TAIL"))
+    private void kapkanBench$tick(CallbackInfo ci) {
+        if (failed || ++ticks % 20 != 0) return;
+        Minecraft mc = (Minecraft)(Object)this;
+        try {
+            if (mc.screen instanceof IntroductionScreen) { mc.screen.onClose(); return; }
+            if (mc.player == null) {
+                if (!creating && mc.screen instanceof TitleScreen && mc.getOverlay() == null) {
+                    creating = true;
+                    mc.options.renderDistance().set(6); mc.options.simulationDistance().set(5);
+                    mc.options.framerateLimit().set(260); mc.options.enableVsync().set(false);
+                    mc.options.inactivityFpsLimit().set(InactivityFpsLimit.MINIMIZED); mc.options.save();
+                    mc.createWorldOpenFlows().createFreshLevel("KapKan isolated frame-time QA", new LevelSettings("KapKan isolated frame-time QA", GameType.CREATIVE,
+                        new LevelSettings.DifficultySettings(Difficulty.PEACEFUL, false, false), true, WorldDataConfiguration.DEFAULT),
+                        new WorldOptions(1234L, false, false), WorldPresets::createNormalWorldDimensions, mc.screen);
+                }
+                return;
+            }
+            if (Boolean.getBoolean("kapkan.qa.smokeOnly")) {
+                if (++smokeSeconds < 6) return;
+                var ids = net.fabricmc.loader.api.FabricLoader.getInstance().getAllMods().stream().map(m -> m.getMetadata().getId()).collect(java.util.stream.Collectors.toSet());
+                if (!ids.containsAll(Set.of("kapkan-presence", "immediatelyfast", "lithium", "ferritecore"))) throw new AssertionError("Expected modules not loaded: " + ids);
+                Files.writeString(mc.gameDirectory.toPath().resolve("world-smoke.json"), "{\"status\":\"PASS\",\"minecraft\":\"" + System.getProperty("kapkan.qa.version") + "\",\"world\":\"fresh native Mac single-player\",\"loaded\":[\"kapkan-presence\",\"immediatelyfast\",\"lithium\",\"ferritecore\"]}\n");
+                failed = true; mc.stop(); return;
+            }
+            if (!prepared && mc.getSingleplayerServer() != null) {
+                prepared = true; mc.options.inactivityFpsLimit().set(InactivityFpsLimit.MINIMIZED);
+                var server = mc.getSingleplayerServer();
+                server.execute(() -> {
+                    try {
+                        var source = server.createCommandSourceStack().withSuppressedOutput();
+                        var rules = server.overworld().getGameRules();
+                        rules.set(GameRules.ADVANCE_TIME, false, server);
+                        rules.set(GameRules.ADVANCE_WEATHER, false, server);
+                        rules.set(GameRules.SPAWN_MOBS, false, server);
+                        rules.set(GameRules.RANDOM_TICK_SPEED, 0, server);
+                        int y = 0;
+                        for (int cx=-1;cx<=1;cx++) for (int cz=-1;cz<=2;cz++) server.overworld().getChunk(cx,cz);
+                        for (int x=-15;x<=15;x+=5) for (int z=-5;z<=30;z+=5) y=Math.max(y,server.overworld().getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,x,z));
+                        y += 4;
+                        var commands = new ArrayList<String>();
+                        commands.add("time set day"); commands.add("weather clear");
+                        commands.add("kill @e[type=!minecraft:player]");
+                        commands.add("fill -15 " + y + " -5 15 " + (y+8) + " 30 minecraft:air");
+                        commands.add("fill -15 " + (y-1) + " -5 15 " + (y-1) + " 30 minecraft:stone");
+                        commands.add("tp QA_Bench 0.5 " + (y+2) + " 25.5 180 8");
+                        for (int row=0; row<10; row++) for (int col=0; col<20; col++)
+                            commands.add("summon minecraft:armor_stand " + (-9.5+col) + " " + y + " " + row + " {NoGravity:1b,Invulnerable:1b,Silent:1b,Marker:1b,ShowArms:1b}");
+                        for (String command : commands) server.getCommands().performPrefixedCommand(source, command);
+                        sceneReady = true;
+                    } catch (Throwable t) { t.printStackTrace(); failed = true; }
+                });
+            }
+            if (sceneStarted != 0 && !sceneScreenshot && System.nanoTime()-sceneStarted > 3_000_000_000L) {
+                sceneScreenshot=true;
+                Screenshot.grab(mc.gameDirectory,"KapKan-scene-check.png",mc.getMainRenderTarget(),1,c->System.out.println(c.getString()));
+                Files.writeString(mc.gameDirectory.toPath().resolve("camera.txt"),state(mc)+"\n");
+            }
+            if (sceneReady && sceneStarted == 0) {
+                int entities = 0; for (var e : mc.level.entitiesForRendering()) if (e instanceof ArmorStand) entities++;
+                if (entities != 200) return;
+                mc.setScreen(null); mc.mouseHandler.releaseMouse(); sceneStarted = System.nanoTime();
+                Files.writeString(mc.gameDirectory.toPath().resolve("scene-ready.txt"), "seed=1234\narmorStands="+entities+"\nnormalTerrain=true\nadvanceTime=false\nadvanceWeather=false\nspawnMobs=false\nrandomTickSpeed=0\n");
+                System.out.println("KAPKAN_FRAME_SCENE_READY " + entities);
+            }
+        } catch (Throwable t) { fail(mc,t); }
+    }
+    @Inject(method="runTick", at=@At("TAIL"))
+    private void kapkanBench$frame(boolean renderLevel, CallbackInfo ci) {
+        if (failed || sceneStarted == 0) return;
+        Minecraft mc = (Minecraft)(Object)this;
+        long now = System.nanoTime();
+        String interruption = !renderLevel ? "runTick did not render the level" :
+            mc.player == null || mc.level == null ? "world unavailable" :
+            mc.screen != null || mc.getOverlay() != null ? "UI or overlay interrupted rendering" :
+            mc.getWindow().isMinimized() || mc.getWindow().isIconified() ? "window minimized" :
+            GLFW.glfwGetWindowAttrib(mc.getWindow().handle(),GLFW.GLFW_VISIBLE) != GLFW.GLFW_TRUE ? "window hidden" :
+            mc.isWindowActive() != EXPECTED_FOCUS || mc.getWindow().isFocused() != EXPECTED_FOCUS ? "focus differs from expected " + EXPECTED_FOCUS : null;
+        if (interruption != null) {
+            previous=0; eligibleSince=0; canonicalRestored=false;
+            if (measuring) fail(mc,new AssertionError(interruption));
+            else { interruptionsBeforeSample++; waitReasons.merge(interruption,1,Integer::sum); waitLog(mc,now,interruption,0); }
+            return;
+        }
+        // PREPARATION ONLY: never adjust input or orientation during a measured sample.
+        if (!measuring && !canonicalRestored) {
+            mc.mouseHandler.releaseMouse();
+            mc.player.setYRot(-180.0f); mc.player.yRotO=-180.0f;
+            mc.player.setXRot(8.0f); mc.player.xRotO=8.0f;
+            canonicalRestored=true; canonicalRestorations++; eligibleSince=previous=0;
+            try { Files.writeString(mc.gameDirectory.toPath().resolve("pre-sample-preparation.json"),
+                "{\"method\":\"release mouse after scene setup; restore canonical rotation only while unfocused before warmup\",\"targetYaw\":-180,\"targetPitch\":8,\"restorations\":"+canonicalRestorations+",\"measurementCameraMutation\":false}\n");
+            } catch(Exception e) { fail(mc,e); }
+            return;
+        }
+        if (eligibleSince == 0) eligibleSince=now;
+        if (now-eligibleSince < WARMUP*1_000_000_000L) { waitLog(mc,now,"eligible warmup",(now-eligibleSince)/1e9); return; }
+        try {
+            double[] camera=camera(mc), player=player(mc);
+            if (!measuring) {
+                expectedCamera=camera; expectedPlayer=player; expectedEntities=entities(mc);
+                if (!expectedEntities.startsWith("200:")) throw new AssertionError("Scene must contain exactly 200 armor stands");
+                expectedTime=mc.level.getOverworldClockTime();
+                initialState=state(mc); Files.writeString(mc.gameDirectory.toPath().resolve("sample-start-state.json"),initialState+"\n");
+                measuring=true; sampleStarted=previous=lastSceneCheck=now;
+                System.out.println("KAPKAN_FRAME_SAMPLE_STARTED focus="+EXPECTED_FOCUS);
+                return;
+            }
+            if (!near(expectedCamera,camera) || !near(expectedPlayer,player)) throw new AssertionError("Camera or player moved during sample");
+            if (mc.level.isRaining() || mc.level.getOverworldClockTime()!=expectedTime) throw new AssertionError("Time or weather changed during sample");
+            if (mc.options.framerateLimit().get()!=260 || mc.options.enableVsync().get() || mc.options.renderDistance().get()!=6 || mc.options.simulationDistance().get()!=5 || mc.getWindow().getWidth()!=2560 || mc.getWindow().getHeight()!=1440) throw new AssertionError("Graphics or framebuffer changed during sample");
+            if (now-lastSceneCheck>=1_000_000_000L) {
+                if (!expectedEntities.equals(entities(mc))) throw new AssertionError("Entity scene changed during sample");
+                lastSceneCheck=now;
+            }
+            if (previous==0) throw new AssertionError("Interrupted frame interval");
+            frames.add(now-previous); previous=now;
+            if (mc.isWindowActive()) activeFrames++; else inactiveFrames++;
+            if (now-sampleStarted < SAMPLE * 1_000_000_000L) return;
+            if (!expectedEntities.equals(entities(mc))) throw new AssertionError("Final entity scene mismatch");
+            Files.writeString(mc.gameDirectory.toPath().resolve("sample-end-state.json"),state(mc)+"\n");
+            failed=true; long[] sorted=frames.stream().mapToLong(Long::longValue).sorted().toArray();
+            double meanMs=frames.stream().mapToLong(Long::longValue).average().orElseThrow()/1_000_000.0;
+            double p50=sorted[(int)(sorted.length*.50)]/1_000_000.0, p95=sorted[(int)(sorted.length*.95)]/1_000_000.0, p99=sorted[(int)(sorted.length*.99)]/1_000_000.0;
+            String json=String.format(Locale.ROOT,"{\"frames\":%d,\"sampleSeconds\":%.3f,\"averageFps\":%.3f,\"meanFrameMs\":%.4f,\"p50FrameMs\":%.4f,\"p95FrameMs\":%.4f,\"p99FrameMs\":%.4f,\"activeFrames\":%d,\"inactiveFrames\":%d,\"warmupSeconds\":%d,\"fpsCap\":260,\"vsync\":false,\"renderDistance\":6,\"simulationDistance\":5,\"framebufferWidth\":%d,\"framebufferHeight\":%d,\"seed\":1234,\"armorStands\":200,\"timingValid\":true,\"expectedFocus\":%s,\"interruptionsBeforeSample\":%d,\"sampleInterruptions\":0,\"continuousCameraCheck\":true,\"periodicEntityCheckSeconds\":1,\"frozenTime\":true,\"frozenWeather\":true,\"scene\":\"normal terrain plus fixed 200 armor stands\",\"renderer\":\"native macOS LWJGL OpenGL\"}\n",sorted.length,(now-sampleStarted)/1e9,1000.0/meanMs,meanMs,p50,p95,p99,activeFrames,inactiveFrames,WARMUP,mc.getWindow().getWidth(),mc.getWindow().getHeight(),EXPECTED_FOCUS,interruptionsBeforeSample);
+            Files.writeString(mc.gameDirectory.toPath().resolve("frame-results.json"),json);
+            Screenshot.grab(mc.gameDirectory,"KapKan-isolated-frame-scene.png",mc.getMainRenderTarget(),1,c->System.out.println(c.getString()));
+            System.out.println("KAPKAN_FRAME_MEASUREMENT_PASS "+json); mc.stop();
+        } catch (Throwable t) { fail(mc,t); }
+    }
+    private static void waitLog(Minecraft mc,long now,String reason,double seconds) {
+        if (now-lastWaitLog<1_000_000_000L) return; lastWaitLog=now;
+        try {Files.writeString(mc.gameDirectory.toPath().resolve("waiting.txt"), "reason="+reason+"\ncontinuousEligibleSeconds="+seconds+"\ncounts="+waitReasons+"\nactive="+mc.isWindowActive()+" focused="+mc.getWindow().isFocused()+" minimized="+mc.getWindow().isMinimized()+" iconified="+mc.getWindow().isIconified()+" visible="+GLFW.glfwGetWindowAttrib(mc.getWindow().handle(),GLFW.GLFW_VISIBLE)+" screen="+mc.screen+" overlay="+mc.getOverlay()+"\n");} catch(Exception ignored) {}
+    }
+    private static double[] camera(Minecraft mc) {var c=mc.gameRenderer.getMainCamera();var p=c.position();return new double[]{p.x,p.y,p.z,c.yRot(),c.xRot(),c.getFov()};}
+    private static double[] player(Minecraft mc) {return new double[]{mc.player.getX(),mc.player.getY(),mc.player.getZ(),mc.player.getYRot(),mc.player.getXRot()};}
+    private static boolean near(double[] a,double[] b) {for(int i=0;i<a.length;i++)if(Math.abs(a[i]-b[i])>0.0001)return false;return true;}
+    private static String entities(Minecraft mc) {
+        var positions=new ArrayList<String>();
+        for(var e:mc.level.entitiesForRendering()) if(e instanceof ArmorStand) positions.add(String.format(Locale.ROOT,"%.4f,%.4f,%.4f,%.4f,%.4f",e.getX(),e.getY(),e.getZ(),e.getYRot(),e.getXRot()));
+        Collections.sort(positions);return positions.size()+":"+String.join(";",positions);
+    }
+    private static String state(Minecraft mc) {return "{\"camera\":"+Arrays.toString(camera(mc))+",\"player\":"+Arrays.toString(player(mc))+",\"active\":"+mc.isWindowActive()+",\"focused\":"+mc.getWindow().isFocused()+",\"iconified\":"+mc.getWindow().isIconified()+",\"minimized\":"+mc.getWindow().isMinimized()+",\"time\":"+mc.level.getOverworldClockTime()+",\"raining\":"+mc.level.isRaining()+",\"entityPositions\":\""+entities(mc)+"\"}";}
+    private static void fail(Minecraft mc,Throwable t) {
+        failed=true;t.printStackTrace();try{Files.writeString(mc.gameDirectory.toPath().resolve("frame-failed.txt"),t.toString());}catch(Exception ignored){}mc.stop();
+    }
+}

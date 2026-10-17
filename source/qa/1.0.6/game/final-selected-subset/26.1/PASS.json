@@ -1,0 +1,40 @@
+{
+  "minecraft": "26.1",
+  "moduleSha256": "c01579a31379f567eb19afb03969a888367bb91517d9652e9622851c1f194210",
+  "injected": [
+    {
+      "file": "KapKan-1.0.6-mc26.1-fabric.jar",
+      "sha512": "05f2b1ce61e590fd4f266bf43bccc61a0d7ad001d9877b3607960ab628f08e79742ff36d040c5ff20925fb5ac9568787e992b61a0b361d4a76456bf1af34857b"
+    },
+    {
+      "file": "performance-qa-only.jar",
+      "sha512": "ed5549c30adb41f43a8f4edfdb8a21c410778c547295a32b579661022b8a0a7a65ad637e44c1dbb695af5a3a44da5006e4c3cd5c12a52ab7efacbb241a3e3810"
+    },
+    {
+      "file": "ImmediatelyFast-Fabric-1.15.3+26.1.jar",
+      "sha512": "b665037aee8e76e330f068f640b340b97ce8c0c0e940dfccda8a5b00f772dfa9b2d20594bb950e4f2595b359ad3c27190a4d998da28d4507a9747ab507980d11"
+    }
+  ],
+  "runtime": "macOS aarch64 native OpenGL, verified vendor Zulu25 JRE, Fabric0.19.5",
+  "javaVersion": "openjdk version \"25.0.4.1\" 2026-08-18 LTS\nOpenJDK Runtime Environment Zulu25.36+205-CA (build 25.0.4.1+1-LTS)\nOpenJDK 64-Bit Server VM Zulu25.36+205-CA (build 25.0.4.1+1-LTS, mixed mode, sharing)",
+  "javaExecutableSha256": "038e856d3c7b8307152b5ea440f548f74fad8e0acd3d9615983173bf451290d4",
+  "scope": "Final selected IF-only subset, isolated fresh single-player world, no performance measurement",
+  "performanceMeasured": false,
+  "result": {
+    "status": "PASS",
+    "minecraft": "26.1",
+    "world": "fresh isolated native Mac single-player",
+    "loaded": [
+      "kapkan-presence",
+      "immediatelyfast"
+    ],
+    "excluded": [
+      "lithium",
+      "ferritecore"
+    ],
+    "consecutiveWorldSeconds": 6,
+    "renderedFramesObserved": 1283,
+    "performanceMeasured": false
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,7 @@
+seed=1234
+armorStands=200
+normalTerrain=true
+advanceTime=false
+advanceWeather=false
+spawnMobs=false
+randomTickSpeed=0

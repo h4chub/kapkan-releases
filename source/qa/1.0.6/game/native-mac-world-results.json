@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "environment": {
+    "system": "Darwin",
+    "release": "24.6.0",
+    "machine": "arm64",
+    "hardware": "Apple M4"
+  },
+  "minecraftTargets": [
+    {
+      "minecraft": "26.1",
+      "status": "PASS",
+      "scope": "native Mac fresh single-player world with all3 performance modules loaded;6-second world smoke",
+      "kapkanModuleSha256": "c01579a31379f567eb19afb03969a888367bb91517d9652e9622851c1f194210",
+      "evidenceDirectory": "native-mac-26.1"
+    },
+    {
+      "minecraft": "26.1.1",
+      "status": "PASS",
+      "scope": "native Mac fresh single-player world with all3 performance modules loaded;6-second world smoke",
+      "kapkanModuleSha256": "3d447a99b1c3bf190e9af3864f1d82a3c3978e141fa16a47fa64193d9f2c75da",
+      "evidenceDirectory": "native-mac-26.1.1"
+    },
+    {
+      "minecraft": "26.1.2",
+      "status": "PASS",
+      "scope": "native Mac fresh single-player world, scripted200 armor stands,30-second warmup and45-second frame sample with all3 performance modules",
+      "kapkanModuleSha256": "a747bff50be125397a77fc4be7155f98485a049676c2a8616d8ce03aeb2f5f41",
+      "evidenceDirectory": "frame-candidate"
+    }
+  ],
+  "bundledMods": [
+    "ImmediatelyFast1.15.3+26.1",
+    "Lithium0.24.7+mc26.1.2",
+    "FerriteCore9.0.0"
+  ],
+  "requiredJava": 25,
+  "testedFabricLoader": "0.19.5",
+  "accountMode": "Isolated local development identity; single-player only; no public server/account acceptance tested"
+}

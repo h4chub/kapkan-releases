@@ -1,8 +1,8 @@
 {
   "version": "1.0.6",
-  "state": "HOLD_PERFORMANCE_INVESTIGATION",
+  "state": "READY_FOR_PUBLICATION",
   "expected_tag": "v1.0.6-beta.1",
   "source_branch": "codex/kapkan-1.0.6",
   "previous_public_release": "https://github.com/h4chub/kapkan-releases/releases/tag/v1.0.5-beta.1",
-  "verification": "Compatibility/package checks pass. One local scene regressed with the bundle; default selection and benchmark validity are being investigated. Public release remains1.0.5."
+  "verification": "Final IF-only integration and exact-target native world checks pass. Final desktop packages are rebuilt, audited and delivery-verified before public publication. Public release remains 1.0.5 until publication is confirmed."
 }

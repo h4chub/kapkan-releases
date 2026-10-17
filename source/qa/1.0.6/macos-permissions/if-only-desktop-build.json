@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-17T17:48:33.613749+00:00",
+  "scope": "Exact rebuilt desktop launcher, JDK21 and ImmediatelyFast-only argument/filesystem integration fixtures; not Minecraft gameplay or benchmark.",
+  "launcherJarSha256": "320c172e968123faf0454c9927a610f811524ef70b0401ca37a389b7e63948f1",
+  "compiler": "/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home",
+  "logs": [
+    "if-only-desktop-build.log",
+    "if-only-test-compile.log",
+    "if-only-integration.log"
+  ]
+}

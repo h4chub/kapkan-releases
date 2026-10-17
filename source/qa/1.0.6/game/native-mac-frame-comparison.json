@@ -1,0 +1,86 @@
+{
+  "runs": [
+    {
+      "frames": 8198,
+      "sampleSeconds": 45.007,
+      "averageFps": 182.148,
+      "meanFrameMs": 5.49,
+      "p50FrameMs": 4.7427,
+      "p95FrameMs": 9.3772,
+      "p99FrameMs": 15.6174,
+      "activeFrames": 0,
+      "inactiveFrames": 8198,
+      "warmupSeconds": 30,
+      "fpsCap": 260,
+      "vsync": false,
+      "renderDistance": 6,
+      "simulationDistance": 5,
+      "framebufferWidth": 2560,
+      "framebufferHeight": 1440,
+      "seed": 1234,
+      "armorStands": 200,
+      "scene": "normal terrain plus fixed200 armor stands",
+      "renderer": "native macOS LWJGL OpenGL",
+      "kind": "baseline",
+      "moduleSha256": "4671b4ea573f7e4742ff03e30eaed562d6df3d828f4f1c33463682b987cdd2c9"
+    },
+    {
+      "frames": 5608,
+      "sampleSeconds": 45.001,
+      "averageFps": 124.618,
+      "meanFrameMs": 8.0245,
+      "p50FrameMs": 7.0783,
+      "p95FrameMs": 13.8281,
+      "p99FrameMs": 19.3572,
+      "activeFrames": 578,
+      "inactiveFrames": 5030,
+      "warmupSeconds": 30,
+      "fpsCap": 260,
+      "vsync": false,
+      "renderDistance": 6,
+      "simulationDistance": 5,
+      "framebufferWidth": 2560,
+      "framebufferHeight": 1440,
+      "seed": 1234,
+      "armorStands": 200,
+      "scene": "normal terrain plus fixed200 armor stands",
+      "renderer": "native macOS LWJGL OpenGL",
+      "kind": "candidate",
+      "moduleSha256": "a747bff50be125397a77fc4be7155f98485a049676c2a8616d8ce03aeb2f5f41"
+    }
+  ],
+  "timingValid": false,
+  "quietWindowConfirmed": true,
+  "limits": [
+    "One paired run on this Mac is a directional local result, not an FPS guarantee.",
+    "Fresh worlds use the same seed and scripted scene; system background load can vary.",
+    "OpenGL on macOS only; other devices,versions and render mods require separate verification.",
+    "Both runs may render in unfocused windows; inactivityFPSlimit is MINIMIZED and focus counts are recorded.",
+    "Requested1280x720 window uses a2560x1440 Retina framebuffer on this Mac."
+  ],
+  "averageFpsChangePercent": -31.584206249862746,
+  "host": {
+    "system": "Darwin",
+    "release": "24.6.0",
+    "machine": "arm64",
+    "hardware": "Apple M4"
+  },
+  "harnessReportedTimingValid": true,
+  "comparisonStatus": "Observed 31.6% slowdown retained; causal attribution inconclusive because focus differs and the original sampler did not validate render eligibility or continuous scene state.",
+  "focusCounts": {
+    "baseline": {
+      "active": 0,
+      "inactive": 8198
+    },
+    "candidate": {
+      "active": 578,
+      "inactive": 5030
+    }
+  },
+  "validationGaps": [
+    "Unequal focus state during sampling",
+    "Original sampler ignored runTick renderLevel and did not reset intervals on UI/world interruptions",
+    "Camera was snapshotted once before sampling, not continuously validated",
+    "Single baseline-first pair confounds order and temperature"
+  ]
+}

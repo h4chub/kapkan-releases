@@ -1,0 +1,28 @@
+{
+  "minecraft": "26.1.1",
+  "moduleSha256": "3d447a99b1c3bf190e9af3864f1d82a3c3978e141fa16a47fa64193d9f2c75da",
+  "injected": [
+    {
+      "file": "KapKan-1.0.6-mc26.1.1-fabric.jar",
+      "sha512": "b41b3980750c258f12ac1ed7ead6659621ba13ceaf0cfc437c33da69ee98d69b8855fabc32998523c3c7f253855e79ae033319b92a443574d02a15adc9a1ba35"
+    },
+    {
+      "file": "performance-qa-only.jar",
+      "sha512": "b3dacec2bb8a21c79a783cf81ba4ec69a80a83c1947c4384855b3e457939d04a1e0301b473aba06a0c1638e7ded51d0d6ac40d6de1d3c900fdbb9085599e9b2b"
+    },
+    {
+      "file": "ImmediatelyFast-Fabric-1.15.3+26.1.jar",
+      "sha512": "b665037aee8e76e330f068f640b340b97ce8c0c0e940dfccda8a5b00f772dfa9b2d20594bb950e4f2595b359ad3c27190a4d998da28d4507a9747ab507980d11"
+    },
+    {
+      "file": "ferritecore-9.0.0-fabric.jar",
+      "sha512": "d81fa97e11784c19d42f89c2f433831d007603dd7193cee45fa177e4a6a9c52b384b198586e04a0f7f63cd996fed713322578bde9a8db57e1188854ae5cbe584"
+    },
+    {
+      "file": "lithium-fabric-0.24.7+mc26.1.2.jar",
+      "sha512": "37240bdbf93c19fdc6aa632d89223639f0ef9d923ee1793b33d624946b0482cc972834049ed07d71db3494e16c9de68e755937aac7c4ac5d7291bd38c1425899"
+    }
+  ],
+  "runtime": "macOS aarch64 native OpenGL,Java25,Fabric0.19.5",
+  "scope": "isolated new single-player world, all3 optimization mods loaded; no performance measurement"
+}

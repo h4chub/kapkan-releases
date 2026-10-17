@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "purpose": "Native acceptance of the actual vendor-selected macOS runtimes; not an FPS benchmark",
+  "launcher": {
+    "runtime": "Azul Zulu JRE21.0.12.1+1-LTS, macOS aarch64",
+    "archiveSha256": "611673ab332d58e6d3a61506eaafbfb13e9f9b0e01452067a9cc8b2f470289fb",
+    "javaExecutableSha256": "27de1f0773d55b237fb6ed4288bec8a285a5b7ff973c4b6ba9c59edcc75c2d9e",
+    "launcherJarSha256": "32053e3b7fbb351d13094523e47de0db9c30950130a380d47023e11d96dae6e0",
+    "checks": [
+      "launcher frame visible",
+      "Play/Accounts/Settings controls present",
+      "bundled module setting present",
+      "only test process windows closed"
+    ],
+    "processExit": 0,
+    "isolatedHomeAndGameAndPreferences": true,
+    "ownWindowPaintOnly": true
+  },
+  "game": {
+    "runtime": "Azul Zulu JRE25.0.4.1+1-LTS, macOS aarch64",
+    "archiveSha256": "1071ba0b99c46368927e4085d610271e82998767985cb9cf0318a6b673885eb8",
+    "javaExecutableSha256": "038e856d3c7b8307152b5ea440f548f74fad8e0acd3d9615983173bf451290d4",
+    "minecraft": "26.1.2",
+    "scope": "native macOS26.1.2 startup into a real isolated single-player world with KapKan and three bundled modules; runtime acceptance only, no FPS benchmark",
+    "probeResult": {
+      "minecraft": "26.1.2",
+      "moduleSha256": "a747bff50be125397a77fc4be7155f98485a049676c2a8616d8ce03aeb2f5f41",
+      "injected": [
+        {
+          "file": "KapKan-1.0.6-mc26.1.2-fabric.jar",
+          "sha512": "5bb9d982c34815e88a52e8b910a37bb965500b45713d065a5c80c4daf56d65662f4c623969ac2a962060d1a1719358cda357a48253bc8d0d74050c349eaff9fb"
+        },
+        {
+          "file": "performance-qa-only.jar",
+          "sha512": "f5842b29d9ceb10b0f15d6331796c98a2b9c942dda02d0cd5ba097d4115a327c5c7654779949036712a390b8b01d7cccb564e58b20b68477ce501b6cf1e41ec5"
+        },
+        {
+          "file": "ImmediatelyFast-Fabric-1.15.3+26.1.jar",
+          "sha512": "b665037aee8e76e330f068f640b340b97ce8c0c0e940dfccda8a5b00f772dfa9b2d20594bb950e4f2595b359ad3c27190a4d998da28d4507a9747ab507980d11"
+        },
+        {
+          "file": "ferritecore-9.0.0-fabric.jar",
+          "sha512": "d81fa97e11784c19d42f89c2f433831d007603dd7193cee45fa177e4a6a9c52b384b198586e04a0f7f63cd996fed713322578bde9a8db57e1188854ae5cbe584"
+        },
+        {
+          "file": "lithium-fabric-0.24.7+mc26.1.2.jar",
+          "sha512": "37240bdbf93c19fdc6aa632d89223639f0ef9d923ee1793b33d624946b0482cc972834049ed07d71db3494e16c9de68e755937aac7c4ac5d7291bd38c1425899"
+        }
+      ],
+      "runtime": "macOS aarch64 native OpenGL,Java25,Fabric0.19.5",
+      "scope": "isolated new single-player world, all3 optimization mods loaded; no performance measurement",
+      "result": {
+        "status": "PASS",
+        "minecraft": "26.1.2",
+        "world": "fresh native Mac single-player",
+        "loaded": [
+          "kapkan-presence",
+          "immediatelyfast",
+          "lithium",
+          "ferritecore"
+        ]
+      },
+      "status": "PASS"
+    },
+    "isolatedNewWorld": true
+  },
+  "microphoneConsentRequested": false,
+  "audioCaptured": false,
+  "existingUserProfilesOrWorldsModified": false,
+  "limits": [
+    "No interactive microphone capture or permission acceptance was attempted.",
+    "No Windows device or Intel Mac execution was performed.",
+    "No FPS improvement is claimed by these acceptance checks."
+  ]
+}
