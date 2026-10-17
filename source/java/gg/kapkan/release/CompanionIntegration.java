@@ -12,11 +12,11 @@ import java.util.jar.JarFile;
 /** Injects the selected build per process and preserves incompatible older companions as backups. */
 public final class CompanionIntegration {
     public static final Map<String,String> FILES=Map.of(
-        "26.1","KapKan-1.0.5-mc26.1-fabric.jar",
-        "26.1.1","KapKan-1.0.5-mc26.1.1-fabric.jar",
-        "26.1.2","KapKan-1.0.5-mc26.1.2-fabric.jar");
+        "26.1","KapKan-1.0.6-mc26.1-fabric.jar",
+        "26.1.1","KapKan-1.0.6-mc26.1.1-fabric.jar",
+        "26.1.2","KapKan-1.0.6-mc26.1.2-fabric.jar");
     public static final String FILE=FILES.get("26.1.2");
-    public static final String BUILD="client-1.0.5";
+    public static final String BUILD="client-1.0.6";
     private CompanionIntegration(){}
     public static LaunchPlan prepare(LaunchPlan plan,Consumer<String> log) {
         if(!"Fabric".equalsIgnoreCase(plan.loaderLabel()))return plan;
@@ -37,7 +37,7 @@ public final class CompanionIntegration {
                 if(legacy.isBlank())return plan;source=Path.of(legacy);
             } else {log.accept("KapKan badges: this version is not supported; continuing normal launch.");return plan;}
             if(!Files.isRegularFile(source)){log.accept("KapKan companion unavailable; continuing normal launch.");return plan;}
-            log.accept(FILES.containsKey(plan.baseVersion())?"KapKan companion prepared for "+plan.baseVersion()+" ("+BUILD+")":"KapKan legacy companion retained for "+plan.baseVersion()+"; the 1.0.5 client features are not supported on this version.");return withArgs(plan,source);
+            log.accept(FILES.containsKey(plan.baseVersion())?"KapKan companion prepared for "+plan.baseVersion()+" ("+BUILD+")":"KapKan legacy companion retained for "+plan.baseVersion()+"; the 1.0.6 client features are not supported on this version.");return withArgs(plan,source);
         } catch(Exception e){log.accept("KapKan companion unavailable: "+e.getClass().getSimpleName()+". Continuing normal launch.");return plan;}
     }
     static boolean supportsLoader(String version){
@@ -62,8 +62,8 @@ public final class CompanionIntegration {
             var meta=MiniJson.object(MiniJson.parse(new String(bytes,java.nio.charset.StandardCharsets.UTF_8)));
             String target=MiniJson.string(MiniJson.object(meta.get("depends")).get("minecraft")).strip();
             if(target.startsWith("="))target=target.substring(1).strip();
-            if(!"kapkan-presence".equals(MiniJson.string(meta.get("id")))||!"1.0.5".equals(MiniJson.string(meta.get("version")))||!version.equals(target))
-                throw new java.io.IOException("Companion does not match Minecraft "+version+" / KapKan 1.0.5");
+            if(!"kapkan-presence".equals(MiniJson.string(meta.get("id")))||!"1.0.6".equals(MiniJson.string(meta.get("version")))||!version.equals(target))
+                throw new java.io.IOException("Companion does not match Minecraft "+version+" / KapKan 1.0.6");
         }
     }
     private static boolean migrateManualPresence(Path game,String version,Consumer<String> log)throws Exception {

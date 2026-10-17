@@ -1,0 +1,15 @@
+/Users/homefolder/.codex/.chatgpt-projects/g-p-6ab96274aeec81919ee1071ebc66f27e/development106/source/dist/KapKan-macOS-1.0.6/KapKan.app: valid on disk
+/Users/homefolder/.codex/.chatgpt-projects/g-p-6ab96274aeec81919ee1071ebc66f27e/development106/source/dist/KapKan-macOS-1.0.6/KapKan.app: satisfies its Designated Requirement
+Archive / binary / asset audit: PASS
+Changed existing classes: gg/kapkan/launcher/install/BaseGameInstallerService.class
+gg/kapkan/launcher/launch/FabricDetector.class
+gg/kapkan/launcher/launch/FabricInstallerService.class
+gg/kapkan/launcher/launch/LaunchPlan.class
+gg/kapkan/launcher/launch/LaunchPlanBuilder.class
+gg/kapkan/launcher/launch/MinecraftProcessLauncher.class
+gg/kapkan/launcher/launch/ModLoaderInstallerService.class
+gg/kapkan/launcher/launch/VersionProfileLoader.class
+gg/kapkan/launcher/system/HardwareProbe.class
+gg/kapkan/v23/KapKanAutoTunePolicy.class
+gg/kapkan/v23/KapKanV23Launcher$App$4.class
+gg/kapkan/v23/KapKanV23Launcher$MicrosoftAuthService.class

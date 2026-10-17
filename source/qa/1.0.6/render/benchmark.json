@@ -1,0 +1,14 @@
+{
+  "operation": "logical UI text width, 32 warmed menu/HUD labels",
+  "iterations_per_round": 1000000,
+  "rounds": 9,
+  "before_cpu_ns_per_call": 63.043,
+  "after_cpu_ns_per_call": 15.339,
+  "before_allocated_bytes_per_call": 68.5,
+  "after_allocated_bytes_per_call": 0.0,
+  "scope": "Text metrics hotpath only; not a Minecraft FPS measurement",
+  "measured_utc": "2026-10-17T16:40:25.885842+00:00",
+  "host_os": "Darwin",
+  "host_arch": "arm64",
+  "java_version": "java version \"25.0.2\" 2026-01-20 LTS"
+}

@@ -16,7 +16,7 @@ import (
 	"time"
 )
 
-const version = "1.0.5"
+const version = "1.0.6"
 
 func main() {
 	if err := run(); err != nil {
@@ -137,7 +137,7 @@ func run() error {
 		return err
 	}
 	defer out.Close()
-	args := []string{"-Xms64m", "-Xmx512m", "-Dfile.encoding=UTF-8", "-XX:ErrorFile=" + filepath.Join(logs, "launcher-jvm-crash-%p.log"), "-Dkapkan.release.version=" + version, "-Dkapkan.nativeBootstrap=" + exe, "-Dkapkan.clientCoreJar=" + filepath.Join(res, "KapKan-ClientCore-1.21.11-Beta1.jar"), "-Dkapkan.presenceJar=" + filepath.Join(res, "KapKan-1.0.5-mc26.1.2-fabric.jar"), "-Dkapkan.companionDirectory=" + res, "-Dkapkan.build=client-release-1.0.5"}
+	args := []string{"-Xms64m", "-Xmx512m", "-Dfile.encoding=UTF-8", "-XX:ErrorFile=" + filepath.Join(logs, "launcher-jvm-crash-%p.log"), "-Dkapkan.release.version=" + version, "-Dkapkan.nativeBootstrap=" + exe, "-Dkapkan.clientCoreJar=" + filepath.Join(res, "KapKan-ClientCore-1.21.11-Beta1.jar"), "-Dkapkan.presenceJar=" + filepath.Join(res, "KapKan-1.0.6-mc26.1.2-fabric.jar"), "-Dkapkan.companionDirectory=" + res, "-Dkapkan.build=client-release-1.0.6"}
 	if runtime.GOOS == "darwin" {
 		// Choose the native dark appearance before Java initializes AWT, including owned dialogs.
 		args = append(args, "-Xdock:name=KapKan", "-Xdock:icon="+filepath.Join(res, "KapKan-AppIcon.png"), "-Dapple.awt.application.name=KapKan", "-Dapple.awt.application.appearance=NSAppearanceNameDarkAqua")
@@ -150,6 +150,9 @@ func run() error {
 	cmd.Stderr = out
 	runtimeenv.HideWindow(cmd)
 	logger.Println("Starting the launcher with native Java", *major, a)
+	// Keep this app's direct process ancestry alive. macOS attributes microphone
+	// consent from Minecraft voice mods to the responsible KapKan.app bundle.
+	// Detaching Java through a shell or `open` breaks that application identity.
 	if err = cmd.Run(); err != nil {
 		logger.Println("Launcher exited:", err)
 		return fmt.Errorf("KapKan closed during startup.\n\nOpen this log for the exact error:\n%s", outPath)

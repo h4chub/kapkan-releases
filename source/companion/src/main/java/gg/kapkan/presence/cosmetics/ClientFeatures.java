@@ -60,7 +60,7 @@ public final class ClientFeatures {
     public static float fov(float fov){ClientSettings s=settings();Minecraft mc=Minecraft.getInstance();if(mc.player==null||mc.screen!=null){zoomState.reset();return fov;}return (float)(fov/zoomState.update(System.nanoTime(),zooming(),s.zoomPower,s.reducedMotion));}
     public static void hud(GuiGraphicsExtractor g){
         Minecraft mc=Minecraft.getInstance();if(mc.player==null||mc.options.hideGui||mc.screen!=null||mc.gui.getDebugOverlay().showDebugScreen())return;
-        HudRenderer.render(g,settings(),false,null);
+        HudRenderer.renderGameplay(g,settings());
         if(!settingsError.isBlank()){String message="KapKan: preferences could not save. Open Help.";MenuStyle.text(g,message,8,g.guiHeight()-16,0xFFFFAAB6);}
     }
     /** Retained for old external diagnostics; automatic welcome overlays were removed. */

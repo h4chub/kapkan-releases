@@ -13,7 +13,7 @@ public final class CompanionIntegrationTest {
         try{
             if(args.length==0){
                 Path resources=dir.resolve("synthetic-resources");Files.createDirectories(resources);
-                for(var target:CompanionIntegration.FILES.entrySet())fixture(resources.resolve(target.getValue()),metadata("kapkan-presence","1.0.5","="+target.getKey()),true);
+                for(var target:CompanionIntegration.FILES.entrySet())fixture(resources.resolve(target.getValue()),metadata("kapkan-presence","1.0.6","="+target.getKey()),true);
                 Path legacy=fixture(resources.resolve("legacy-core.jar"),metadata("kapkan-client-core","0.9","1.21.11"),false);
                 Path previous=fixture(resources.resolve("old-presence.jar"),metadata("kapkan-presence","1.0.4","26.1.2"),true);
                 args=new String[]{resources.resolve(CompanionIntegration.FILE).toString(),legacy.toString(),previous.toString(),previous.toString(),previous.toString()};
@@ -57,15 +57,16 @@ public final class CompanionIntegrationTest {
                 check(Arrays.equals(Files.readAllBytes(Path.of(args[2])),Files.readAllBytes(game.resolve(".kapkan-managed/retired/my-renamed-old-badge.jar"))),"Retired companion backup is byte-identical");
             }
             if(args.length>3){Path old=mods.resolve("previous-build-six.jar");Files.copy(Path.of(args[3]),old);var updated=CompanionIntegration.prepare(p,System.out::println);check(!Files.exists(old)&&Files.exists(game.resolve(".kapkan-managed/retired/previous-build-six.jar")),"Build 6 companion retained as a backup during update");check(updated.command().stream().anyMatch(s->s.startsWith("-Dfabric.addMods=")),"In-game companion injected after Build 6 retirement");}
-            if(args.length>4){Path old=mods.resolve("renamed-1.0.4.jar");Files.copy(Path.of(args[4]),old);var updated=CompanionIntegration.prepare(p,System.out::println);check(!Files.exists(old)&&Files.exists(game.resolve(".kapkan-managed/retired/renamed-1.0.4.jar")),"Known 1.0.4 companion backed up during update");check(updated.command().stream().anyMatch(s->s.startsWith("-Dfabric.addMods=")),"1.0.5 injected after 1.0.4 retirement");}
+            if(args.length>4){Path old=mods.resolve("renamed-1.0.4.jar");Files.copy(Path.of(args[4]),old);var updated=CompanionIntegration.prepare(p,System.out::println);check(!Files.exists(old)&&Files.exists(game.resolve(".kapkan-managed/retired/renamed-1.0.4.jar")),"Known 1.0.4 companion backed up during update");check(updated.command().stream().anyMatch(s->s.startsWith("-Dfabric.addMods=")),"1.0.6 injected after 1.0.4 retirement");}
             migrationFixtures(dir.resolve("migration"),Path.of(args[0]),Path.of(args[1]),args.length>4?Path.of(args[4]):null);
+            if(args.length>5)real105Migration(dir.resolve("real-1.0.5-upgrade"),Path.of(args[5]),Path.of(args[0]).toAbsolutePath().getParent());
             System.out.println("Companion integration: "+checks+" checks passed (synthetic game-folder fixtures).");
         }finally{try(var walk=Files.walk(dir)){for(Path p:walk.sorted(Comparator.reverseOrder()).toList())Files.deleteIfExists(p);}}
     }
     static void migrationFixtures(Path root,Path replacement,Path legacy,Path previousPresence)throws Exception{
         System.setProperty("kapkan.presenceJar",replacement.toAbsolutePath().toString());
         Path game=root.resolve("manual-current"),mods=game.resolve("mods");Files.createDirectories(mods);
-        Path current=fixture(mods.resolve("manually-installed.jar"),metadata("kapkan-presence","1.0.5","=26.1.2"),true);
+        Path current=fixture(mods.resolve("manually-installed.jar"),metadata("kapkan-presence","1.0.6","=26.1.2"),true);
         byte[] currentBytes=Files.readAllBytes(current);
         Path malformed=fixture(mods.resolve("malformed-json.jar"),"{\"id\":\"kapkan-presence\",",true);
         Path unrelated=fixture(mods.resolve("user-mod.jar"),"{\"id\":\"user-mod\",\"description\":\"kapkan-presence\"}",false);
@@ -76,7 +77,7 @@ public final class CompanionIntegrationTest {
             Path file=game.resolve(name);Files.createDirectories(file.getParent());Files.writeString(file,"USER "+name);preserved.put(file,Files.readAllBytes(file));
         }
         var retained=CompanionIntegration.prepare(plan(game,"26.1.2","Fabric"),System.out::println);
-        check(!injected(retained),"Matching 1.0.5 manual companion retained without duplicate injection");
+        check(!injected(retained),"Matching 1.0.6 manual companion retained without duplicate injection");
         check(Arrays.equals(currentBytes,Files.readAllBytes(current)),"Manual current companion bytes preserved");
         check(retained.command().stream().anyMatch(s->s.startsWith("-Dkapkan.launchSession=")),"Matching manual companion keeps launcher association");
         Path duplicate=mods.resolve("z-duplicate-current.jar");Files.copy(current,duplicate);
@@ -85,7 +86,7 @@ public final class CompanionIntegrationTest {
         for(var saved:preserved.entrySet())check(Arrays.equals(saved.getValue(),Files.readAllBytes(saved.getKey())),"Unrelated or malformed user file preserved: "+saved.getKey().getFileName());
 
         int i=0;
-        for(String[] spec:List.of(new String[]{"1.0.4","26.1.2","true"},new String[]{"1.0.5","26.1","true"},new String[]{"1.0.5",">=26.1","true"},new String[]{"1.0.5","26.1.2","false"})){
+        for(String[] spec:List.of(new String[]{"1.0.4","26.1.2","true"},new String[]{"1.0.6","26.1","true"},new String[]{"1.0.6",">=26.1","true"},new String[]{"1.0.6","26.1.2","false"})){
             Path target=root.resolve("replace-"+(i++)),old=target.resolve("mods/my-renamed-companion.jar");
             fixture(old,metadata("kapkan-presence",spec[0],spec[1]),Boolean.parseBoolean(spec[2]));byte[] before=Files.readAllBytes(old);
             var upgraded=CompanionIntegration.prepare(plan(target,"26.1.2","Fabric"),System.out::println);
@@ -121,7 +122,7 @@ public final class CompanionIntegrationTest {
 
         Path invalidGame=root.resolve("invalid-replacement"),invalidOld=fixture(invalidGame.resolve("mods/old.jar"),metadata("kapkan-presence","1.0.4","26.1.2"),true);
         byte[] invalidBefore=Files.readAllBytes(invalidOld);
-        Path wrongReplacement=fixture(root.resolve("wrong-replacement.jar"),metadata("kapkan-presence","1.0.5","=26.1"),true);
+        Path wrongReplacement=fixture(root.resolve("wrong-replacement.jar"),metadata("kapkan-presence","1.0.6","=26.1"),true);
         System.setProperty("kapkan.presenceJar",wrongReplacement.toString());var unchanged=plan(invalidGame,"26.1.2","Fabric");
         check(CompanionIntegration.prepare(unchanged,System.out::println).command().equals(unchanged.command()),"Wrong-target replacement cannot change launch arguments");
         check(Arrays.equals(invalidBefore,Files.readAllBytes(invalidOld))&&!Files.exists(invalidGame.resolve(".kapkan-managed")),"Wrong-target replacement cannot move existing companion");
@@ -142,7 +143,7 @@ public final class CompanionIntegrationTest {
         check(!Files.exists(customLegacy)&&Arrays.equals(legacyBytes,Files.readAllBytes(customRetired.resolve(customLegacy.getFileName()))),"Known legacy hash in custom directory backed up safely");
         if(customKnown!=null)check(!Files.exists(customKnown)&&Arrays.equals(customKnownBytes,Files.readAllBytes(customRetired.resolve(customKnown.getFileName()))),"Known presence hash in custom directory backed up safely");
         check(Arrays.equals(customUserBytes,Files.readAllBytes(customUser))&&Files.readString(customNotes).equals("USER CUSTOM FOLDER DATA"),"Unrelated custom mods and nested data remain unchanged");
-        Path customCurrent=fixture(customMods.resolve("manual-current.jar"),metadata("kapkan-presence","1.0.5","=26.1.2"),true);byte[] customCurrentBytes=Files.readAllBytes(customCurrent);
+        Path customCurrent=fixture(customMods.resolve("manual-current.jar"),metadata("kapkan-presence","1.0.6","=26.1.2"),true);byte[] customCurrentBytes=Files.readAllBytes(customCurrent);
         check(!injected(CompanionIntegration.prepare(plan(customGame,"26.1.2","Fabric"),System.out::println)),"Matching manual current companion in custom directory retained without duplicate injection");
         check(Arrays.equals(customCurrentBytes,Files.readAllBytes(customCurrent))&&Files.isSymbolicLink(customLink),"Custom current companion and directory link stay unchanged");
 
@@ -158,6 +159,31 @@ public final class CompanionIntegrationTest {
         var blocked=plan(linkedBackupGame,"26.1.2","Fabric");
         check(CompanionIntegration.prepare(blocked,System.out::println).command().equals(blocked.command())&&Files.exists(linkedBackupOld),"Symlinked backup directory prevents migration without changing active files");
         try(var files=Files.list(outsideFolder)){check(files.findAny().isEmpty(),"Symlinked backup directory receives no writes");}
+    }
+    /** Run the actual published 1.0.5 JAR bytes through the current launcher migration. */
+    static void real105Migration(Path root,Path previousDirectory,Path currentDirectory)throws Exception{
+        Map<String,String> hashes=Map.of(
+            "26.1","38a34fbece91c1cb197a842f8543224cf4f2c736181431060ee73e60f7c5cdb8",
+            "26.1.1","2666aa3a53b7063ec7fd2673893da1ef61018b1838ad6a8e4e3729409aac2b67",
+            "26.1.2","4671b4ea573f7e4742ff03e30eaed562d6df3d828f4f1c33463682b987cdd2c9");
+        for(String version:List.of("26.1","26.1.1","26.1.2")){
+            Path previous=previousDirectory.resolve("KapKan-1.0.5-mc"+version+"-fabric.jar");byte[] original=Files.readAllBytes(previous);
+            check(HexFormat.of().formatHex(MessageDigest.getInstance("SHA-256").digest(original)).equals(hashes.get(version)),"Real published 1.0.5 artifact hash: "+version);
+            Path replacement=currentDirectory.resolve(CompanionIntegration.FILES.get(version));CompanionIntegration.validate(replacement,version);
+            Path game=root.resolve(version),mods=game.resolve("mods");Files.createDirectories(mods);
+            Path active=mods.resolve("user-renamed-kapkan.jar");Files.write(active,original);
+            Path options=game.resolve("options.txt"),world=game.resolve("saves/world/level.dat");Files.writeString(options,"USER controls and graphics");Files.createDirectories(world.getParent());Files.writeString(world,"USER world");
+            var upgraded=CompanionIntegration.prepare(plan(game,version,"Fabric"),System.out::println);
+            check(upgraded.command().stream().anyMatch(arg->arg.equals("-Dfabric.addMods="+replacement.toAbsolutePath())),"Real 1.0.5 replaced by exact 1.0.6 target: "+version);
+            Path backup=game.resolve(".kapkan-managed/retired/user-renamed-kapkan.jar");
+            check(!Files.exists(active)&&Arrays.equals(original,Files.readAllBytes(backup)),"Real 1.0.5 retired byte for byte: "+version);
+            check(Files.readString(options).equals("USER controls and graphics")&&Files.readString(world).equals("USER world"),"Real upgrade preserves controls/graphics/world: "+version);
+            byte[] current=Files.readAllBytes(replacement);Path manual=mods.resolve("current-manually-installed.jar");Files.write(manual,current);
+            check(!injected(CompanionIntegration.prepare(plan(game,version,"Fabric"),System.out::println)),"Real current manual companion is not duplicated: "+version);
+            check(Arrays.equals(current,Files.readAllBytes(manual))&&Arrays.equals(original,Files.readAllBytes(backup)),"Real current companion and old backup remain unchanged: "+version);
+            check(Arrays.equals(original,Files.readAllBytes(previous)),"Recovered 1.0.5 reference remains immutable: "+version);
+            System.out.println("REAL 1.0.5 -> 1.0.6 MIGRATION: PASS Minecraft "+version+" (temporary game folder, original JAR bytes; no gameplay execution)");
+        }
     }
     static boolean injected(LaunchPlan plan){return plan.command().stream().anyMatch(s->s.startsWith("-Dfabric.addMods="));}
     static String metadata(String id,String version,String target){return "{\"schemaVersion\":1,\"id\":\""+id+"\",\"version\":\""+version+"\",\"depends\":{\"minecraft\":\""+target+"\"}}";}

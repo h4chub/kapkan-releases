@@ -27,15 +27,28 @@ failure() {
 trap cleanup EXIT
 trap failure ERR
 if [ ! -f "$APP/Contents/Info.plist" ] || [ ! -f "$APP/Contents/MacOS/KapKan" ]; then
-  echo "Keep Make-DMG.command beside the complete KapKan.app from the same 1.0.5 package."
+  echo "Keep Make-DMG.command beside the complete KapKan.app from the same 1.0.6 package."
   false
 fi
 STAGE="$(mktemp -d "${TMPDIR:-/tmp}/KapKan-dmg.XXXXXX")"
-printf '\nPreparing KapKan 1.0.5 disk image...\n'
+printf '\nPreparing KapKan 1.0.6 disk image...\n'
 /usr/bin/ditto "$APP" "$STAGE/KapKan.app"
 EXE="$STAGE/KapKan.app/Contents/MacOS/KapKan"
 /bin/chmod 755 "$EXE"
 /usr/bin/plutil -lint "$STAGE/KapKan.app/Contents/Info.plist"
+ENTITLEMENTS="$STAGE/KapKan.app/Contents/Resources/KapKan.entitlements"
+/usr/bin/plutil -lint "$ENTITLEMENTS"
+# A purpose string enables macOS's consent dialog when a game voice mod opens
+# audio input. This entitlement also permits that operation in signed builds
+# using the hardened runtime; macOS still requires the player's consent.
+if [ "$(/usr/libexec/PlistBuddy -c 'Print :com.apple.security.device.audio-input' "$ENTITLEMENTS")" != true ]; then
+  echo "The app is missing its microphone signing declaration. Use a complete KapKan package."
+  false
+fi
+if ! /usr/libexec/PlistBuddy -c 'Print :NSMicrophoneUsageDescription' "$STAGE/KapKan.app/Contents/Info.plist" >/dev/null; then
+  echo "The app is missing its microphone usage description. Use a complete KapKan package."
+  false
+fi
 # The release packer now ends the universal file exactly at its final slice.
 # On Macs with lipo available, also canonicalize through Apple's own tool.
 # This modifies the temporary copy only, not the original application.
@@ -54,16 +67,22 @@ if [ -n "${KAPKAN_NOTARY_PROFILE:-}" ] && [ -z "${KAPKAN_SIGN_IDENTITY:-}" ]; th
   false
 fi
 if [ -n "${KAPKAN_SIGN_IDENTITY:-}" ]; then
-  /usr/bin/codesign --force --sign "$KAPKAN_SIGN_IDENTITY" --options runtime --timestamp "$STAGE/KapKan.app"
+  /usr/bin/codesign --force --sign "$KAPKAN_SIGN_IDENTITY" --options runtime --entitlements "$ENTITLEMENTS" --timestamp "$STAGE/KapKan.app"
 else
-  /usr/bin/codesign --force --sign - --timestamp=none "$STAGE/KapKan.app"
+  /usr/bin/codesign --force --sign - --entitlements "$ENTITLEMENTS" --timestamp=none "$STAGE/KapKan.app"
 fi
 # Never remove this check to make a broken executable look successful.
 /usr/bin/codesign --verify --deep --strict --verbose=2 "$STAGE/KapKan.app"
+/usr/bin/codesign --display --entitlements :- "$STAGE/KapKan.app" > "$STAGE/signed-entitlements.plist"
+if [ "$(/usr/libexec/PlistBuddy -c 'Print :com.apple.security.device.audio-input' "$STAGE/signed-entitlements.plist")" != true ]; then
+  echo "The app signature did not retain its microphone declaration. Packaging stopped."
+  false
+fi
+/bin/rm "$STAGE/signed-entitlements.plist"
 echo "Application code-signature validation passed."
 /bin/ln -s /Applications "$STAGE/Applications"
 cat > "$STAGE/READ-ME.txt" <<'TXT'
-KapKan 1.0.5
+KapKan 1.0.6
 Drag KapKan.app into Applications, then open it.
 First launch prepares the matching Java runtime and requires internet.
 Minecraft data in ~/.kapkan is preserved. This package does not publish updates.
@@ -78,12 +97,12 @@ if [ -n "${KAPKAN_NOTARY_PROFILE:-}" ]; then
   /usr/bin/xcrun stapler staple "$TEMP_OUT"
   /usr/bin/xcrun stapler validate "$TEMP_OUT"
 fi
-FINAL="$OUT_DIR/KapKan-macOS-1.0.5.dmg"
+FINAL="$OUT_DIR/KapKan-macOS-1.0.6.dmg"
 if [ -f "$FINAL" ]; then
   /bin/mv "$FINAL" "$OUT_DIR/KapKan-macOS-previous-$(date +%Y%m%d-%H%M%S).dmg"
 fi
 /bin/mv "$TEMP_OUT" "$FINAL"
-(cd "$OUT_DIR" && /usr/bin/shasum -a 256 "KapKan-macOS-1.0.5.dmg" > "KapKan-macOS-1.0.5.dmg.sha256")
+(cd "$OUT_DIR" && /usr/bin/shasum -a 256 "KapKan-macOS-1.0.6.dmg" > "KapKan-macOS-1.0.6.dmg.sha256")
 printf '\nCREATED AND VERIFIED: %s\n' "$FINAL"
 if [ -z "${KAPKAN_NOTARY_PROFILE:-}" ]; then echo "Not Developer-ID notarized. No website/GitHub release was published."; fi
 /usr/bin/open -R "$FINAL"

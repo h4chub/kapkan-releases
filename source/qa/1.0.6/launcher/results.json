@@ -1,0 +1,15 @@
+{
+  "gg.kapkan.v23.ReleaseSelfTest": 0,
+  "gg.kapkan.release.FirstInstallTest": 0,
+  "gg.kapkan.release.DownloadRecoveryTest": 0,
+  "gg.kapkan.release.ModProfilesTest": 0,
+  "gg.kapkan.release.WindowsFabricClasspathTest": 0,
+  "gg.kapkan.release.HardeningSelfTest": 0,
+  "CompanionIntegrationTest": 0,
+  "gg.kapkan.release.LauncherMaintenanceTest": 0,
+  "gg.kapkan.release.PerformanceIntegrationTest": 0,
+  "FabricProfileRegression": 0,
+  "CompanionCompatibility": 0,
+  "MenuLayoutTest": 0,
+  "CompanionIntegration105To106": 0
+}

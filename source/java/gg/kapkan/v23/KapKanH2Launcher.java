@@ -20,7 +20,7 @@ public final class KapKanH2Launcher {
     static final Color BG=new Color(15,17,20), PANEL=new Color(23,25,29), CONTROL=new Color(33,36,41);
     static final Color TEXT=new Color(242,243,245), MUTED=new Color(170,177,188), CRIMSON=new Color(201,38,63);
     static final Font FONT=KapKanV23Launcher.FONT;
-    public static final String BUILD="client-release-1.0.5";
+    public static final String BUILD="client-release-1.0.6";
     static KapKanH2Launcher instance;
     final KapKanV23Launcher.App a;
     final LauncherUpdates updates;
@@ -63,7 +63,7 @@ public final class KapKanH2Launcher {
             a.scene.images.clear(); // Release unused H1 preload images; keep the displayed artwork sharp.
             logo=ImageIO.read(KapKanH2Launcher.class.getResourceAsStream("/gg/kapkan/h2/double-k-white.png"));
         }catch(Exception e){throw new IllegalStateException("KapKan artwork is missing",e);}
-        a.frame.setTitle("KapKan 1.0.5");a.frame.setIconImage(logo);a.frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        a.frame.setTitle("KapKan 1.0.6");a.frame.setIconImage(logo);a.frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         a.frame.setMinimumSize(new Dimension(820,560));a.frame.setContentPane(root);
         LauncherPolish.trackFocus(a.frame);
         buildNavigation();root.add(navigation,BorderLayout.WEST);
@@ -88,7 +88,7 @@ public final class KapKanH2Launcher {
         JPanel brand=panel(new FlowLayout(FlowLayout.LEFT,8,0));brand.add(new JLabel(new ImageIcon(logo.getScaledInstance(-1,34,Image.SCALE_SMOOTH))));brand.add(label("KapKan",Font.BOLD,18,TEXT));brand.setMaximumSize(new Dimension(136,48));brand.setAlignmentX(0);navigation.add(brand);navigation.add(Box.createVerticalStrut(35));
         for(String name:List.of("Play","Mods","Accounts","Explore")){JButton b=navButton(name);navigation.add(b);navigation.add(Box.createVerticalStrut(6));}
         navigation.add(Box.createVerticalGlue());navigation.add(navButton("Settings"));navigation.add(Box.createVerticalStrut(20));
-        JLabel version=label("1.0.5",0,11,MUTED);version.setBorder(new EmptyBorder(0,12,0,0));navigation.add(version);
+        JLabel version=label("1.0.6",0,11,MUTED);version.setBorder(new EmptyBorder(0,12,0,0));navigation.add(version);
     }
     JButton navButton(String name){JButton b=button(name,false,()->select(name));b.putClientProperty("navigation",true);b.setIcon(new LineIcon(name));b.setIconTextGap(12);b.setHorizontalAlignment(SwingConstants.LEFT);b.setAlignmentX(0);b.setPreferredSize(new Dimension(136,44));b.setMinimumSize(new Dimension(136,44));b.setMaximumSize(new Dimension(136,44));nav.put(name,b);return b;}
     JPanel playPage(){
@@ -168,7 +168,7 @@ public final class KapKanH2Launcher {
                     var modProfile=content.modProfiles.resolve(version,loader);modLease=content.modProfiles.lock(modProfile);
                     plan=content.modProfiles.apply(plan,modProfile);report.accept("Mods folder: "+modProfile.mods());
                     KapKanV23Launcher.SplashManager.prepare(new MinecraftInstallation(plan.workingDirectory()),version,a.state);
-                    return CompanionIntegration.prepare(plan,report);
+                    return PerformanceIntegration.prepare(CompanionIntegration.prepare(plan,report),report);
                 }
             }
             protected void done(){try{

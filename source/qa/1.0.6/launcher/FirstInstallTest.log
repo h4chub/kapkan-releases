@@ -1,0 +1,85 @@
+KapKan: preparing official Minecraft files for 26.1.2
+Minecraft: finding official metadata for 26.1.2...
+Minecraft: downloading Minecraft client...
+2026-10-17T16:44:45.140890Z Attempt 1/3 http://127.0.0.1:51492/lib -> fixture-1.jar [HTTP] HTTP 503 from 127.0.0.1
+gg.kapkan.release.RetryDownloader$Problem: HTTP 503 from 127.0.0.1
+	at gg.kapkan.release.RetryDownloader.transfer(RetryDownloader.java:135)
+	at gg.kapkan.release.RetryDownloader.download(RetryDownloader.java:76)
+	at gg.kapkan.release.RetryDownloader.download(RetryDownloader.java:51)
+	at gg.kapkan.release.RetryDownloader.download(RetryDownloader.java:44)
+	at gg.kapkan.launcher.install.BaseGameInstallerService.downloadRaw(BaseGameInstallerService.java)
+	at gg.kapkan.launcher.install.BaseGameInstallerService.downloadDescriptor(BaseGameInstallerService.java:177)
+	at gg.kapkan.launcher.install.BaseGameInstallerService.installLibraries(BaseGameInstallerService.java:95)
+	at gg.kapkan.launcher.install.BaseGameInstallerService.ensureInstalled(BaseGameInstallerService.java:67)
+	at gg.kapkan.release.FreshInstallSupport.install(FreshInstallSupport.java:42)
+	at gg.kapkan.release.FreshInstallSupport.install(FreshInstallSupport.java:33)
+	at gg.kapkan.release.FirstInstallTest.main(FirstInstallTest.java:46)
+2026-10-17T16:44:45.847996Z Attempt 2/3 http://127.0.0.1:51492/lib -> fixture-1.jar [HTTP] HTTP 503 from 127.0.0.1
+gg.kapkan.release.RetryDownloader$Problem: HTTP 503 from 127.0.0.1
+	at gg.kapkan.release.RetryDownloader.transfer(RetryDownloader.java:135)
+	at gg.kapkan.release.RetryDownloader.download(RetryDownloader.java:76)
+	at gg.kapkan.release.RetryDownloader.download(RetryDownloader.java:51)
+	at gg.kapkan.release.RetryDownloader.download(RetryDownloader.java:44)
+	at gg.kapkan.launcher.install.BaseGameInstallerService.downloadRaw(BaseGameInstallerService.java)
+	at gg.kapkan.launcher.install.BaseGameInstallerService.downloadDescriptor(BaseGameInstallerService.java:177)
+	at gg.kapkan.launcher.install.BaseGameInstallerService.installLibraries(BaseGameInstallerService.java:95)
+	at gg.kapkan.launcher.install.BaseGameInstallerService.ensureInstalled(BaseGameInstallerService.java:67)
+	at gg.kapkan.release.FreshInstallSupport.install(FreshInstallSupport.java:42)
+	at gg.kapkan.release.FreshInstallSupport.install(FreshInstallSupport.java:33)
+	at gg.kapkan.release.FirstInstallTest.main(FirstInstallTest.java:46)
+2026-10-17T16:44:47.258258Z Attempt 3/3 http://127.0.0.1:51492/lib -> fixture-1.jar [HTTP] HTTP 503 from 127.0.0.1
+gg.kapkan.release.RetryDownloader$Problem: HTTP 503 from 127.0.0.1
+	at gg.kapkan.release.RetryDownloader.transfer(RetryDownloader.java:135)
+	at gg.kapkan.release.RetryDownloader.download(RetryDownloader.java:76)
+	at gg.kapkan.release.RetryDownloader.download(RetryDownloader.java:51)
+	at gg.kapkan.release.RetryDownloader.download(RetryDownloader.java:44)
+	at gg.kapkan.launcher.install.BaseGameInstallerService.downloadRaw(BaseGameInstallerService.java)
+	at gg.kapkan.launcher.install.BaseGameInstallerService.downloadDescriptor(BaseGameInstallerService.java:177)
+	at gg.kapkan.launcher.install.BaseGameInstallerService.installLibraries(BaseGameInstallerService.java:95)
+	at gg.kapkan.launcher.install.BaseGameInstallerService.ensureInstalled(BaseGameInstallerService.java:67)
+	at gg.kapkan.release.FreshInstallSupport.install(FreshInstallSupport.java:42)
+	at gg.kapkan.release.FreshInstallSupport.install(FreshInstallSupport.java:33)
+	at gg.kapkan.release.FirstInstallTest.main(FirstInstallTest.java:46)
+2026-10-17T16:44:47.263230Z Could not download fixture-1.jar from 127.0.0.1 after 3 attempts.
+HTTP 503 from 127.0.0.1
+The download server rejected the request. Retry later.
+Details: /Users/homefolder/.codex/.chatgpt-projects/g-p-6ab96274aeec81919ee1071ebc66f27e/development106/source/qa/1.0.6/launcher/home/.kapkan/logs/downloads.log
+gg.kapkan.release.RetryDownloader$Problem: HTTP 503 from 127.0.0.1
+	at gg.kapkan.release.RetryDownloader.transfer(RetryDownloader.java:135)
+	at gg.kapkan.release.RetryDownloader.download(RetryDownloader.java:76)
+	at gg.kapkan.release.RetryDownloader.download(RetryDownloader.java:51)
+	at gg.kapkan.release.RetryDownloader.download(RetryDownloader.java:44)
+	at gg.kapkan.launcher.install.BaseGameInstallerService.downloadRaw(BaseGameInstallerService.java)
+	at gg.kapkan.launcher.install.BaseGameInstallerService.downloadDescriptor(BaseGameInstallerService.java:177)
+	at gg.kapkan.launcher.install.BaseGameInstallerService.installLibraries(BaseGameInstallerService.java:95)
+	at gg.kapkan.launcher.install.BaseGameInstallerService.ensureInstalled(BaseGameInstallerService.java:67)
+	at gg.kapkan.release.FreshInstallSupport.install(FreshInstallSupport.java:42)
+	at gg.kapkan.release.FreshInstallSupport.install(FreshInstallSupport.java:33)
+	at gg.kapkan.release.FirstInstallTest.main(FirstInstallTest.java:46)
+2026-10-17T16:44:47.265317Z Managed installation failed
+gg.kapkan.release.RetryDownloader$DownloadFailure: Could not download fixture-1.jar from 127.0.0.1 after 3 attempts.
+HTTP 503 from 127.0.0.1
+The download server rejected the request. Retry later.
+Details: /Users/homefolder/.codex/.chatgpt-projects/g-p-6ab96274aeec81919ee1071ebc66f27e/development106/source/qa/1.0.6/launcher/home/.kapkan/logs/downloads.log
+	at gg.kapkan.release.RetryDownloader.failed(RetryDownloader.java:215)
+	at gg.kapkan.release.RetryDownloader.download(RetryDownloader.java:89)
+	at gg.kapkan.release.RetryDownloader.download(RetryDownloader.java:51)
+	at gg.kapkan.release.RetryDownloader.download(RetryDownloader.java:44)
+	at gg.kapkan.launcher.install.BaseGameInstallerService.downloadRaw(BaseGameInstallerService.java)
+	at gg.kapkan.launcher.install.BaseGameInstallerService.downloadDescriptor(BaseGameInstallerService.java:177)
+	at gg.kapkan.launcher.install.BaseGameInstallerService.installLibraries(BaseGameInstallerService.java:95)
+	at gg.kapkan.launcher.install.BaseGameInstallerService.ensureInstalled(BaseGameInstallerService.java:67)
+	at gg.kapkan.release.FreshInstallSupport.install(FreshInstallSupport.java:42)
+	at gg.kapkan.release.FreshInstallSupport.install(FreshInstallSupport.java:33)
+	at gg.kapkan.release.FirstInstallTest.main(FirstInstallTest.java:46)
+Caused by: gg.kapkan.release.RetryDownloader$Problem: HTTP 503 from 127.0.0.1
+	at gg.kapkan.release.RetryDownloader.transfer(RetryDownloader.java:135)
+	at gg.kapkan.release.RetryDownloader.download(RetryDownloader.java:76)
+	... 9 more
+KapKan: preparing official Minecraft files for 26.1.2
+Minecraft: finding official metadata for 26.1.2...
+Minecraft: libraries ready (1 checked, 1 downloaded).
+Minecraft: checking asset index...
+Minecraft: assets ready (0 verified and reused).
+Minecraft: 26.1.2 is ready.
+Official-installer local fixture: PASS (interrupted install, repair, SHA1 reuse, offline second check, mods preservation)

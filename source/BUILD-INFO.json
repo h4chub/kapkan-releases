@@ -1,10 +1,10 @@
 {
   "product": "KapKan",
-  "version": "1.0.5",
-  "build_id": "client-release-1.0.5",
-  "publication": "NOT_PUBLISHED",
-  "built_at_utc": "2026-10-16T13:58:15.661341+00:00",
-  "source_baseline": "Recovered KapKan 1.0.4 source archive; launcher Fabric repair retained",
+  "version": "1.0.6",
+  "build_id": "client-release-1.0.6",
+  "publication": "READY_FOR_PUBLICATION",
+  "built_at_utc": "2026-10-17T16:49:16.735510+00:00",
+  "source_baseline": "Public KapKan 1.0.5 commit 9562b31217772709d901e50c057a2af26acf9303",
   "launcher_target_java": 21,
   "companion_target_java": 25,
   "companion_minecraft": [
@@ -13,7 +13,7 @@
     "26.1.2"
   ],
   "companion_loader": "Fabric Loader 0.19.5 (declared minimum)",
-  "companion_build_id": "1.0.5",
+  "companion_build_id": "1.0.6",
   "companion_rebuilt": true,
   "bundled_fabric_api_modules": [
     "fabric-api-base",
@@ -22,16 +22,20 @@
   ],
   "cosmetic_sync": "Matching Fabric server and clients using the bundled server relay; optional legacy HTTP service",
   "presence_service_deployed": false,
-  "native_acceptance": "Cross-compilation and package checks; native macOS/Windows installation not run for this exact release",
-  "gameplay_acceptance": "PASS all three exact targets: two real clients, cosmetics/lifecycle/restarts and 35 gameplay feature checks each; native UI keybind restart verified",
-  "toolchain": "Official checksum-verified Corretto 21/25; Go 1.23.2; Python/Pillow",
+  "native_acceptance": "Native macOS arm64 game startup/world entry all3 exact targets; signed app/archive/payload checks PASS. Interactive mic and native Windows install not run.",
+  "gameplay_acceptance": "Native macOS arm64 isolated single-player smoke all3 exact targets with bundled modules. No general FPS conclusion; see separate controlled-scene QA.",
+  "toolchain": "Temurin JDK21, Oracle JDK25, checksum-verified official Go1.27.2, Python3/Pillow",
   "hotfix": "fabric-dependency-recovery-3",
   "microsoft_sign_in": "Existing owned application client-ID setup unchanged",
-  "performance_claims": "No FPS improvement claim; software-rendered QA is not a device performance benchmark",
+  "performance_claims": "No FPS marketing claim; runtime measurements are machine/scene specific",
   "artifacts": {
-    "26.1": "38a34fbece91c1cb197a842f8543224cf4f2c736181431060ee73e60f7c5cdb8",
-    "26.1.1": "2666aa3a53b7063ec7fd2673893da1ef61018b1838ad6a8e4e3729409aac2b67",
-    "26.1.2": "4671b4ea573f7e4742ff03e30eaed562d6df3d828f4f1c33463682b987cdd2c9"
+    "26.1": "c01579a31379f567eb19afb03969a888367bb91517d9652e9622851c1f194210",
+    "26.1.1": "3d447a99b1c3bf190e9af3864f1d82a3c3978e141fa16a47fa64193d9f2c75da",
+    "26.1.2": "a747bff50be125397a77fc4be7155f98485a049676c2a8616d8ce03aeb2f5f41"
   },
-  "publishing_blocker": "Connected GitHub repository permissions: pull=true, push=false"
+  "bundled_performance_modules": [
+    "ImmediatelyFast 1.15.3",
+    "Lithium 0.24.7",
+    "FerriteCore 9.0.0"
+  ]
 }

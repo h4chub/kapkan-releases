@@ -32,7 +32,7 @@ type Status func(string)
 type Manager struct {
 	Root   string
 	Client *http.Client
-	// Metadata is supplied only in tests. Production always uses Adoptium's HTTPS API.
+	// Metadata is supplied only in tests. Production uses the vendor's HTTPS API.
 	Metadata func(int, string, string) string
 }
 type Release struct {
@@ -45,6 +45,9 @@ type Release struct {
 			Link     string `json:"link"`
 			Name     string `json:"name"`
 			Size     int64  `json:"size"`
+			// Azul's API rounds some archive sizes (the SHA-256 is exact).
+			// Adoptium retains exact-size verification with the default zero.
+			SizeTolerance int64 `json:"-"`
 		} `json:"package"`
 	} `json:"binary"`
 	ReleaseName string `json:"release_name"`
@@ -111,8 +114,8 @@ func (m Manager) Ensure(ctx context.Context, major int, arch string, status Stat
 	if err = os.MkdirAll(root, 0700); err != nil {
 		return "", err
 	}
-	target := filepath.Join(root, fmt.Sprintf("temurin-%d-%s-%s", major, platform, a))
-	if j := cached(target, major, a, platform); j != "" {
+	target := filepath.Join(root, fmt.Sprintf("%s-%d-%s-%s", runtimeVendor(platform), major, platform, a))
+	if j := m.usableCached(target, major, a, platform); j != "" {
 		return j, nil
 	}
 	lock := target + ".install-lock"
@@ -129,7 +132,7 @@ func (m Manager) Ensure(ctx context.Context, major int, arch string, status Stat
 			os.Remove(lock)
 			continue
 		}
-		if j := cached(target, major, a, platform); j != "" {
+		if j := m.usableCached(target, major, a, platform); j != "" {
 			return j, nil
 		}
 		if time.Now().After(deadline) {
@@ -142,46 +145,13 @@ func (m Manager) Ensure(ctx context.Context, major int, arch string, status Stat
 		}
 	}
 	defer os.Remove(lock)
-	if j := cached(target, major, a, platform); j != "" {
+	if j := m.usableCached(target, major, a, platform); j != "" {
 		return j, nil
 	}
 	status(fmt.Sprintf("Preparing Java %d (%s). First setup requires internet.", major, a))
-	releasesURL := fmt.Sprintf(MetadataURL, major, a, platform)
-	if m.Metadata != nil {
-		releasesURL = m.Metadata(major, a, platform)
-	}
-	req, err := http.NewRequestWithContext(ctx, "GET", releasesURL, nil)
+	selected, err := m.release(ctx, major, a, platform)
 	if err != nil {
 		return "", err
-	}
-	req.Header.Set("User-Agent", "KapKan/1.0.5")
-	resp, err := m.httpClient().Do(req)
-	if err != nil {
-		return "", fmt.Errorf("cannot reach Java download metadata: %w", err)
-	}
-	var releases []Release
-	if resp.StatusCode != http.StatusOK {
-		resp.Body.Close()
-		return "", fmt.Errorf("Java %d %s/%s is unavailable (HTTP %d)", major, platform, a, resp.StatusCode)
-	}
-	data, err := io.ReadAll(io.LimitReader(resp.Body, 2<<20))
-	resp.Body.Close()
-	if err != nil {
-		return "", err
-	}
-	if err = json.Unmarshal(data, &releases); err != nil {
-		return "", fmt.Errorf("invalid Java release metadata: %w", err)
-	}
-	var selected *Release
-	for i := range releases {
-		b := &releases[i]
-		if b.Version.Major == major && b.Binary.Architecture == a && b.Binary.OS == platform && b.Binary.ImageType == "jre" {
-			selected = b
-			break
-		}
-	}
-	if selected == nil {
-		return "", fmt.Errorf("no matching Java %d runtime for %s/%s", major, platform, a)
 	}
 	pkg := selected.Binary.Package
 	if _, err = hex.DecodeString(pkg.Checksum); err != nil || len(pkg.Checksum) != 64 {
@@ -201,7 +171,7 @@ func (m Manager) Ensure(ctx context.Context, major int, arch string, status Stat
 	defer os.RemoveAll(stage)
 	archive := filepath.Join(stage, "runtime.archive")
 	status(fmt.Sprintf("Downloading Java %d (%d MB)...", major, pkg.Size/(1<<20)))
-	if err = m.download(ctx, pkg.Link, archive, pkg.Size, pkg.Checksum); err != nil {
+	if err = m.download(ctx, pkg.Link, archive, pkg.Size, pkg.Checksum, pkg.SizeTolerance); err != nil {
 		return "", err
 	}
 	content := filepath.Join(stage, "content")
@@ -225,6 +195,11 @@ func (m Manager) Ensure(ctx context.Context, major int, arch string, status Stat
 	}
 	if err = VerifyJava(ctx, j, major, a); err != nil {
 		return "", err
+	}
+	if platform == "mac" && m.Metadata == nil {
+		if err = verifyMicrophoneJava(ctx, j); err != nil {
+			return "", err
+		}
 	}
 	relative, _ := filepath.Rel(content, j)
 	receipt := Receipt{major, a, platform, relative, selected.ReleaseName, pkg.Checksum}
@@ -273,12 +248,12 @@ func cached(target string, major int, arch, platform string) string {
 	}
 	return j
 }
-func (m Manager) download(ctx context.Context, link, dest string, size int64, checksum string) error {
+func (m Manager) download(ctx context.Context, link, dest string, size int64, checksum string, sizeTolerance int64) error {
 	req, e := http.NewRequestWithContext(ctx, "GET", link, nil)
 	if e != nil {
 		return e
 	}
-	req.Header.Set("User-Agent", "KapKan/1.0.5")
+	req.Header.Set("User-Agent", "KapKan/1.0.6")
 	resp, e := m.httpClient().Do(req)
 	if e != nil {
 		return fmt.Errorf("Java download failed: %w", e)
@@ -300,7 +275,14 @@ func (m Manager) download(ctx context.Context, link, dest string, size int64, ch
 	if ce != nil {
 		return ce
 	}
-	if n != size {
+	if n == 0 || n > MaxArchive {
+		return errors.New("Java runtime download exceeds its size limit or is empty")
+	}
+	difference := n - size
+	if difference < 0 {
+		difference = -difference
+	}
+	if difference > sizeTolerance {
 		return fmt.Errorf("Java download is incomplete: expected %d bytes, received %d", size, n)
 	}
 	if !strings.EqualFold(hex.EncodeToString(hash.Sum(nil)), checksum) {

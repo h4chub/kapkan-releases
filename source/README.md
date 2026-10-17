@@ -1,31 +1,25 @@
-# KapKan 1.0.5
+# KapKan 1.0.6
 
-A Fabric client mod with a compact menu, configurable gameplay HUD and optional server-assisted cosmetics. The existing desktop launcher keeps its Fabric dependency-recovery fixes and selects the exact matching client build.
+A Fabric client mod and desktop launcher with a searchable menu, configurable gameplay HUD, smooth zoom, toggle sprint and optional server-assisted cosmetics.
 
-## Install the mod
+## Install
 
-Use the JAR matching **26.1**, **26.1.1** or **26.1.2**, Fabric Loader **0.19.5 or newer**, and **Java 25**. Put it in the game's `mods` folder, replacing the previous KapKan companion. Required Fabric API modules are bundled. Keep your existing `.kapkan` data and preferences. No new 1.0.5 build is supplied for other Minecraft versions or loaders.
+Use the exact Minecraft **26.1**, **26.1.1** or **26.1.2** JAR with Fabric Loader **0.19.5+** and **Java 25**. The desktop packages include all three client builds. Other versions/loaders remain unsupported by this update.
 
-The launcher packages include all three client builds. On macOS, extract the ZIP and move KapKan.app into Applications. On Windows, run Setup, or extract the entire portable ZIP and open KapKan.exe. Keep KapKan.exe beside Resources. Existing worlds, mods, accounts and settings stay in `.kapkan`. Packages are unsigned.
+On macOS, extract the ZIP and move KapKan.app into Applications. The Mac app uses a local capability signature; it is not Developer ID notarized. Microphone access requires macOS approval when voice chat first requests input. On Windows, run Setup or extract the complete portable ZIP and keep KapKan.exe beside Resources. Existing accounts, worlds, controls, mods and preferences stay in `.kapkan`.
 
-## Controls
+## Controls and settings
 
-- **J** opens the menu. **Escape** closes it. Rebind KapKan controls in Minecraft's Controls menu or KapKan's Controls page. Existing bindings stay saved.
-- The introduction appears once and stays dismissed. Help can open it again.
-- Enable widgets in Features, then open the HUD editor to move, scale, align and reset them. Save separate HUD profiles.
-- **C** is the default smooth zoom key. Toggle sprint uses **R** after enabling it; both keys can be rebound.
-- Capes → **No Cape** removes the custom KapKan cape. Minecraft's own cape setting remains separate.
+Press **J** for KapKan; rebind in Minecraft Controls or KapKan Controls. Enable individual widgets in Features and position them in the HUD editor. **C** defaults to zoom; **R** defaults to toggle sprint after enabling it. Help replays the introduction. Capes → No Cape removes the custom KapKan cape.
 
-## Multiplayer cosmetics
+The launcher's Game performance page includes **Use bundled performance modules**. A change applies at the next game start. Existing copies and declared conflicts take precedence. The launcher does not change your graphics options. Module licenses and exact corresponding sources are included in Resources/performance; see [performance/NOTICE.txt](performance/NOTICE.txt).
 
-For automatic synchronization, put the **same Minecraft-version KapKan JAR on the Fabric server and both clients**, then restart the server. No HTTP service is required for this relay. Players without KapKan can still join the server, but cannot see these custom cosmetics. Servers without the relay cannot provide automatic sharing.
+## Cosmetics
 
-The server assigns cosmetic records to the connected player's UUID; clients do not choose another player's identity. Badge/cape selections and No Cape changes propagate to compatible clients. PNG decoding and network work use bounded background queues. Your imported skins remain local.
-
-The earlier HTTP presence service remains an optional, separately configured fallback. It is not a deployed public service or an account-ownership verification service.
+Automatic badge/cape sharing requires matching KapKan JARs on the Fabric server and clients. The server assigns identities; clients cannot publish for another UUID. Players without KapKan can join but do not render these custom cosmetics. The legacy HTTP fallback is optional; no public cosmetic service is provided.
 
 ## Build and verification
 
-`KAPKAN_JDK=/path/to/jdk25 python3 companion/build.py` builds each exact target against pinned, checksum-verified official inputs. `companion/test.py --minecraft VERSION` runs companion tests. The desktop build uses JDK21; full packaging also requires Go and Python/Pillow. Set `KAPKAN_CLIENT_JDK` to JDK25 and `KAPKAN_JDK` to JDK21 for build-release.sh.
+Use JDK 25 for the companion and JDK 21 for the desktop. Set `KAPKAN_CLIENT_JDK` and `KAPKAN_JDK`, with Go and Python/Pillow available, then run `build-release.sh`. Inputs are pinned and checksum verified. macOS packaging signs and verifies the actual app before creating its ZIP. `KAPKAN_SIGN_IDENTITY` selects an existing Developer ID; otherwise local ad-hoc signing is used. Signing identity setup and notarization are separate.
 
-See COMPATIBILITY.md and QA-REPORT.md for the exact results and remaining device acceptance. Minecraft and Mojang libraries are build inputs, not included in source or mod deliverables.
+See [QA-REPORT.md](QA-REPORT.md) for current verification scope and [history/1.0.5](history/1.0.5/) for historical records. No general FPS gain is promised.

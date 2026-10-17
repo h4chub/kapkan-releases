@@ -37,6 +37,20 @@ public final class LauncherMaintenanceTest {
             List<Path> protect=List.of(current,game,root.resolve(".kapkan"));var candidates=LauncherMaintenance.scan(List.of(downloads),protect);
             check(candidates.size()==3&&candidates.containsAll(List.of(old,folder,zip)),"Only three verified old distributions selected");
             check(LauncherMaintenance.scan(List.of(downloads),List.of(current,folder.resolve("custom-game"),game)).stream().noneMatch(folder::equals),"An ancestor of a configured game folder is protected");
+            // Exercise macOS /var -> /private/var-style aliases on every filesystem.
+            // The game folder has not been created, so resolving only existing paths is insufficient.
+            Path protectedAlias=root.resolve("protected-downloads-alias");
+            try{
+                Files.createSymbolicLink(protectedAlias,downloads.toAbsolutePath());
+                Path futureGame=protectedAlias.resolve(folder.getFileName()).resolve("future-game/deep-profile");
+                check(!Files.exists(futureGame),"Aliased configured game folder is deliberately absent");
+                check(LauncherMaintenance.scan(List.of(downloads),List.of(current,game,futureGame)).stream().noneMatch(folder::equals),"Existing symlink ancestor protects a nonexistent nested game folder");
+            }catch(UnsupportedOperationException unsupported){System.out.println("SKIP symlink-ancestor fixture: symbolic links unsupported");}
+            catch(FileSystemException unavailable){
+                String reason=Objects.toString(unavailable.getReason(),"").toLowerCase(Locale.ROOT);
+                if(reason.contains("not supported")||reason.contains("not implemented"))System.out.println("SKIP symlink-ancestor fixture: "+reason);
+                else throw unavailable;
+            }
             var busy=LauncherMaintenance.retire(List.of(old),protect,p->{throw new AssertionError("Busy copy must not reach Trash");},p->true);check(busy.kept()==1&&Files.exists(old),"Running old app retained");
             Path changed=app(downloads.resolve("KapKan changed.app"),10002);var snapshot=List.of(changed);Files.writeString(changed.resolve("world.txt"),"NEW DATA");
             check(LauncherMaintenance.retire(snapshot,protect,p->{throw new AssertionError("Changed copy must not reach Trash");},p->false).kept()==1,"Candidate rechecked after scan");

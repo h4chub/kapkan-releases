@@ -1,0 +1,25 @@
+Picked up JAVA_TOOL_OPTIONS: -Djava.awt.headless=true
+Picked up JAVA_TOOL_OPTIONS: -Djava.awt.headless=true
+Cape sync: 18 checks passed against the shipped Python service with two independent clients.
+Picked up JAVA_TOOL_OPTIONS: -Djava.awt.headless=true
+Flow running tip 0.3779235921879569, 1.0251934474655882
+Flow settled tip 1.0249034814886846, 8.936029955047732E-78
+Silk running tip 0.3007132871421705, 1.0474255338892795
+Silk settled tip 1.0170392241764683, 3.517131778905985E-61
+Heavy running tip 0.4987432238637849, 0.9799974129910332
+Heavy settled tip 1.0393212865610812, 4.2921759857294494E-70
+Cosmetics: 222 checks passed
+Picked up JAVA_TOOL_OPTIONS: -Djava.awt.headless=true
+HudSettingsTest: 690 assertions passed
+Picked up JAVA_TOOL_OPTIONS: -Djava.awt.headless=true
+Presence engine: 34 checks passed. Local HTTP fixtures, no gameplay claim.
+Picked up JAVA_TOOL_OPTIONS: -Djava.awt.headless=true
+Relay sync: 87 checks passed with two independent protocol clients, authenticated adapter identities, and queued validation.
+Picked up JAVA_TOOL_OPTIONS: -Djava.awt.headless=true
+Text components and visibility policy: 17 assertions passed using real Minecraft classes. Not rendered gameplay.
+Picked up JAVA_TOOL_OPTIONS: -Djava.awt.headless=true
+ZoomStateTest: 38 assertions passed
+Picked up JAVA_TOOL_OPTIONS: -Djava.awt.headless=true
+HUD render settings: 20 checks passed
+Picked up JAVA_TOOL_OPTIONS: -Djava.awt.headless=true
+Render hotpaths: 83 checks passed

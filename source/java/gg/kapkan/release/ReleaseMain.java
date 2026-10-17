@@ -19,7 +19,7 @@ public final class ReleaseMain {
                     "KapKan", JOptionPane.ERROR_MESSAGE);
             }
         });
-        System.out.println("KapKan " + System.getProperty("kapkan.release.version", "1.0.5") +
+        System.out.println("KapKan " + System.getProperty("kapkan.release.version", "1.0.6") +
             " | " + System.getProperty("os.name") + " | " + System.getProperty("os.arch") +
             " | Java " + Runtime.version());
         KapKanH2Launcher.main(args);

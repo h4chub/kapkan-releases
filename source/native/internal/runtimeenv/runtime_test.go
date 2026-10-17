@@ -145,7 +145,7 @@ func TestInstallVerifyReuseAndRepair(t *testing.T) {
 	if _, e = m.Ensure(context.Background(), 21, arch, nil); e == nil {
 		t.Fatal("bad checksum accepted")
 	}
-	matches, _ := filepath.Glob(filepath.Join(m.Root, "temurin-*"))
+	matches, _ := filepath.Glob(filepath.Join(m.Root, runtimeVendor(Platform())+"-*"))
 	if len(matches) != 0 {
 		t.Fatal("invalid archive was published")
 	}

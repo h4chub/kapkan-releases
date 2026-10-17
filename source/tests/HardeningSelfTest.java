@@ -153,7 +153,8 @@ public final class HardeningSelfTest {
   boolean nonzero=false;try{LoaderInstallSupport.runCommand(List.of(java,"-NotAnActualVMOption"),root,"Fixture",null,Duration.ofSeconds(10));}catch(IOException e){nonzero=e.getMessage().contains("exited with code");}check(nonzero,"Nonzero installer exit surfaces context");
   Path sleeper=write(root.resolve("sleep-fixture.sh"),"#!/bin/sh\necho $$ > '"+root.resolve("sleep-pid")+"'\nexec sleep 60\n");sleeper.toFile().setExecutable(true);
   long start=System.nanoTime();boolean timeout=false;
-  try{LoaderInstallSupport.runCommand(List.of(sleeper.toString()),root,"Fixture",null,Duration.ofMillis(200));}catch(IOException e){timeout=e.getMessage().contains("timed out");}
+  // Allow a cold macOS script launch to write its PID before testing termination.
+  try{LoaderInstallSupport.runCommand(List.of(sleeper.toString()),root,"Fixture",null,Duration.ofSeconds(2));}catch(IOException e){timeout=e.getMessage().contains("timed out");}
   check(timeout&&System.nanoTime()-start<TimeUnit.SECONDS.toNanos(5),"Hung installer has a working timeout");
   long pid=Long.parseLong(Files.readString(root.resolve("sleep-pid")).trim());for(int i=0;i<50&&ProcessHandle.of(pid).map(ProcessHandle::isAlive).orElse(false);i++)Thread.sleep(20);
   check(!ProcessHandle.of(pid).map(ProcessHandle::isAlive).orElse(false),"Timed-out fixture process stopped");

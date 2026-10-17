@@ -1,30 +1,21 @@
 {
-  "version": "1.0.5",
-  "build_id": "client-release-1.0.5",
-  "publication": "NOT_PUBLISHED",
+  "version": "1.0.6",
+  "build_id": "client-release-1.0.6",
+  "publication": "READY_FOR_PUBLICATION",
   "exact_target_builds": {
     "26.1": "PASS",
     "26.1.1": "PASS",
     "26.1.2": "PASS"
   },
-  "unit_and_protocol_checks_per_target": 1106,
-  "gameplay": "PASS all 3 exact-version targets; two clients and full restarts per target",
+  "companion_deterministic_checks": "PASS all three targets; see qa/1.0.6",
+  "native_game_runtime": "PASS macOS arm64 all3 exact targets; bundle loaded and single-player world entered",
   "native_windows_install": "NOT_RUN",
   "native_macos_install": "NOT_RUN",
+  "interactive_microphone_capture": "NOT_RUN; requires user OS consent",
   "windows_authenticode": "NOT_SIGNED",
-  "macos_developer_id_notarization": "NOT_SIGNED",
+  "macos_developer_id_notarization": "NOT_NOTARIZED; actual ad-hoc app seal+audio-input verified",
   "performance_boost_claims": "NONE",
-  "public_cosmetic_service": "NOT_DEPLOYED; matching Fabric server relay supplied",
-  "unsupported_targets": [
-    "Minecraft versions outside 26.1/26.1.1/26.1.2",
-    "Forge",
-    "NeoForge",
-    "Quilt"
-  ],
-  "retained_fabric_dependency_recovery": "PASS synthetic launcher regressions",
-  "companion_migration": "82 fixture checks passed including custom mods directory links",
-  "remaining_limits": "Native OS installation and GPU/modpack combinations require device acceptance",
   "candidate_artifacts_ready": true,
-  "ui_interactions": "PASS 62 interactions + 5 restart assertions",
-  "public_publishing": "BLOCKED: connected GitHub account has no push access"
+  "native_payload_upgrade": "PASS real built Windows payload fixture",
+  "game_performance_claim": "NONE; overlapping-load/setup samples excluded, controlled-scene evidence separate"
 }

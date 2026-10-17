@@ -26,7 +26,7 @@ var payload []byte
 //go:embed payload.sha256
 var expectedHash string
 
-const version = "1.0.5"
+const version = "1.0.6"
 
 var box = syscall.NewLazyDLL("user32.dll").NewProc("MessageBoxW")
 
@@ -159,7 +159,7 @@ func command(name string, args ...string) error {
 	return nil
 }
 func installIntegration(target string) string {
-	script := `$ErrorActionPreference='Stop'; $root=$env:KAPKAN_INSTALL_ROOT; $exe=Join-Path $root 'KapKan.exe'; $icon=Join-Path $root 'KapKan.ico'; $w=New-Object -ComObject WScript.Shell; $folder=Join-Path ([Environment]::GetFolderPath('Programs')) 'KapKan'; New-Item -ItemType Directory -Path $folder -Force|Out-Null; $s=$w.CreateShortcut((Join-Path $folder 'KapKan.lnk')); $s.TargetPath=$exe; $s.WorkingDirectory=$root; $s.IconLocation=$icon; $s.Save(); $key='HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\KapKan'; New-Item -Path $key -Force|Out-Null; New-ItemProperty -Path $key -Name DisplayName -Value 'KapKan Client' -Force|Out-Null; New-ItemProperty -Path $key -Name DisplayVersion -Value '1.0.5' -Force|Out-Null; New-ItemProperty -Path $key -Name DisplayIcon -Value $icon -Force|Out-Null; New-ItemProperty -Path $key -Name InstallLocation -Value $root -Force|Out-Null; New-ItemProperty -Path $key -Name UninstallString -Value ('"'+(Join-Path $root 'Uninstall.exe')+'" --uninstall') -Force|Out-Null; New-ItemProperty -Path $key -Name NoModify -PropertyType DWord -Value 1 -Force|Out-Null; New-ItemProperty -Path $key -Name NoRepair -PropertyType DWord -Value 1 -Force|Out-Null;`
+	script := `$ErrorActionPreference='Stop'; $root=$env:KAPKAN_INSTALL_ROOT; $exe=Join-Path $root 'KapKan.exe'; $icon=Join-Path $root 'KapKan.ico'; $w=New-Object -ComObject WScript.Shell; $folder=Join-Path ([Environment]::GetFolderPath('Programs')) 'KapKan'; New-Item -ItemType Directory -Path $folder -Force|Out-Null; $s=$w.CreateShortcut((Join-Path $folder 'KapKan.lnk')); $s.TargetPath=$exe; $s.WorkingDirectory=$root; $s.IconLocation=$icon; $s.Save(); $key='HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\KapKan'; New-Item -Path $key -Force|Out-Null; New-ItemProperty -Path $key -Name DisplayName -Value 'KapKan Client' -Force|Out-Null; New-ItemProperty -Path $key -Name DisplayVersion -Value '1.0.6' -Force|Out-Null; New-ItemProperty -Path $key -Name DisplayIcon -Value $icon -Force|Out-Null; New-ItemProperty -Path $key -Name InstallLocation -Value $root -Force|Out-Null; New-ItemProperty -Path $key -Name UninstallString -Value ('"'+(Join-Path $root 'Uninstall.exe')+'" --uninstall') -Force|Out-Null; New-ItemProperty -Path $key -Name NoModify -PropertyType DWord -Value 1 -Force|Out-Null; New-ItemProperty -Path $key -Name NoRepair -PropertyType DWord -Value 1 -Force|Out-Null;`
 	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
 	defer cancel()
 	c := exec.CommandContext(ctx, "powershell.exe", "-NoProfile", "-NonInteractive", "-Command", script)

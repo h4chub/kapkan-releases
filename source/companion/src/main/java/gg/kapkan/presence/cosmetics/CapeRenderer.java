@@ -33,10 +33,15 @@ public final class CapeRenderer {
     public static void submit(PoseStack pose,SubmitNodeCollector collector,int light,CapeFrame frame){
         float[] points=frame.points();
         collector.submitCustomGeometry(pose,type(frame.texture()),(transform,out)->{
-            for(int row=0;row<CapeMotion.SEGMENTS;row++)for(int col=0;col<6;col++){
-                float u0=col/6f,u1=(col+1)/6f,v0=(float)row/CapeMotion.SEGMENTS,v1=(float)(row+1)/CapeMotion.SEGMENTS;
-                float dy=points[(row+1)*3]-points[row*3],dz=points[(row+1)*3+1]-points[row*3+1];float length=(float)Math.max(1e-6,Math.hypot(dy,dz));
-                vertex(out,transform,points,row,u0,v0,light,-dz/length,dy/length);vertex(out,transform,points,row+1,u0,v1,light,-dz/length,dy/length);vertex(out,transform,points,row+1,u1,v1,light,-dz/length,dy/length);vertex(out,transform,points,row,u1,v0,light,-dz/length,dy/length);
+            for(int row=0;row<CapeMotion.SEGMENTS;row++){
+                float v0=(float)row/CapeMotion.SEGMENTS,v1=(float)(row+1)/CapeMotion.SEGMENTS;
+                float dy=points[(row+1)*3]-points[row*3],dz=points[(row+1)*3+1]-points[row*3+1];
+                float length=(float)Math.max(1e-6,Math.hypot(dy,dz)),ny=-dz/length,nz=dy/length;
+                // Every column in a row shares the same spine normal. Compute it once.
+                for(int col=0;col<6;col++){
+                    float u0=col/6f,u1=(col+1)/6f;
+                    vertex(out,transform,points,row,u0,v0,light,ny,nz);vertex(out,transform,points,row+1,u0,v1,light,ny,nz);vertex(out,transform,points,row+1,u1,v1,light,ny,nz);vertex(out,transform,points,row,u1,v0,light,ny,nz);
+                }
             }
         });
     }

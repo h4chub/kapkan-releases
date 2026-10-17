@@ -1,5 +1,7 @@
 package gg.kapkan.v23;
 
+import gg.kapkan.release.PerformanceIntegration;
+
 import static gg.kapkan.v23.KapKanH2Launcher.*;
 import gg.kapkan.release.LauncherMaintenance;
 import gg.kapkan.release.ModProfiles;
@@ -163,6 +165,10 @@ final class LauncherPages {
         badges.add(Box.createVerticalStrut(14));badges.add(disclosure("Server relay & optional service",remote));addCard(rows,badges);
 
         JPanel performance=card("Game performance","Suggested starting settings for your detected hardware.");var tune=ui.a.tune();JPanel stats=panel(new GridLayout(1,3,16,0));stats.add(stat("GAME MEMORY",String.format(Locale.ROOT,"%.1f GB",tune.memoryMiB()/1024.0)));stats.add(stat("VIEW DISTANCE",tune.renderDistance()+" chunks"));stats.add(stat("FPS LIMIT",String.valueOf(tune.fps())));stats.setMaximumSize(new Dimension(Integer.MAX_VALUE,58));performance.add(stats);performance.add(Box.createVerticalStrut(16));
+        JCheckBox modules=check("Use bundled performance modules",PerformanceIntegration.enabled());
+        JLabel moduleStatus=label("Applies when Minecraft next starts.",Font.PLAIN,12,MUTED);
+        modules.addActionListener(e->{try{PerformanceIntegration.setEnabled(modules.isSelected());moduleStatus.setText("Saved. Applies when Minecraft next starts.");}catch(Exception error){modules.setSelected(PerformanceIntegration.enabled());moduleStatus.setText("Couldn't save this preference.");}});
+        performance.add(modules);performance.add(moduleStatus);performance.add(note("You can turn these off to troubleshoot mod compatibility. Your graphics settings stay unchanged."));performance.add(Box.createVerticalStrut(12));
         performance.add(button("Apply suggested settings",false,this::applyProfileAutoTune));performance.add(note("Applies to the selected version and loader. Your controls are preserved."));addCard(rows,performance);
 
         JPanel tidy=card("Keep KapKan tidy","Remove old launcher apps, ZIPs and extracted downloads. Your game files stay in place.");
@@ -171,7 +177,7 @@ final class LauncherPages {
         JPanel files=card("Game files",ui.a.mc.gameDir().toString());files.add(actions(button("Open game folder",false,()->ui.a.openPath(ui.a.mc.gameDir())),button("Export version packs",false,()->VersionPackExporter.open(ui.a.frame,ui.a.mc.gameDir()))));addCard(rows,files);
         JPanel versions=card("Versions","Choose which Minecraft releases appear in the version menu.");JCheckBox snapshots=check("Show snapshots and pre-releases",ui.a.state.showSnapshots);snapshots.addActionListener(e->{ui.a.state.showSnapshots=snapshots.isSelected();ui.a.state.save();ui.a.loadVersions();});versions.add(snapshots);addCard(rows,versions);
         JPanel advanced=column();advanced.add(note(ui.a.state.microsoftClientId.isBlank()?"Microsoft sign-in needs a configured OAuth client ID.":"Microsoft OAuth client ID is configured locally."));advanced.add(button("Set client ID",false,()->{String value=JOptionPane.showInputDialog(ui.a.frame,"KapKan Microsoft OAuth Client ID:",ui.a.state.microsoftClientId);if(value!=null){ui.a.state.microsoftClientId=value.trim();ui.a.state.save();}}));
-        JPanel about=card("KapKan 1.0.5","");about.add(disclosure("Advanced sign-in settings",advanced));about.add(note("Interface motion is disabled. KapKan remains idle while Minecraft runs."));addCard(rows,about);ui.updateBadgeState();return page(rows);
+        JPanel about=card("KapKan 1.0.6","");about.add(disclosure("Advanced sign-in settings",advanced));about.add(note("Interface motion is disabled. KapKan remains idle while Minecraft runs."));addCard(rows,about);ui.updateBadgeState();return page(rows);
     }
     static JPanel stat(String caption,String value){JPanel p=column();p.add(label(caption,Font.BOLD,10,MUTED));p.add(Box.createVerticalStrut(7));p.add(label(value,Font.BOLD,20,TEXT));return p;}
     static JPanel disclosure(String title,JPanel content){

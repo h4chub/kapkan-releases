@@ -1,7 +1,9 @@
-# KapKan 1.0.5 build status
+# KapKan 1.0.6 build status
 
-KapKan 1.0.5 is [publicly released](https://github.com/h4chub/kapkan-releases/releases/tag/v1.0.5-beta.1), and the [website](https://kapkan-website.vercel.app) serves the verified public downloads. All seven asset sizes and SHA-256 digests match the original package bytes. The live release feed passes update discovery checks on Windows and macOS. See [PUBLICATION.json](PUBLICATION.json) and [delivery metadata](../releases/1.0.5/Delivery.json).
+The rebuilt 1.0.6 update passes its package and compatibility checks and is ready for public beta publication. The current public release remains [1.0.5](https://github.com/h4chub/kapkan-releases/releases/tag/v1.0.5-beta.1) until publication is verified.
 
-Inherited final QA records PASS for exact Minecraft 26.1, 26.1.1 and 26.1.2 builds: each ran two real clients on Linux x86_64 with Java 25, Fabric 0.19.5, Xvfb and Mesa llvmpipe, including cosmetics/lifecycle/restarts and 35 gameplay feature checks per target. Separate 26.1.2 UI tests passed 62 interaction and 5 restart checks. The import verifies artifact hashes; it does not rerun those game tests.
+All three exact Minecraft targets compile and pass 1,209 deterministic checks each. Native macOS arm64 smoke runs load all bundled modules and enter fresh single-player worlds on 26.1, 26.1.1 and 26.1.2. Launcher/Fabric/recovery, actual 1.0.5 migration, built installer payload and archive checks pass. The Mac app signature seal and audio-input entitlement are verified; clean official Java 21/25 runtime installation and cache migration pass.
 
-Native macOS/Windows installation and gameplay were not run for this release. Cross-built desktop packages are unsigned. Linux Go payload fixtures passed, including the final built-payload upgrade fixture. See [QA-REPORT.md](QA-REPORT.md) for full scope and limits; older publication/access statements in retained reports are historical.
+The update reduces repeated HUD measurements and disabled-widget work, simplifies cape vertex preparation, and adds optional compatible modules without changing graphics settings. Microphone support includes app metadata/signing and a capable managed Mac runtime. Interactive microphone consent/capture, native Windows installation, Intel Mac execution and macOS 12 device acceptance remain untested. Mac local signing is separate from Developer ID notarization.
+
+See [QA-REPORT.md](QA-REPORT.md) for scope, and [history/1.0.5](history/1.0.5/) for historical records. No general FPS claim is made.

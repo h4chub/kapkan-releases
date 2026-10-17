@@ -1,0 +1,60 @@
+{
+  "release": "1.0.6",
+  "macos_bundle_identity": "gg.kapkan.launcher",
+  "privacy_settings_modified": false,
+  "cause": [
+    "1.0.5 KapKan.app Info.plist omitted NSMicrophoneUsageDescription.",
+    "The official Temurin 25 JRE has hardened-runtime signing without the audio-input entitlement; the cached file was byte-for-byte identical to the checksum-verified vendor archive.",
+    "Simple Voice Chat reports an unsupported launcher when the native microphone authorization status remains neither AUTHORIZED nor DENIED."
+  ],
+  "fix": {
+    "bundle_usage_description": "Minecraft voice chat mods use your microphone so you can talk to other players.",
+    "native_app_signature": "audio-input capability attached and verified before packaging on macOS",
+    "runtime_provider": "Azul Zulu JRE on macOS only, Windows remains Temurin",
+    "cache_migration": "separate zulu-major-mac-architecture directories; existing Temurin cache untouched",
+    "runtime_validation": "exact official archive SHA-256, native major/architecture execution check, Apple signature seal verification, signed DER top-level audio-input=true",
+    "rounded_size_policy": "Azul metadata size may differ by at most 1024 bytes; exact SHA-256 remains mandatory. Adoptium size remains exact.",
+    "prompt_timing": "No new launcher startup request. macOS consent remains controlled by the player when a voice mod opens audio input.",
+    "process_ancestry": "native executable -> Java launcher -> game Java by direct child processes; native waits for launcher"
+  },
+  "verification": {
+    "package_and_macho_regressions": "13 tests passed; package fixture verifies metadata, identity, complete performance sources/licenses/binaries",
+    "native_unit_and_provider_tests": "passed including archive traversal, checksums, migration boundaries, wrong architecture/version/provider rejection, missing/false/altered/truncated DER",
+    "native_java21_install": "PASS: vendor archive -> checksum -> extraction -> execution -> vendor seal -> signed audio-input -> cache reuse; old Temurin fixture preserved",
+    "native_java25_install": "PASS: vendor archive -> checksum -> extraction -> execution -> vendor seal -> signed audio-input -> cache reuse; old Temurin fixture preserved",
+    "actual_app_signing_fixture": "PASS: never-opened temporary native app signed with packaged entitlement and verified via Apple codesign",
+    "actual_temurin25_negative_check": "PASS: valid vendor signature accepted, missing audio-input rejected",
+    "installed_release_payload_test": "not performed by this agent; root builds and tests final package",
+    "interactive_game_capture_and_consent": "not performed; microphone access and privacy settings untouched",
+    "intel_runtime_execution_and_macos12_device": "not performed; metadata selection/parser logic covered, direct reader avoids newer codesign display flags"
+  },
+  "vendor_archives": {
+    "zulu21_arm64": {
+      "name": "zulu21.52.203-ca-jre21.0.12.1-macosx_aarch64.tar.gz",
+      "sha256": "611673ab332d58e6d3a61506eaafbfb13e9f9b0e01452067a9cc8b2f470289fb",
+      "actual_bytes": 48338831,
+      "metadata_bytes": 48338800
+    },
+    "zulu25_arm64": {
+      "name": "zulu25.36.205-ca-jre25.0.4.1-macosx_aarch64.tar.gz",
+      "sha256": "1071ba0b99c46368927e4085d610271e82998767985cb9cf0318a6b673885eb8",
+      "actual_bytes": 56496636,
+      "metadata_bytes": 56496600
+    },
+    "temurin25_arm64_comparison": {
+      "archive_sha256": "5b02bcc908da092e7e00b9772d4f9bbb87f44a60b7c90f7cf5a91a1d98f37e1b",
+      "java_sha256": "83c9c5310d044e7c4262432854eb1bc5f49763d7c1e9971777a646c91b96c06d",
+      "cached_matches_vendor": true
+    }
+  },
+  "sources": [
+    "https://developer.apple.com/documentation/bundleresources/requesting-authorization-for-media-capture-on-macos",
+    "https://developer.apple.com/documentation/bundleresources/entitlements/com.apple.security.device.audio-input",
+    "https://developer.apple.com/documentation/security/applying-launch-environment-and-library-constraints",
+    "https://github.com/henkelmax/simple-voice-chat/blob/1.21.11/common-client/src/main/java/de/maxhenkel/voicechat/voice/client/ClientManager.java",
+    "https://github.com/henkelmax/simple-voice-chat/blob/1.21.11/common-client/src/main/java/de/maxhenkel/voicechat/voice/client/MicThread.java",
+    "https://docs.azul.com/core/install/metadata-api",
+    "https://docs.azul.com/core/detailed/metadata-api-migration"
+  ],
+  "environment_note": "Restricted Codex sandbox caused false invalid-signature results even for untouched official executables. Read-only signature/native acceptance checks passed outside that sandbox; no signature was bypassed or modified."
+}

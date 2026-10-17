@@ -1,0 +1,67 @@
+KapKan 1.0.6: bundled optimization mods
+
+This folder contains UNMODIFIED upstream Fabric mod binaries, their exact tagged
+source archives and accompanying licenses. These mods are separate works loaded
+by Fabric at runtime. No upstream source or binary was modified by KapKan.
+
+ImmediatelyFast 1.15.3+26.1
+  Author: RK_01 / RaphiMC
+  License: LGPL-3.0-or-later (licenses/immediatelyfast-LICENSE and GPL-3.0.txt)
+  Source: sources/immediatelyfast-v1.15.3-source.zip
+  Official source commit: c010c5d53f93a5399a87472b82dfab8067e953d5
+  https://github.com/RaphiMC/ImmediatelyFast/tree/v1.15.3
+  Its nested Reflect 1.6.2 library is Copyright (c) 2022 Lenni0451, MIT licensed;
+  the original notice remains inside its nested JAR and in licenses/Reflect-MIT.txt.
+
+Lithium 0.24.7+mc26.1.2
+  Authors: JellySquid, 2No2Name and upstream contributors
+  License: LGPL-3.0-only (licenses/lithium-LICENSE.md and GPL-3.0.txt)
+  Source: sources/lithium-mc26.1.2-0.24.7-source.zip
+  Official source commit: f230894b7f46b8f48f8ea9f7ed085a1e2d3cd59f
+  https://github.com/CaffeineMC/lithium/tree/mc26.1.2-0.24.7
+
+FerriteCore 9.0.0
+  Copyright (c) 2020 malte0811
+  License: MIT (licenses/ferrite-core-LICENSE)
+  Source: sources/ferrite-core-build-9.0.0-source.zip
+  Official source commit: 0cef1f2add1f1329aa6e690e8e292acd625c5c6d
+  https://github.com/malte0811/FerriteCore/tree/build-9.0.0
+
+Corresponding source, build files and Gradle wrappers are present in the source
+archives above. Refer to each archive's upstream build instructions. These source
+archives and all licenses MUST accompany the binary mods in every KapKan package.
+The manifest records official URLs, IDs, sizes, source commits and binary SHA512.
+The complete GPL3 text accompanying the LGPL terms is from the official FSF page:
+https://www.gnu.org/licenses/gpl-3.0.txt
+
+All three selected upstream versions explicitly list Minecraft 26.1, 26.1.1 and
+26.1.2 for Fabric in their official Modrinth metadata. KapKan limits auto-loading
+to those exact targets, Java25 and Fabric Loader0.19.5+. It does not infer support
+for other game versions from a broad dependency declaration.
+
+Default behavior and recovery:
+- The launcher adds verified bundled JAR paths to its per-process fabric.addMods
+  argument. It does not copy into or replace any user mods folder.
+- Existing direct/nested/provided mod IDs win, including modified replacements.
+  Known conflicts and reverse breaks/conflicts suppress the corresponding mod.
+  If an active mod cannot be inspected safely, the entire addition is skipped.
+- Set enabled=false in ~/.kapkan/performance.properties, or use the diagnostic
+  system property -Dkapkan.performance.disabled=true, to disable bundled mods for
+  the next game process. You may provide your own compatible/modified versions in
+  your normal mods folder instead; KapKan preserves them. Upstream licenses permit
+  the modifications, debugging and replacement described by their own terms.
+- No render distance, visual quality, frame limit, JVM memory or other game option
+  is changed by this integration. Upstream mods retain their own normal settings.
+
+Sodium is not included. The inspected official candidates embed PolyForm Shield
+1.0.0 with noncompete terms, so redistribution was not assumed for this client.
+
+Verification limits:
+The official Modrinth binary SHA512 and SHA1 values were recomputed successfully.
+The Java21-compatible integration passes51 filesystem/argument checks, including
+packaged resource lookup, user-data preservation, direct/nested/provided duplicate
+IDs, conflicts, opt-outs and same-size binary tampering. These fixture checks are separate from the actual native Mac world-entry smoke
+that subsequently passed for all3 exact targets with all3 modules loaded. Exact
+KapKan module hashes and evidence IDs are recorded in manifest.json. These smoke
+checks are not exhaustive gameplay/modpack acceptance. No general FPS guarantee
+is made; any local frame-time measurement is separate and has its own limits.

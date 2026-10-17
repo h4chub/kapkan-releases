@@ -22,6 +22,7 @@ __pycache__/
 source/companion/build/
 source/companion/qa105/runtime/
 source/qa/1.0.5/runtime/
+source/qa/1.0.6/launcher/home/
 source/build/
 source/dist/
 source/native/bin/

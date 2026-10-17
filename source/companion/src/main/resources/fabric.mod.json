@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "kapkan-presence",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "name": "KapKan Client",
   "description": "KapKan gameplay HUD, controls and cosmetics, with optional Fabric-server cosmetic relay.",
   "environment": "*",
@@ -25,6 +25,6 @@
     "fabric-lifecycle-events-v1": "*"
   },
   "custom": {
-    "kapkan:build": "client-1.0.5"
+    "kapkan:build": "client-1.0.6"
   }
 }

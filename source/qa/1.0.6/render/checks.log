@@ -1,0 +1,9 @@
+Owned render classes compile against exact Minecraft 26.1: PASS
+26.1: Render hotpaths: 83 checks passed
+26.1: HUD render settings: 20 checks passed
+Owned render classes compile against exact Minecraft 26.1.1: PASS
+26.1.1: Render hotpaths: 83 checks passed
+26.1.1: HUD render settings: 20 checks passed
+Owned render classes compile against exact Minecraft 26.1.2: PASS
+26.1.2: Render hotpaths: 83 checks passed
+26.1.2: HUD render settings: 20 checks passed

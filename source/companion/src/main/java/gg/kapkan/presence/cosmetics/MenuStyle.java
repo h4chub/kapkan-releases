@@ -15,9 +15,10 @@ import java.awt.image.BufferedImage;
 public final class MenuStyle {
     public static final int BG=0xFF111318,PANEL=0xFF191C23,CONTROL=0xFF262B34,TEXT=0xFFF2F3F6,MUTED=0xFFA8B0BD,ACCENT=0xFFE295A6,EDGE=0xFF353D49;
     public static final Style FONT=Style.EMPTY.withFont(new FontDescription.Resource(Identifier.fromNamespaceAndPath("kapkan","ui")));
-    private record Key(String text,MenuRaster.Icon icon,int w,int h,float radius,int pw,int ph){}
     private static final class Sprite {final Identifier id;final int bytes;long used;Sprite(Identifier id,int bytes,long frame){this.id=id;this.bytes=bytes;used=frame;}}
-    private static final Map<Key,Sprite> CACHE=new LinkedHashMap<>(64,.75f,true);
+    private static final Map<MenuSpriteKey,Sprite> CACHE=new LinkedHashMap<>(64,.75f,true);
+    // Extraction is confined to the client thread. Only copies enter CACHE.
+    private static final MenuSpriteKey LOOKUP=MenuSpriteKey.probe();
     private static long frame,serial,rasterizations;private static long bytes;private static Object extractor;
     public static long rasterizations(){return rasterizations;}
     public static int cachedSprites(){return CACHE.size();}
@@ -41,8 +42,9 @@ public final class MenuStyle {
         if(extractor!=g){extractor=g;frame++;trim();}
         double density=Minecraft.getInstance().getWindow().getGuiScale()*Math.hypot(g.pose().m00(),g.pose().m01());
         int pw=Math.max(1,(int)Math.ceil(w*density)),ph=Math.max(1,(int)Math.ceil(h*density));
-        Key key=new Key(text,icon,w,h,radius,pw,ph);Sprite sprite=CACHE.get(key);
+        MenuSpriteKey lookup=LOOKUP.set(text,icon,w,h,radius,pw,ph);Sprite sprite=CACHE.get(lookup);
         if(sprite==null){
+            MenuSpriteKey key=lookup.stored();
             BufferedImage image=icon==null?MenuRaster.paint(text,w,h,radius,pw,ph):MenuRaster.paintIcon(icon,pw,ph);NativeImage pixels=new NativeImage(pw,ph,false);
             int[] argb=image.getRGB(0,0,pw,ph,null,0,pw);var buffer=org.lwjgl.system.MemoryUtil.memIntBuffer(pixels.getPointer(),argb.length);
             for(int i=0;i<argb.length;i++){int c=argb[i];buffer.put(i,(c&0xFF00FF00)|((c&255)<<16)|((c>>>16)&255));}

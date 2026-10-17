@@ -13,7 +13,7 @@ import org.xml.sax.InputSource;
 
 /** Retires only positively identified older Mac distributions, using the system Trash. */
 public final class LauncherMaintenance {
-    public static final int BUILD_NUMBER=10013;
+    public static final int BUILD_NUMBER=10015;
     private static final Set<String> APP_FILES=Set.of(
         "Contents/Info.plist","Contents/PkgInfo","Contents/MacOS/KapKan",
         "Contents/Resources/BUILD-INFO.json","Contents/Resources/RELEASE-GATE.json",
@@ -78,7 +78,15 @@ public final class LauncherMaintenance {
                 Arrays.stream(info.arguments().orElse(new String[0])).anyMatch(arg->arg.contains(prefix));});
         }catch(RuntimeException e){return true;}
     }
-    private static Path resolved(Path path)throws IOException{return Files.exists(path)?path.toRealPath():path.toAbsolutePath().normalize();}
+    private static Path resolved(Path path)throws IOException{
+        Path ancestor=path.toAbsolutePath().normalize();Deque<Path> missing=new ArrayDeque<>();
+        // A future game directory still inherits aliases/symlinks from its existing parent.
+        while(!Files.exists(ancestor,LinkOption.NOFOLLOW_LINKS)){
+            Path name=ancestor.getFileName();if(name==null)throw new IOException("Cannot resolve protected path");
+            missing.addFirst(name);ancestor=ancestor.getParent();
+        }
+        Path real=ancestor.toRealPath();for(Path name:missing)real=real.resolve(name);return real;
+    }
     private static boolean safe(Path p,List<Path> protectedPaths){
         try{
             if(Files.isSymbolicLink(p))return false;Path real=resolved(p);
