@@ -13,5 +13,5 @@ python3 packaging/windows_icon.py
 (cd native && GOTOOLCHAIN=local CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -trimpath -ldflags='-s -w -H=windowsgui' -o ../build/KapKan.exe ./cmd/launcher)
 python3 packaging/make_packages.py --windows-only
 (cd native && KAPKAN_TEST_PAYLOAD="$PWD/cmd/installer/payload.zip" GOTOOLCHAIN=local go test ./... -count=1 -v)
-(cd native && GOTOOLCHAIN=local CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -trimpath -ldflags='-s -w -H=windowsgui' -o ../dist/KapKan-1.0.6-Setup.exe ./cmd/installer)
+(cd native && GOTOOLCHAIN=local CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build -trimpath -ldflags='-s -w -H=windowsgui' -o ../dist/KapKan-1.0.7-Setup.exe ./cmd/installer)
 python3 packaging/audit.py --windows-only

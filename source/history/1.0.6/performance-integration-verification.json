@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "checks": 56,
+  "scope": "Java21-compatible filesystem/argument fixtures using the selected verified official ImmediatelyFast binary; not Minecraft gameplay or FPS benchmark.",
+  "test": "tests/PerformanceIntegrationTest.java",
+  "testSourceSha256": "490894ecb9bed33230d88415d00ecaf2a7b940e67f3e72b9bfde453a6f055e51",
+  "launcherJarSha256": "320c172e968123faf0454c9927a610f811524ef70b0401ca37a389b7e63948f1",
+  "selectedMods": [
+    "immediatelyfast"
+  ],
+  "binaryVerification": "Official ImmediatelyFast SHA512 and SHA1 recomputed; exact corresponding source SHA512 and sizes verified.",
+  "packagedLookup": "PASS from launcher JAR parent/performance, path with spaces; exactly one selected bundled JAR.",
+  "sources": "Exact official tagged ImmediatelyFast source commit included unmodified; LGPL, full GPL3 and nested Reflect MIT notices retained.",
+  "distributionFiles": [
+    "NOTICE.txt",
+    "integration-verification.json",
+    "licenses/GPL-3.0.txt",
+    "licenses/Reflect-MIT.txt",
+    "licenses/immediatelyfast-LICENSE",
+    "manifest.json",
+    "mods/ImmediatelyFast-Fabric-1.15.3+26.1.jar",
+    "sources/immediatelyfast-v1.15.3-source.zip"
+  ],
+  "generatedUTC": "2026-10-17T17:50:10.816743+00:00",
+  "nativeRuntimeVerification": {
+    "platform": "macOS arm64 native OpenGL; verified unmodified vendor Azul Zulu JRE25.0.4.1+1-LTS; Fabric0.19.5",
+    "javaExecutableSha256": "038e856d3c7b8307152b5ea440f548f74fad8e0acd3d9615983173bf451290d4",
+    "scope": "Final selected ImmediatelyFast-only bundle in fresh isolated single-player worlds. At least six consecutive clear-world seconds and rendered frames; kapkan-presence and immediatelyfast loaded, lithium and ferritecore absent. Boot/world smoke, not exhaustive gameplay, arbitrary modpack or native launcher installation acceptance. No FPS measurement.",
+    "performanceMeasured": false,
+    "evidenceIndex": "qa/1.0.6/game/final-selected-subset.json",
+    "targets": {
+      "26.1": {
+        "status": "PASS",
+        "kapkanModuleSha256": "c01579a31379f567eb19afb03969a888367bb91517d9652e9622851c1f194210",
+        "evidenceRun": "selected-smoke-26.1-20261017T174915Z",
+        "evidenceReceipt": "qa/1.0.6/game/final-selected-subset/26.1/PASS.json"
+      },
+      "26.1.1": {
+        "status": "PASS",
+        "kapkanModuleSha256": "3d447a99b1c3bf190e9af3864f1d82a3c3978e141fa16a47fa64193d9f2c75da",
+        "evidenceRun": "selected-smoke-26.1.1-20261017T174944Z",
+        "evidenceReceipt": "qa/1.0.6/game/final-selected-subset/26.1.1/PASS.json"
+      },
+      "26.1.2": {
+        "status": "PASS",
+        "kapkanModuleSha256": "a747bff50be125397a77fc4be7155f98485a049676c2a8616d8ce03aeb2f5f41",
+        "evidenceRun": "selected-smoke-26.1.2-20261017T175012Z",
+        "evidenceReceipt": "qa/1.0.6/game/final-selected-subset/26.1.2/PASS.json"
+      }
+    },
+    "evidenceIndexSha256": "9bf4340b836e82d3bbeca8fb365c8d5f061d63ebc0f0f8d10dcbf88519074922"
+  }
+}

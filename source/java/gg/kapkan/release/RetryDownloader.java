@@ -122,7 +122,7 @@ public final class RetryDownloader {
     private static void transfer(HttpClient client,URI uri,OutputStream out,long limit,long expected,boolean http1,Policy policy)throws Problem,InterruptedException {
         LaunchProgress.attempt();
         HttpRequest.Builder b=HttpRequest.newBuilder(uri).GET().timeout(Duration.ofMillis(policy.headerMillis()))
-            .header("User-Agent","KapKan/1.0.6").header("Accept-Encoding","identity");
+            .header("User-Agent","KapKan/1.0.7").header("Accept-Encoding","identity");
         if(http1)b.version(HttpClient.Version.HTTP_1_1);
         HttpResponse<InputStream> response;
         try { response=client.send(b.build(),HttpResponse.BodyHandlers.ofInputStream()); }

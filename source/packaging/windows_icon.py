@@ -17,7 +17,7 @@ for i in range(count):
  group+=struct.pack('<BBBBHHIH',w,h,nc,r,planes,bits,size,i+1)
 manifest=b'''<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
- <assemblyIdentity version="1.0.5.0" processorArchitecture="amd64" name="KapKan.Client" type="win32"/>
+ <assemblyIdentity version="1.0.7.0" processorArchitecture="amd64" name="KapKan.Client" type="win32"/>
  <description>KapKan Client</description>
  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3"><security><requestedPrivileges><requestedExecutionLevel level="asInvoker" uiAccess="false"/></requestedPrivileges></security></trustInfo>
  <application xmlns="urn:schemas-microsoft-com:asm.v3"><windowsSettings><dpiAware xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">true</dpiAware></windowsSettings></application>

@@ -1,14 +1,14 @@
 {
-  "version": "1.0.6",
-  "build_id": "client-release-1.0.6",
+  "version": "1.0.7",
+  "build_id": "client-release-1.0.7",
   "publication": "READY_FOR_PUBLICATION",
   "exact_target_builds": {
     "26.1": "PASS",
     "26.1.1": "PASS",
     "26.1.2": "PASS"
   },
-  "companion_deterministic_checks": "PASS all three targets; see qa/1.0.6",
-  "native_game_runtime": "PASS macOS arm64; final IF-only subset + verified Zulu25 in fresh single-player worlds on all three exact targets",
+  "companion_deterministic_checks": "PASS 1,350 on each exact target, including 141 new durability checks",
+  "native_game_runtime": "PASS macOS arm64 26.1.2 bright/dark equipment HUD visual scene; other exact-target native games not rerun",
   "native_windows_install": "NOT_RUN",
   "native_macos_install": "NOT_RUN",
   "interactive_microphone_capture": "NOT_RUN; requires user OS consent",
@@ -16,7 +16,8 @@
   "macos_developer_id_notarization": "NOT_NOTARIZED; actual ad-hoc app seal+audio-input verified",
   "performance_boost_claims": "NONE",
   "candidate_artifacts_ready": true,
-  "native_payload_upgrade": "PASS real built Windows payload fixture",
-  "game_performance_claim": "NONE; guarded local ablations have control drift and uninstrumented OS/background confounds. IF-only is the selected narrower default; see raw QA.",
-  "performance_integration_checks": 56
+  "native_payload_upgrade": "PASS real final built1.0.7 Windows payload fixture",
+  "game_performance_claim": "NONE; no new FPS benchmark in this HUD patch",
+  "performance_integration_checks": 56,
+  "final_package_audit": "PASS exact Mac app signature/seal/audio capability, archive/binary/resource/license closure"
 }

@@ -11,14 +11,14 @@ import java.util.*;
 /** The editor and gameplay share exactly the same widget geometry and live values. */
 public final class HudRenderer {
     public record Widget(String id,int width,int height,List<String> lines,List<ItemStack> items){}
-    public static String name(String id){return switch(id){case "fps"->"FPS";case "coordinates"->"Coordinates";case "keys"->"Keystrokes";case "clicks"->"Mouse clicks";case "armor"->"Armor durability";case "effects"->"Active effects";case "sprint"->"Sprint status";default->id;};}
+    public static String name(String id){return switch(id){case "fps"->"FPS";case "coordinates"->"Coordinates";case "keys"->"Keystrokes";case "clicks"->"Mouse clicks";case "armor"->"Equipment durability";case "effects"->"Active effects";case "sprint"->"Sprint status";default->id;};}
     public static boolean enabled(ClientSettings s,String id){return switch(id){case "fps"->s.fps;case "coordinates"->s.coordinates;case "keys"->s.keystrokes;case "clicks"->s.clicks;case "armor"->s.armor;case "effects"->s.effects;case "sprint"->s.sprintIndicator&&s.toggleSprint;default->false;};}
     public static void toggle(ClientSettings s,String id){switch(id){case "fps"->s.fps=!s.fps;case "coordinates"->s.coordinates=!s.coordinates;case "keys"->s.keystrokes=!s.keystrokes;case "clicks"->s.clicks=!s.clicks;case "armor"->s.armor=!s.armor;case "effects"->s.effects=!s.effects;case "sprint"->s.sprintIndicator=!s.sprintIndicator;}}
     private static final int ALL_WIDGETS=(1<<7)-1;
     private static final HudRefreshCache<List<Widget>> CACHE=new HudRefreshCache<>();
     private static final Widget KEYS=new Widget("keys",76,72,List.of(),List.of()),CLICKS=new Widget("clicks",96,25,List.of(),List.of());
-    private static final EquipmentSlot[] ARMOR_SLOTS={EquipmentSlot.HEAD,EquipmentSlot.CHEST,EquipmentSlot.LEGS,EquipmentSlot.FEET};
-    private static final String[] ARMOR_NAMES={"Head","Chest","Legs","Feet"};
+    private static final EquipmentSlot[] EQUIPMENT_SLOTS={EquipmentSlot.HEAD,EquipmentSlot.CHEST,EquipmentSlot.LEGS,EquipmentSlot.FEET,EquipmentSlot.MAINHAND,EquipmentSlot.OFFHAND};
+    private static final String EMPTY_EQUIPMENT_HINT="Equip armor or a tool";
     private record EffectName(MobEffectInstance effect,String label){}
     private static final Comparator<EffectName> EFFECT_NAMES=Comparator.comparing(EffectName::label);
     static int enabledMask(ClientSettings s){
@@ -37,11 +37,16 @@ public final class HudRenderer {
         if((mask&2)!=0)result.add(text("coordinates",mc.player==null?"Coordinates: no world":mc.player.getBlockX()+"  "+mc.player.getBlockY()+"  "+mc.player.getBlockZ()));
         if((mask&4)!=0)result.add(KEYS);if((mask&8)!=0)result.add(CLICKS);
         if((mask&16)!=0){
-            var armorLines=new ArrayList<String>(4);var armorItems=new ArrayList<ItemStack>(4);
-            for(int i=0;i<ARMOR_SLOTS.length;i++){ItemStack item=mc.player==null?ItemStack.EMPTY:mc.player.getItemBySlot(ARMOR_SLOTS[i]);armorItems.add(item);
-                armorLines.add(item.isEmpty()?ARMOR_NAMES[i]+" · empty":item.isDamageableItem()?Math.max(0,item.getMaxDamage()-item.getDamageValue())+" / "+item.getMaxDamage():"Unbreakable");
+            var armorLines=new ArrayList<String>(6);var armorItems=new ArrayList<ItemStack>(6);
+            for(EquipmentSlot slot:EQUIPMENT_SLOTS){
+                ItemStack item=mc.player==null?ItemStack.EMPTY:mc.player.getItemBySlot(slot);
+                boolean held=slot==EquipmentSlot.MAINHAND||slot==EquipmentSlot.OFFHAND;
+                if(item.isEmpty()||held&&item.getMaxDamage()<=0)continue;
+                ItemStack snapshot=item.copy();armorItems.add(snapshot);
+                armorLines.add(snapshot.isDamageableItem()?DurabilityStyle.label(snapshot.getDamageValue(),snapshot.getMaxDamage()):snapshot.getMaxDamage()>0?"∞":"");
             }
-            result.add(new Widget("armor",width(armorLines)+25,88,List.copyOf(armorLines),List.copyOf(armorItems)));
+            int armorWidth=armorItems.isEmpty()?MenuStyle.width(EMPTY_EQUIPMENT_HINT)+2:Math.max(16,width(armorLines)+24);
+            result.add(new Widget("armor",armorWidth,armorItems.isEmpty()?18:armorItems.size()*20-4,List.copyOf(armorLines),List.copyOf(armorItems)));
         }
         if((mask&32)!=0){
             var effects=new ArrayList<String>();
@@ -71,11 +76,12 @@ public final class HudRenderer {
         Map<String,HudLayout.Bounds> bounds=collectBounds?new LinkedHashMap<>():Map.of();Minecraft mc=Minecraft.getInstance();
         for(Widget widget:widgets(editor?ALL_WIDGETS:enabledMask(s))){
             boolean active=enabled(s,widget.id());if(!active&&!editor)continue;
+            if(widget.id().equals("armor")&&widget.items().isEmpty()&&!editor)continue;
             HudLayout.Bounds b=s.hud.bounds(widget.id(),g.guiWidth(),g.guiHeight(),widget.width(),widget.height());if(collectBounds)bounds.put(widget.id(),b);
             double safeScale=Math.min(s.hud.get(widget.id()).scale,Math.min((double)b.width()/widget.width(),(double)b.height()/widget.height()));
             if(editor){g.outline(b.x()-1,b.y()-1,b.width()+2,b.height()+2,widget.id().equals(selected)?0xFFE3A67D:active?0xFF6D727D:0xFF343840);}
             g.pose().pushMatrix();g.pose().translate(b.x(),b.y());g.pose().scale((float)safeScale,(float)safeScale);
-            MenuStyle.rounded(g,0,0,widget.width(),widget.height(),4,active?0xDA111419:0xA0111419);
+            if(!widget.id().equals("armor"))MenuStyle.rounded(g,0,0,widget.width(),widget.height(),4,active?0xDA111419:0xA0111419);
             int text=active?0xFFF0F2F5:0xFF858992;
             if(widget.id().equals("keys")){
                 key(g,mc.options.keyUp.getTranslatedKeyMessage().getString(),26,3,24,21,mc.options.keyUp.isDown(),text);
@@ -86,7 +92,13 @@ public final class HudRenderer {
             }else if(widget.id().equals("clicks")){
                 key(g,"LMB",3,3,43,19,mc.mouseHandler.isLeftPressed(),text);key(g,"RMB",50,3,43,19,mc.mouseHandler.isRightPressed(),text);
             }else if(widget.id().equals("armor")){
-                for(int i=0;i<widget.lines().size();i++){ItemStack item=widget.items().get(i);if(!item.isEmpty())g.item(item,5,5+i*20);MenuStyle.text(g,widget.lines().get(i),26,7+i*20,text);}
+                if(widget.items().isEmpty())MenuStyle.text(g,EMPTY_EQUIPMENT_HINT,0,2,text);
+                for(int i=0;i<widget.items().size();i++){
+                    ItemStack item=widget.items().get(i);g.item(item,0,i*20);
+                    String label=widget.lines().get(i);int color=active&&item.isDamageableItem()?DurabilityStyle.color(item.getMaxDamage()-item.getDamageValue(),item.getMaxDamage()):text;
+                    MenuStyle.text(g,label,23,3+i*20,0xC0000000);
+                    MenuStyle.text(g,label,22,2+i*20,color);
+                }
             }else{for(int i=0;i<widget.lines().size();i++)MenuStyle.text(g,widget.lines().get(i),8,5+i*19,text);}
             g.pose().popMatrix();
         }return bounds;

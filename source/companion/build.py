@@ -39,7 +39,7 @@ def fetch(url, path, expected, algorithm="sha1", fallback=None, size=None):
     for candidate in [url] + ([fallback] if fallback else []):
         for attempt in range(3):
             try:
-                request = urllib.request.Request(candidate, headers={"User-Agent": "KapKan-build/1.0.6"})
+                request = urllib.request.Request(candidate, headers={"User-Agent": "KapKan-build/1.0.7"})
                 with urllib.request.urlopen(request, timeout=90) as response:
                     data = response.read()
                 if not valid(data):

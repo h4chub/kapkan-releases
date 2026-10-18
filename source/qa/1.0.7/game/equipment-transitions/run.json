@@ -1,0 +1,21 @@
+{
+  "minecraft": "26.1.2",
+  "moduleSha256": "2d7b9116050638da9eae0449ca46df80d3dd991b99a39f72ad68e7793e7a579e",
+  "javaExecutableSha256": "038e856d3c7b8307152b5ea440f548f74fad8e0acd3d9615983173bf451290d4",
+  "runtime": "verified unmodified Zulu25 JRE25.0.4.1, macOS arm64 native OpenGL, Fabric0.19.5",
+  "scope": "Private fresh flat world, actual removal/swap/cache/empty-editor transitions. No timing, UI automation or installed-app writes.",
+  "injected": [
+    {
+      "file": "KapKan-1.0.7-mc26.1.2-fabric.jar",
+      "sha512": "0dd03bee388440e53bff1878559b3c80a673b4793a784e58bf11eb0325904c863afe5d5d2c04ffd6fc52f51864bc50c50bfa0379a20f5c2e580874a1043430d2"
+    },
+    {
+      "file": "equipment-hud-qa-only.jar",
+      "sha512": "aeca2b843d4c743f92445af112d798b170e4d9f619828b5284cea67c89475df7ecb6f276cd2643661d7226bcba8fa40eec5bdbe3d44342cb38f843993ccfb92e"
+    },
+    {
+      "file": "ImmediatelyFast-Fabric-1.15.3+26.1.jar",
+      "sha512": "b665037aee8e76e330f068f640b340b97ce8c0c0e940dfccda8a5b00f772dfa9b2d20594bb950e4f2595b359ad3c27190a4d998da28d4507a9747ab507980d11"
+    }
+  ]
+}

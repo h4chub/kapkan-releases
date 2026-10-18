@@ -1,10 +1,10 @@
 {
   "product": "KapKan",
-  "version": "1.0.6",
-  "build_id": "client-release-1.0.6",
+  "version": "1.0.7",
+  "build_id": "client-release-1.0.7",
   "publication": "READY_FOR_PUBLICATION",
-  "built_at_utc": "2026-10-17T17:51:43.144654+00:00",
-  "source_baseline": "Public KapKan 1.0.5 commit 9562b31217772709d901e50c057a2af26acf9303",
+  "built_at_utc": "2026-10-18T10:52:32.857564+00:00",
+  "source_baseline": "Public KapKan 1.0.6 source commit 2bf668ed2ad4966e878c751d4b57d10cdee75314",
   "launcher_target_java": 21,
   "companion_target_java": 25,
   "companion_minecraft": [
@@ -13,7 +13,7 @@
     "26.1.2"
   ],
   "companion_loader": "Fabric Loader 0.19.5 (declared minimum)",
-  "companion_build_id": "1.0.6",
+  "companion_build_id": "1.0.7",
   "companion_rebuilt": true,
   "bundled_fabric_api_modules": [
     "fabric-api-base",
@@ -22,18 +22,20 @@
   ],
   "cosmetic_sync": "Matching Fabric server and clients using the bundled server relay; optional legacy HTTP service",
   "presence_service_deployed": false,
-  "native_acceptance": "Native macOS arm64 IF-only + verified Zulu25 fresh-world smoke PASS on all three exact targets. Signed app/archive/payload checks recorded under qa/1.0.6. Interactive mic and native Windows install not run.",
-  "gameplay_acceptance": "Final selected IF-only subset: kapkan-presence + immediatelyfast loaded, Lithium/Ferrite absent; six consecutive clear-world seconds and rendered frames on 26.1, 26.1.1 and 26.1.2 using verified managed Zulu25. No timing in these acceptance runs.",
+  "native_acceptance": "Native macOS arm64 26.1.2 equipment-HUD visual check; exact bright/dark scene receipts under qa/1.0.7. Launcher/native packaging checks recorded separately. Interactive microphone capture and native Windows installation not rerun.",
+  "gameplay_acceptance": "Equipment icons and colored durability verified in a private 26.1.2 world using verified Zulu25 and ImmediatelyFast. Other two exact targets compile and pass 1,350 deterministic checks each; no new native gameplay claim for those targets.",
   "toolchain": "Temurin JDK21, Oracle JDK25, checksum-verified official Go1.27.2, Python3/Pillow",
-  "hotfix": "fabric-dependency-recovery-3",
+  "hotfix": "equipment-hud-1",
   "microsoft_sign_in": "Existing owned application client-ID setup unchanged",
-  "performance_claims": "No causal FPS percentage claimed. Controlled-scene ablation had 16.76% baseline and 17.97% bare-control drift; IF-only selected as narrower rendering addition with strongest directional result.",
+  "performance_claims": "No new FPS claim or benchmark. Existing rendering optimizations retained; this release changes equipment HUD presentation.",
   "artifacts": {
-    "26.1": "c01579a31379f567eb19afb03969a888367bb91517d9652e9622851c1f194210",
-    "26.1.1": "3d447a99b1c3bf190e9af3864f1d82a3c3978e141fa16a47fa64193d9f2c75da",
-    "26.1.2": "a747bff50be125397a77fc4be7155f98485a049676c2a8616d8ce03aeb2f5f41"
+    "26.1": "d79f3440f5d3d55c263376e2355abe30817bdb82c750380681b56aa23c1d9025",
+    "26.1.1": "e7d495b023f94f354f6a1d21e7ca56c5d3582816e1f070fc0ef58793a2a5f5ac",
+    "26.1.2": "2d7b9116050638da9eae0449ca46df80d3dd991b99a39f72ad68e7793e7a579e"
   },
   "bundled_performance_modules": [
     "ImmediatelyFast 1.15.3 (rendering; optional, default enabled)"
-  ]
+  ],
+  "desktop_launcher_sha256": "22e170eec8f11fc6424b12a3a285fc4908bdbc38d64bf221b0e48f310b4f4253",
+  "current_launcher_checks": "PASS release 33, companion migration 126 including1.0.5+1.0.6 all3targets, rendering integration 56, updater 14 synthetic cases, native Go units."
 }

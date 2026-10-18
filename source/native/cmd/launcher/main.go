@@ -16,7 +16,7 @@ import (
 	"time"
 )
 
-const version = "1.0.6"
+const version = "1.0.7"
 
 func main() {
 	if err := run(); err != nil {
@@ -137,7 +137,7 @@ func run() error {
 		return err
 	}
 	defer out.Close()
-	args := []string{"-Xms64m", "-Xmx512m", "-Dfile.encoding=UTF-8", "-XX:ErrorFile=" + filepath.Join(logs, "launcher-jvm-crash-%p.log"), "-Dkapkan.release.version=" + version, "-Dkapkan.nativeBootstrap=" + exe, "-Dkapkan.clientCoreJar=" + filepath.Join(res, "KapKan-ClientCore-1.21.11-Beta1.jar"), "-Dkapkan.presenceJar=" + filepath.Join(res, "KapKan-1.0.6-mc26.1.2-fabric.jar"), "-Dkapkan.companionDirectory=" + res, "-Dkapkan.build=client-release-1.0.6"}
+	args := []string{"-Xms64m", "-Xmx512m", "-Dfile.encoding=UTF-8", "-XX:ErrorFile=" + filepath.Join(logs, "launcher-jvm-crash-%p.log"), "-Dkapkan.release.version=" + version, "-Dkapkan.nativeBootstrap=" + exe, "-Dkapkan.clientCoreJar=" + filepath.Join(res, "KapKan-ClientCore-1.21.11-Beta1.jar"), "-Dkapkan.presenceJar=" + filepath.Join(res, "KapKan-1.0.7-mc26.1.2-fabric.jar"), "-Dkapkan.companionDirectory=" + res, "-Dkapkan.build=client-release-1.0.7"}
 	if runtime.GOOS == "darwin" {
 		// Choose the native dark appearance before Java initializes AWT, including owned dialogs.
 		args = append(args, "-Xdock:name=KapKan", "-Xdock:icon="+filepath.Join(res, "KapKan-AppIcon.png"), "-Dapple.awt.application.name=KapKan", "-Dapple.awt.application.appearance=NSAppearanceNameDarkAqua")

@@ -1,19 +1,8 @@
 {
-  "version": "1.0.6",
-  "state": "PUBLISHED",
-  "expected_tag": "v1.0.6-beta.1",
-  "source_branch": "codex/kapkan-1.0.6",
-  "previous_public_release": "https://github.com/h4chub/kapkan-releases/releases/tag/v1.0.5-beta.1",
-  "verification": "PASS: exact final source tag; seven final asset names/sizes/full GitHub SHA256 digests; unauthenticated HEAD and fourteen bounded prefix/suffix byte ranges; actual published current updater against live feed and live fetch. Historical launcher binaries not executed.",
-  "release_url": "https://github.com/h4chub/kapkan-releases/releases/tag/v1.0.6-beta.1",
-  "release_id": 415971987,
-  "published_at_utc": "2026-10-17T17:58:55Z",
-  "tag_source_commit": "e4eea6d5f2d825f5be5d4e861e1155a4f555a66d",
-  "verification_receipt": "../releases/1.0.6/verification/verification-summary.json",
-  "website": {
-    "url": "https://kapkan-website.vercel.app",
-    "deployment_id": "dpl_4k67GbrFn1Vg1qLaNYaP8hfwRmPt",
-    "state": "READY",
-    "verification": "PASS live bytes, all seven final download URLs/sizes/SHA256 metadata and all five desktop/tablet/mobile viewports"
-  }
+  "version": "1.0.7",
+  "state": "READY_FOR_PUBLICATION",
+  "expected_tag": "v1.0.7-beta.1",
+  "source_branch": "codex/kapkan-1.0.7",
+  "previous_public_release": "https://github.com/h4chub/kapkan-releases/releases/tag/v1.0.6-beta.1",
+  "verification": "Final packages and public delivery are verified before publication."
 }

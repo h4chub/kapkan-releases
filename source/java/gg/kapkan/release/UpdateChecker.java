@@ -14,8 +14,8 @@ import java.util.regex.Pattern;
 
 /** Public release discovery only. No installer is downloaded or executed here. */
 public final class UpdateChecker {
-    public static final String VERSION = "1.0.6";
-    public static final String TAG = "v1.0.6-beta.1";
+    public static final String VERSION = "1.0.7";
+    public static final String TAG = "v1.0.7-beta.1";
     public static final URI RELEASES = URI.create("https://github.com/h4chub/kapkan-releases/releases");
     static final URI FEED = URI.create("https://api.github.com/repos/h4chub/kapkan-releases/releases?per_page=30");
     static final int MAX_BODY = 2 * 1024 * 1024;

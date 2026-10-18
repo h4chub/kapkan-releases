@@ -253,7 +253,7 @@ func (m Manager) download(ctx context.Context, link, dest string, size int64, ch
 	if e != nil {
 		return e
 	}
-	req.Header.Set("User-Agent", "KapKan/1.0.6")
+	req.Header.Set("User-Agent", "KapKan/1.0.7")
 	resp, e := m.httpClient().Do(req)
 	if e != nil {
 		return fmt.Errorf("Java download failed: %w", e)

@@ -12,8 +12,8 @@ base=zipfile.ZipFile(root/'app/KapKan-Launcher-base.jar');final=zipfile.ZipFile(
 names=final.namelist();assert len(names)==len(set(names))
 assert not [n for n in names if n.startswith(('net/minecraft/','org/junit/')) or 'SelfTest' in n or 'SmokeTest' in n]
 assert b'gg.kapkan.release.ReleaseMain' in final.read('META-INF/MANIFEST.MF')
-assert b'KapKan-Build: client-release-1.0.6' in final.read('META-INF/MANIFEST.MF')
-assert b'Implementation-Version: 1.0.6' in final.read('META-INF/MANIFEST.MF')
+assert b'KapKan-Build: client-release-1.0.7' in final.read('META-INF/MANIFEST.MF')
+assert b'Implementation-Version: 1.0.7' in final.read('META-INF/MANIFEST.MF')
 assert b'KapKan-Hotfix: fabric-dependency-recovery-3' in final.read('META-INF/MANIFEST.MF')
 assert 'gg/kapkan/release/RetryDownloader.class' in names
 assert b'gg/kapkan/release/RetryDownloader' in final.read('gg/kapkan/launcher/install/BaseGameInstallerService.class')
@@ -35,7 +35,7 @@ allowed={
 'gg/kapkan/v23/KapKanV23Launcher$MicrosoftAuthService.class',
 }
 assert set(changed)<=allowed,changed
-packages=[out/'KapKan-Windows-1.0.6.zip'] if args.windows_only else [out/'KapKan-macOS-1.0.6.zip',out/'KapKan-Windows-1.0.6.zip']
+packages=[out/'KapKan-Windows-1.0.7.zip'] if args.windows_only else [out/'KapKan-macOS-1.0.7.zip',out/'KapKan-Windows-1.0.7.zip']
 performance_files={p.relative_to(root/'performance').as_posix():p.read_bytes() for p in (root/'performance').rglob('*') if p.is_file()}
 performance_manifest=json.loads(performance_files['manifest.json'])
 assert any(name.startswith('licenses/') for name in performance_files),'Performance licenses missing'
@@ -47,7 +47,7 @@ for mod in performance_manifest['mods']:
 for p in packages:
  with zipfile.ZipFile(p) as z:
   assert z.testzip() is None
-  for shipped in ['KapKan-Launcher.jar','KapKan-1.0.6-mc26.1-fabric.jar','KapKan-1.0.6-mc26.1.1-fabric.jar','KapKan-1.0.6-mc26.1.2-fabric.jar']:
+  for shipped in ['KapKan-Launcher.jar','KapKan-1.0.7-mc26.1-fabric.jar','KapKan-1.0.7-mc26.1.1-fabric.jar','KapKan-1.0.7-mc26.1.2-fabric.jar']:
    entry=next(n for n in z.namelist() if n.endswith('/Resources/'+shipped) or n=='Resources/'+shipped)
    assert z.read(entry)==(root/'app'/shipped).read_bytes(), 'Stale shipped jar: '+shipped
   assert not any('PersonalPack' in n or n.endswith(('.ttf','.otf')) for n in z.namelist())
@@ -61,24 +61,24 @@ for p in packages:
    plist=plistlib.loads(z.read('KapKan.app/Contents/Info.plist'))
    entitlements=plistlib.loads(z.read('KapKan.app/Contents/Resources/KapKan.entitlements'))
    validate_microphone_support(plist,entitlements)
-   app=out/'KapKan-macOS-1.0.6/KapKan.app'
+   app=out/'KapKan-macOS-1.0.7/KapKan.app'
    if not args.unsigned_macos:
     verify_signed_app(app)
     for name in z.namelist():
      if name.startswith('KapKan.app/'):
       assert z.read(name)==(app.parent/name).read_bytes(),'Archive differs from the verified app: '+name
-   assert plist['CFBundleShortVersionString']=='1.0.6'
-   assert plist['CFBundleVersion']=='10015'
-   assert b'1.0.6' in z.read('Make-DMG.command')
-for p in [root/'build/KapKan.exe',out/'KapKan-1.0.6-Setup.exe']:
+   assert plist['CFBundleShortVersionString']=='1.0.7'
+   assert plist['CFBundleVersion']=='10016'
+   assert b'1.0.7' in z.read('Make-DMG.command')
+for p in [root/'build/KapKan.exe',out/'KapKan-1.0.7-Setup.exe']:
  b=p.read_bytes();assert b[:2]==b'MZ';off=struct.unpack_from('<I',b,0x3c)[0];assert b[off:off+4]==b'PE\0\0'
  assert struct.unpack_from('<H',b,off+4)[0]==0x8664
  assert struct.unpack_from('<H',b,off+24+68)[0]==2 # Windows GUI subsystem
-report={'release':'1.0.6','build_id':'client-release-1.0.6','publication':'HOLD','changed_baseline_classes':changed,'preserved_image_assets':assets,'application_entries':len(names),'native_device_tests':'not performed','artifacts':{}}
-for p in [out/'KapKan-macOS-1.0.6.zip',out/'KapKan-Windows-1.0.6.zip',out/'KapKan-1.0.6-Setup.exe']:
+report={'release':'1.0.7','build_id':'client-release-1.0.7','publication':'HOLD','changed_baseline_classes':changed,'preserved_image_assets':assets,'application_entries':len(names),'native_device_tests':'not performed','artifacts':{}}
+for p in [out/'KapKan-macOS-1.0.7.zip',out/'KapKan-Windows-1.0.7.zip',out/'KapKan-1.0.7-Setup.exe']:
  if p.is_file() and p.suffix in ('.exe','.zip'):
   report['artifacts'][p.name]={'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
 (out/'ARTIFACT-AUDIT.json').write_text(json.dumps(report,indent=2)+'\n')
-(out/'SHA256SUMS.txt').write_text(''.join(f"{v['sha256']}  {k}\n" for k,v in report['artifacts'].items() if k in {'KapKan-macOS-1.0.6.zip','KapKan-1.0.6-Setup.exe'}))
+(out/'SHA256SUMS.txt').write_text(''.join(f"{v['sha256']}  {k}\n" for k,v in report['artifacts'].items() if k in {'KapKan-macOS-1.0.7.zip','KapKan-1.0.7-Setup.exe'}))
 print('Archive / binary / asset audit: PASS')
 print('Changed existing classes:', '\n'.join(changed))

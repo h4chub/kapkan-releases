@@ -1,4 +1,4 @@
-# KapKan 1.0.6
+# KapKan 1.0.7
 
 A Fabric client mod and desktop launcher with a searchable menu, configurable gameplay HUD, smooth zoom, toggle sprint and optional server-assisted cosmetics.
 
@@ -11,6 +11,8 @@ On macOS, extract the ZIP and move KapKan.app into Applications. The Mac app use
 ## Controls and settings
 
 Press **J** for KapKan; rebind in Minecraft Controls or KapKan Controls. Enable individual widgets in Features and position them in the HUD editor. **C** defaults to zoom; **R** defaults to toggle sprint after enabling it. Help replays the introduction. Capes → No Cape removes the custom KapKan cape.
+
+Enable **Equipment durability** in Features to show occupied armor and durable held items as icons with remaining/max counters. Counters fade from dark green through yellow to red as durability runs down. The HUD has no background or slot-name labels. Its existing saved position and scale are retained.
 
 The launcher's Game performance page includes **Use rendering optimizations**. A change applies at the next game start. Existing copies and declared conflicts take precedence. The launcher does not change your graphics options. Module licenses and exact corresponding sources are included in Resources/performance; see [performance/NOTICE.txt](performance/NOTICE.txt).
 

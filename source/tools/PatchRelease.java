@@ -29,8 +29,8 @@ public class PatchRelease {
   }
   Manifest manifest=new Manifest();manifest.getMainAttributes().putValue("Manifest-Version","1.0");
   manifest.getMainAttributes().putValue("Main-Class","gg.kapkan.release.ReleaseMain");
-  manifest.getMainAttributes().putValue("Implementation-Version","1.0.6");
-  manifest.getMainAttributes().putValue("KapKan-Build","client-release-1.0.6");
+  manifest.getMainAttributes().putValue("Implementation-Version","1.0.7");
+  manifest.getMainAttributes().putValue("KapKan-Build","client-release-1.0.7");
   manifest.getMainAttributes().putValue("KapKan-Hotfix","fabric-dependency-recovery-3");
   Path temporary=Files.createTempFile(out.toAbsolutePath().getParent(),"launcher-",".jar.tmp");
   try(var jar=new JarOutputStream(Files.newOutputStream(temporary),manifest)){

@@ -27,11 +27,11 @@ failure() {
 trap cleanup EXIT
 trap failure ERR
 if [ ! -f "$APP/Contents/Info.plist" ] || [ ! -f "$APP/Contents/MacOS/KapKan" ]; then
-  echo "Keep Make-DMG.command beside the complete KapKan.app from the same 1.0.6 package."
+  echo "Keep Make-DMG.command beside the complete KapKan.app from the same 1.0.7 package."
   false
 fi
 STAGE="$(mktemp -d "${TMPDIR:-/tmp}/KapKan-dmg.XXXXXX")"
-printf '\nPreparing KapKan 1.0.6 disk image...\n'
+printf '\nPreparing KapKan 1.0.7 disk image...\n'
 /usr/bin/ditto "$APP" "$STAGE/KapKan.app"
 EXE="$STAGE/KapKan.app/Contents/MacOS/KapKan"
 /bin/chmod 755 "$EXE"
@@ -82,7 +82,7 @@ fi
 echo "Application code-signature validation passed."
 /bin/ln -s /Applications "$STAGE/Applications"
 cat > "$STAGE/READ-ME.txt" <<'TXT'
-KapKan 1.0.6
+KapKan 1.0.7
 Drag KapKan.app into Applications, then open it.
 First launch prepares the matching Java runtime and requires internet.
 Minecraft data in ~/.kapkan is preserved. This package does not publish updates.
@@ -97,12 +97,12 @@ if [ -n "${KAPKAN_NOTARY_PROFILE:-}" ]; then
   /usr/bin/xcrun stapler staple "$TEMP_OUT"
   /usr/bin/xcrun stapler validate "$TEMP_OUT"
 fi
-FINAL="$OUT_DIR/KapKan-macOS-1.0.6.dmg"
+FINAL="$OUT_DIR/KapKan-macOS-1.0.7.dmg"
 if [ -f "$FINAL" ]; then
   /bin/mv "$FINAL" "$OUT_DIR/KapKan-macOS-previous-$(date +%Y%m%d-%H%M%S).dmg"
 fi
 /bin/mv "$TEMP_OUT" "$FINAL"
-(cd "$OUT_DIR" && /usr/bin/shasum -a 256 "KapKan-macOS-1.0.6.dmg" > "KapKan-macOS-1.0.6.dmg.sha256")
+(cd "$OUT_DIR" && /usr/bin/shasum -a 256 "KapKan-macOS-1.0.7.dmg" > "KapKan-macOS-1.0.7.dmg.sha256")
 printf '\nCREATED AND VERIFIED: %s\n' "$FINAL"
 if [ -z "${KAPKAN_NOTARY_PROFILE:-}" ]; then echo "Not Developer-ID notarized. No website/GitHub release was published."; fi
 /usr/bin/open -R "$FINAL"

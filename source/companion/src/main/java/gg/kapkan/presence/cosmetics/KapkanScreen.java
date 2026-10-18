@@ -95,7 +95,7 @@ public final class KapkanScreen extends Screen {
             feature("Coordinates","Your current block position: X, Y and Z.",1,()->s.coordinates,()->s.coordinates=!s.coordinates),
             feature("Keystrokes","Movement and jump keys as you press them.",1,()->s.keystrokes,()->s.keystrokes=!s.keystrokes),
             feature("Mouse clicks","See when left and right mouse buttons are held.",1,()->s.clicks,()->s.clicks=!s.clicks),
-            feature("Armor durability","Equipped armor and remaining durability.",1,()->s.armor,()->s.armor=!s.armor),
+            feature("Equipment durability","Armor and held tools with colored durability.",1,()->s.armor,()->s.armor=!s.armor),
             feature("Active effects","Effect names, level and time remaining.",1,()->s.effects,()->s.effects=!s.effects),
             feature("Smooth zoom","Hold your zoom key to look closer.",2,()->s.zoom,()->s.zoom=!s.zoom),
             feature("Toggle sprint","Use the toggle-sprint key to latch sprint.",2,()->s.toggleSprint,()->s.toggleSprint=!s.toggleSprint),

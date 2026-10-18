@@ -38,17 +38,17 @@ if not args.windows_only:
     from macho_layout import universal
     from macos_permissions import MICROPHONE_PURPOSE, validate_microphone_support, sign_app
     
-    mac=OUT/'KapKan-macOS-1.0.6'; app=mac/'KapKan.app'; contents=app/'Contents'
+    mac=OUT/'KapKan-macOS-1.0.7'; app=mac/'KapKan.app'; contents=app/'Contents'
     (contents/'MacOS').mkdir(parents=True,exist_ok=True);res=contents/'Resources';res.mkdir(exist_ok=True)
     layout=universal([ROOT/'build/KapKan-darwin-amd64',ROOT/'build/KapKan-darwin-arm64'],contents/'MacOS/KapKan')
     (OUT/'MACHO-LAYOUT.json').write_text(json.dumps(layout,indent=2)+'\n')
-    info={'CFBundleDisplayName':'KapKan','CFBundleExecutable':'KapKan','CFBundleIconFile':'KapKan.icns','CFBundleIdentifier':'gg.kapkan.launcher','CFBundleInfoDictionaryVersion':'6.0','CFBundleName':'KapKan','CFBundlePackageType':'APPL','CFBundleShortVersionString':'1.0.6','CFBundleVersion':'10015','LSApplicationCategoryType':'public.app-category.games','LSMinimumSystemVersion':'12.0','NSHighResolutionCapable':True}
+    info={'CFBundleDisplayName':'KapKan','CFBundleExecutable':'KapKan','CFBundleIconFile':'KapKan.icns','CFBundleIdentifier':'gg.kapkan.launcher','CFBundleInfoDictionaryVersion':'6.0','CFBundleName':'KapKan','CFBundlePackageType':'APPL','CFBundleShortVersionString':'1.0.7','CFBundleVersion':'10016','LSApplicationCategoryType':'public.app-category.games','LSMinimumSystemVersion':'12.0','NSHighResolutionCapable':True}
     info['NSMicrophoneUsageDescription']=MICROPHONE_PURPOSE
     entitlements=ROOT/'packaging/KapKan.entitlements'
     validate_microphone_support(info,plistlib.loads(entitlements.read_bytes()))
     (contents/'Info.plist').write_bytes(plistlib.dumps(info));(contents/'PkgInfo').write_bytes(b'APPL????')
     shutil.copy2(entitlements,res/'KapKan.entitlements')
-    for n in ['KapKan-Launcher.jar','KapKan-AppIcon.png','KapKan.icns','KapKan-ClientCore-1.21.11-Beta1.jar','KapKan-1.0.6-mc26.1-fabric.jar','KapKan-1.0.6-mc26.1.1-fabric.jar','KapKan-1.0.6-mc26.1.2-fabric.jar']:
+    for n in ['KapKan-Launcher.jar','KapKan-AppIcon.png','KapKan.icns','KapKan-ClientCore-1.21.11-Beta1.jar','KapKan-1.0.7-mc26.1-fabric.jar','KapKan-1.0.7-mc26.1.1-fabric.jar','KapKan-1.0.7-mc26.1.2-fabric.jar']:
         shutil.copy2(ROOT/'app'/n,res/n)
     shutil.copy2(ROOT/'packaging/Make-DMG.command',mac/'Make-DMG.command')
     (mac/'Make-DMG.command').chmod(0o755)
@@ -61,18 +61,18 @@ if not args.windows_only:
     if args.unsigned_macos:
         print('DEVELOPMENT ONLY: macOS application signature not verified')
     else:sign_app(app)
-win=OUT/'KapKan-Windows-1.0.6';wr=win/'Resources';wr.mkdir(parents=True,exist_ok=True)
+win=OUT/'KapKan-Windows-1.0.7';wr=win/'Resources';wr.mkdir(parents=True,exist_ok=True)
 shutil.copy2(ROOT/'build/KapKan.exe',win/'KapKan.exe')
 shutil.copy2(ROOT/'app/KapKan.ico',win/'KapKan.ico')
-for n in ['KapKan-Launcher.jar','KapKan-AppIcon.png','KapKan-ClientCore-1.21.11-Beta1.jar','KapKan-1.0.6-mc26.1-fabric.jar','KapKan-1.0.6-mc26.1.1-fabric.jar','KapKan-1.0.6-mc26.1.2-fabric.jar']:
+for n in ['KapKan-Launcher.jar','KapKan-AppIcon.png','KapKan-ClientCore-1.21.11-Beta1.jar','KapKan-1.0.7-mc26.1-fabric.jar','KapKan-1.0.7-mc26.1.1-fabric.jar','KapKan-1.0.7-mc26.1.2-fabric.jar']:
     shutil.copy2(ROOT/'app'/n,wr/n)
 (wr/'licenses').mkdir(exist_ok=True);shutil.copy2(ROOT/'GO-LICENSE.txt',wr/'licenses/Go.txt')
 shutil.copy2(ROOT/'README.md',win/'READ-ME.md');shutil.copy2(ROOT/'QA-REPORT.md',win/'QA-REPORT.md')
 shutil.copy2(ROOT/'BUILD-INFO.json',wr/'BUILD-INFO.json')
 shutil.copy2(ROOT/'RELEASE-GATE.json',wr/'RELEASE-GATE.json')
 copy_performance(wr)
-if not args.windows_only:zipdir(mac,OUT/'KapKan-macOS-1.0.6.zip')
-zipdir(win,OUT/'KapKan-Windows-1.0.6.zip')
+if not args.windows_only:zipdir(mac,OUT/'KapKan-macOS-1.0.7.zip')
+zipdir(win,OUT/'KapKan-Windows-1.0.7.zip')
 payload=ROOT/'native/cmd/installer/payload.zip'
 zipdir(win,payload)
 (ROOT/'native/cmd/installer/payload.sha256').write_text(hashlib.sha256(payload.read_bytes()).hexdigest()+'\n')

@@ -1,0 +1,9 @@
+HEAD minecraft:diamond_helmet 363/363
+CHEST minecraft:diamond_chestplate 264/528
+LEGS minecraft:diamond_leggings 1/495
+FEET minecraft:diamond_boots 108/429
+MAINHAND minecraft:mace 498/500
+OFFHAND minecraft:shield 168/336
+HUD=[363/363, 264/528, 1/495, 108/429, 498/500, 168/336]
+widget=70x116
+camera=0.5,-56.0,0.5,0.0,0.0

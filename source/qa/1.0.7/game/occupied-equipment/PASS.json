@@ -1,0 +1,58 @@
+{
+  "minecraft": "26.1.2",
+  "moduleSha256": "2d7b9116050638da9eae0449ca46df80d3dd991b99a39f72ad68e7793e7a579e",
+  "javaExecutableSha256": "038e856d3c7b8307152b5ea440f548f74fad8e0acd3d9615983173bf451290d4",
+  "runtime": "verified unmodified Zulu25 JRE25.0.4.1, macOS arm64 native OpenGL, Fabric0.19.5",
+  "scope": "Private fresh flat world, actual equipment widget, white/black backgrounds. No timing, UI automation or installed-app writes.",
+  "injected": [
+    {
+      "file": "KapKan-1.0.7-mc26.1.2-fabric.jar",
+      "sha512": "0dd03bee388440e53bff1878559b3c80a673b4793a784e58bf11eb0325904c863afe5d5d2c04ffd6fc52f51864bc50c50bfa0379a20f5c2e580874a1043430d2"
+    },
+    {
+      "file": "equipment-hud-qa-only.jar",
+      "sha512": "8b217e7e1f986d65f314a0520f2944ff6c063e11c935e8f1ca6ecfc2287d5a77d9cbda3b948737e65c08ca4b0377c6005b6ee08c3401bbe817608edbc03a65b5"
+    },
+    {
+      "file": "ImmediatelyFast-Fabric-1.15.3+26.1.jar",
+      "sha512": "b665037aee8e76e330f068f640b340b97ce8c0c0e940dfccda8a5b00f772dfa9b2d20594bb950e4f2595b359ad3c27190a4d998da28d4507a9747ab507980d11"
+    }
+  ],
+  "result": {
+    "status": "PASS",
+    "checks": 147,
+    "minecraft": "26.1.2",
+    "scope": "actual private-world equipment and HUD, bright/dark backgrounds; visual review required",
+    "mainHand": "mace498/500",
+    "screenshots": [
+      "KapKan-equipment-bright.png",
+      "KapKan-equipment-dark.png"
+    ]
+  },
+  "status": "PASS",
+  "visualReview": {
+    "status": "PASS",
+    "reviewed": [
+      "KapKan-equipment-bright.png",
+      "KapKan-equipment-dark.png"
+    ],
+    "scope": "Actual native gameplay HUD, transparent rows, numeric colors and shadow readability on white/black game walls; no slot labels or opaque panel.",
+    "rows": [
+      "diamond helmet363/363 green",
+      "diamond chest264/528 yellow",
+      "diamond leggings1/495 red",
+      "diamond boots108/429 orange",
+      "main-hand mace498/500 green",
+      "off-hand shield168/336 yellow"
+    ],
+    "limits": [
+      "Native visual runtime is26.1.2 on macOS arm64. Other exact targets are covered by root build/unit checks, not this screenshot pair.",
+      "New isolated world and private client/presence config only; no installed app, user world, live UI or public release/deployment changes."
+    ]
+  },
+  "independentVisualReview": {
+    "reviewer": "recover_context",
+    "status": "PASS",
+    "result": "Six compact occupied rows in expected armor, mainhand mace and offhand shield order; correct colors and readable shadow on both backgrounds; no panel, slot names or concrete blocker."
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "version": "1.0.7",
+  "tag": "v1.0.7-beta.1",
+  "status": "READY_FOR_PUBLICATION",
+  "assets": [
+    {
+      "filename": "KapKan-1.0.7-Setup.exe",
+      "bytes": 39315968,
+      "sha256": "ac33e431498f34ede2ff8693db907da422b1e4b0604f145208c7703de242a77e",
+      "url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.7-beta.1/KapKan-1.0.7-Setup.exe"
+    },
+    {
+      "filename": "KapKan-macOS-1.0.7.zip",
+      "bytes": 37544367,
+      "sha256": "761dda96e87d1cf2fd4e4ff096f267b09b7404acb32d4742a8910a6183cad79f",
+      "url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.7-beta.1/KapKan-macOS-1.0.7.zip"
+    },
+    {
+      "filename": "KapKan-Windows-Portable-1.0.7.zip",
+      "bytes": 34211912,
+      "sha256": "a4f958ee76e2cd2340bdc3ca4338e4eeafcde7a1b25f28a19674d0ec3c207abb",
+      "url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.7-beta.1/KapKan-Windows-Portable-1.0.7.zip"
+    },
+    {
+      "filename": "KapKan-1.0.7-mc26.1-fabric.jar",
+      "bytes": 1721332,
+      "sha256": "d79f3440f5d3d55c263376e2355abe30817bdb82c750380681b56aa23c1d9025",
+      "url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.7-beta.1/KapKan-1.0.7-mc26.1-fabric.jar"
+    },
+    {
+      "filename": "KapKan-1.0.7-mc26.1.1-fabric.jar",
+      "bytes": 1721337,
+      "sha256": "e7d495b023f94f354f6a1d21e7ca56c5d3582816e1f070fc0ef58793a2a5f5ac",
+      "url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.7-beta.1/KapKan-1.0.7-mc26.1.1-fabric.jar"
+    },
+    {
+      "filename": "KapKan-1.0.7-mc26.1.2-fabric.jar",
+      "bytes": 1727199,
+      "sha256": "2d7b9116050638da9eae0449ca46df80d3dd991b99a39f72ad68e7793e7a579e",
+      "url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.7-beta.1/KapKan-1.0.7-mc26.1.2-fabric.jar"
+    },
+    {
+      "filename": "SHA256SUMS.txt",
+      "bytes": 573,
+      "sha256": "db5b1027403c911db3a7a0f9f56696ba70606109602936ae7700a574c1cba40b",
+      "url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.7-beta.1/SHA256SUMS.txt"
+    }
+  ]
+}

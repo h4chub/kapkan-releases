@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "release": "1.0.7",
+  "utc": "2026-10-18T10:51:15.965720+00:00",
+  "go": "/Users/homefolder/.codex/.chatgpt-projects/g-p-6ab96274aeec81919ee1071ebc66f27e/development106/toolchain/go/bin/go",
+  "windowsResourcesRegenerated": true,
+  "binaries": [
+    {
+      "platform": "darwin",
+      "architecture": "arm64",
+      "file": "build/KapKan-darwin-arm64",
+      "bytes": 6779634,
+      "sha256": "a7ce3a74878deabe9db66e79af4397f202cab22bae9a4b7ee5493e3d8ed2b335"
+    },
+    {
+      "platform": "darwin",
+      "architecture": "amd64",
+      "file": "build/KapKan-darwin-amd64",
+      "bytes": 7325440,
+      "sha256": "8288501710598c956a2291a75cafa0254d54ade6efd7ebba3072b9aa980a7bd0"
+    },
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "file": "build/KapKan.exe",
+      "bytes": 7353856,
+      "sha256": "f7b12a12bbb52f08afe44cd525fa72854c73ba38a4b9f25b7fe8425abee61f9b"
+    }
+  ],
+  "packagedOrSigned": false,
+  "installerPayloadOrSetupRebuilt": false
+}

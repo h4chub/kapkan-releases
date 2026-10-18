@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "release": "1.0.7",
+  "stableUTC": "2026-10-18T10:52:52.730439+00:00",
+  "launcherJarSha256": "22e170eec8f11fc6424b12a3a285fc4908bdbc38d64bf221b0e48f310b4f4253",
+  "assertions": {
+    "releasePolicy": 33,
+    "companionIntegration": 126,
+    "performanceIntegration": 56,
+    "updatePlatformCases": 14
+  },
+  "nativeBinaries": [
+    {
+      "platform": "darwin",
+      "architecture": "arm64",
+      "file": "build/KapKan-darwin-arm64",
+      "bytes": 6779634,
+      "sha256": "a7ce3a74878deabe9db66e79af4397f202cab22bae9a4b7ee5493e3d8ed2b335"
+    },
+    {
+      "platform": "darwin",
+      "architecture": "amd64",
+      "file": "build/KapKan-darwin-amd64",
+      "bytes": 7325440,
+      "sha256": "8288501710598c956a2291a75cafa0254d54ade6efd7ebba3072b9aa980a7bd0"
+    },
+    {
+      "platform": "windows",
+      "architecture": "amd64",
+      "file": "build/KapKan.exe",
+      "bytes": 7353856,
+      "sha256": "f7b12a12bbb52f08afe44cd525fa72854c73ba38a4b9f25b7fe8425abee61f9b"
+    }
+  ],
+  "nativeUnits": "PASS; opt-in vendor archive installation and candidate payload acceptance intentionally deferred to packaging stage",
+  "limits": "No packaging/signing/installer payload/Setup rebuild, app installation, actual user-data change or external publication in this batch.",
+  "receipts": [
+    "launcher/desktop-build.json",
+    "launcher/checks.json",
+    "native/builds.json",
+    "native/go-units.json"
+  ]
+}

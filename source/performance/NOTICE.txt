@@ -1,4 +1,4 @@
-KapKan 1.0.6: bundled optimization module
+KapKan 1.0.7: bundled optimization module
 
 This folder contains UNMODIFIED upstream Fabric mod binaries, their exact tagged
 source archives and accompanying licenses. This mod is a separate work loaded
@@ -22,7 +22,7 @@ https://www.gnu.org/licenses/gpl-3.0.txt
 
 The selected upstream version explicitly lists Minecraft 26.1, 26.1.1 and
 26.1.2 for Fabric in its official Modrinth metadata. KapKan limits auto-loading
-to those exact targets, Java25 and Fabric Loader0.19.5+. It does not infer support
+to those exact targets, Java 25 and Fabric Loader 0.19.5+. It does not infer support
 for other game versions from a broad dependency declaration.
 
 Default behavior and recovery:
@@ -46,12 +46,12 @@ Sodium is not included. The inspected official candidates embed PolyForm Shield
 
 Verification limits:
 The official ImmediatelyFast binary SHA512/SHA1 and exact source SHA512 and sizes
-were recomputed successfully. The Java21-compatible selected-bundle integration
+were recomputed successfully. The Java 21-compatible selected-bundle integration
 passes 56 filesystem/argument checks, including package-relative resource lookup,
 user-data preservation, direct/nested/provided duplicate IDs, renderer and reverse
 conflicts, opt-outs and same-size binary tampering. These checks do not run the game.
-Selected-bundle native macOS arm64 OpenGL smoke passed for Minecraft 26.1, 26.1.1
-and 26.1.2 using the verified vendor Zulu25 runtime and Fabric Loader0.19.5. Each
+Historical KapKan 1.0.6 selected-bundle native macOS arm64 OpenGL smoke passed for Minecraft 26.1, 26.1.1
+and 26.1.2 using the verified vendor Zulu25 runtime and Fabric Loader 0.19.5. Each
 fresh isolated world rendered with KapKan and ImmediatelyFast loaded; Lithium and
 FerriteCore were absent. These are startup/world-entry checks, not exhaustive
 modpack/gameplay or native launcher installation acceptance. No FPS timing was
@@ -59,3 +59,7 @@ collected by these smoke runs. Exact module hashes and evidence IDs are recorded
 in manifest.json and integration-verification.json. Earlier three-mod candidate
 receipts remain historical and are clearly separate from these selected runs.
 No general FPS guarantee is made; local measurements have their own limits.
+
+KapKan 1.0.7 retains the exact same upstream module/source/license bytes. Its new
+equipment-HUD visual acceptance is native macOS arm64 Minecraft 26.1.2 only; see
+qa/1.0.7/game. Earlier all-target results above remain historical 1.0.6 evidence.

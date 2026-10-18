@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "kapkanRelease": "1.0.6",
-  "status": "Selected ImmediatelyFast-only bundle: official binary/source hashes, 56 integration fixtures and native macOS Zulu25 world smoke on all three exact targets pass. No general FPS claim.",
+  "kapkanRelease": "1.0.7",
+  "status": "ImmediatelyFast-only bundle retained unchanged. Current integration fixtures and native 26.1.2 equipment-HUD acceptance are recorded in qa/1.0.7; earlier all-three-target native receipts are historical 1.0.6.",
   "upstreamMetadataRetrievedUTC": "2026-10-17T16:35:36Z",
   "targets": [
     "26.1",
@@ -62,8 +62,8 @@
       }
     }
   ],
-  "verificationNotes": "The selected bundle and final exact rebuilt launcher have their own receipts. Earlier three-module candidate receipts under qa/1.0.6/macos-permissions/historical-three-module-candidate are historical evidence; they are not current narrowed-bundle acceptance.",
-  "nativeRuntimeVerification": {
+  "verificationNotes": "Binary/source hashes and license set are unchanged from 1.0.6. Historical 1.0.6 native and performance receipts remain versioned. Current equipment-HUD acceptance is recorded separately under qa/1.0.7/game. No new FPS claim.",
+  "historicalNativeRuntimeVerification1_0_6": {
     "platform": "macOS arm64 native OpenGL; verified unmodified vendor Azul Zulu JRE25.0.4.1+1-LTS; Fabric0.19.5",
     "javaExecutableSha256": "038e856d3c7b8307152b5ea440f548f74fad8e0acd3d9615983173bf451290d4",
     "scope": "Final selected ImmediatelyFast-only bundle in fresh isolated single-player worlds. At least six consecutive clear-world seconds and rendered frames; kapkan-presence and immediatelyfast loaded, lithium and ferritecore absent. Boot/world smoke, not exhaustive gameplay, arbitrary modpack or native launcher installation acceptance. No FPS measurement.",

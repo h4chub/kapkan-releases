@@ -1,0 +1,4 @@
+mace-only | items=[minecraft:mace] | lines=[498/500]
+held-block-filtered-shield-remains | items=[minecraft:shield] | lines=[168/336]
+pumpkin-and-unbreakable | items=[minecraft:carved_pumpkin, minecraft:diamond_chestplate, minecraft:shield] | lines=[, ∞, 168/336]
+all-empty-gameplay | items=[] | lines=[]

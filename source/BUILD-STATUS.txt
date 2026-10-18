@@ -1,1 +1,1 @@
-KapKan 1.0.6 Public Beta published. Exact source tag, all seven public asset digests/sizes/download ranges and current updater discovery PASS. Final IF-only native Mac worlds PASS on all three targets. Interactive microphone capture/native Windows install untested. See PUBLICATION.json and QA-REPORT.md.
+KapKan 1.0.7 equipment HUD: all three builds/tests, native Mac 26.1.2 visual acceptance, desktop/native build and migration checks PASS. Package/payload/public delivery checks precede publication; see PUBLICATION.json and qa/1.0.7.

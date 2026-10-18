@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "kapkanVersion": "1.0.7",
+  "minecraft": "26.1.2",
+  "moduleSha256": "2d7b9116050638da9eae0449ca46df80d3dd991b99a39f72ad68e7793e7a579e",
+  "runtime": "Verified unmodified Zulu25 JRE25.0.4.1, native macOS arm64 OpenGL, Fabric0.19.5, pinned IF-only",
+  "javaExecutableSha256": "038e856d3c7b8307152b5ea440f548f74fad8e0acd3d9615983173bf451290d4",
+  "occupiedEquipmentChecks": 147,
+  "focusedTransitionChecks": 27,
+  "primaryVisualReview": "PASS",
+  "independentOccupiedVisualReview": "PASS by recover_context",
+  "scope": [
+    "Real vanilla inventory and six live HUD rows with full/half/near-broken armor, main-hand mace498/500 and offhand shield168/336.",
+    "Transparent icon and colored remaining/max rows readable on light and dark in-game walls, no slot names or backplate.",
+    "Actual inventory removal and held-item swaps; nondamageable main block filtered while offhand shield stays.",
+    "Retained widget ItemStack snapshot stays unchanged after live held-item swap.",
+    "Max-zero pumpkin icon-only; unbreakable max-positive armor infinity.",
+    "All-empty live items and lines empty; gameplay screenshot has no card/hint; actual editor screenshot shows editor-only hint."
+  ],
+  "limits": [
+    "Native visual runtime covers26.1.2 only. Exact26.1 and26.1.1 compilation/unit validation is owned by the parent task.",
+    "Checks147 include repeated live-state assertions, not147 distinct feature cases.",
+    "No performance timing, live-user UI control, user-world changes, public release or deployment was performed."
+  ],
+  "evidence": [
+    "occupied-equipment/PASS.json",
+    "equipment-transitions/PASS.json"
+  ],
+  "independentTransitionsVisualReview": "PASS by recover_context"
+}

@@ -1,0 +1,4 @@
+=== RUN   TestBuiltPayloadUpgrade
+--- PASS: TestBuiltPayloadUpgrade (0.34s)
+PASS
+ok  	kapkan.local/bootstrap/internal/installpkg	1.465s

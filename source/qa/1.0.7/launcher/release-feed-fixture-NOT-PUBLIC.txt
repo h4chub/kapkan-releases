@@ -1,0 +1,1 @@
+Synthetic update-selection fixture only. Asset sizes/digests are dummy values; no network request, download or publication. Verify discovery from1.0.2/.3/.4/.5/.6 beta to1.0.7 beta, none from1.0.7 beta, and stable channel rejects beta.

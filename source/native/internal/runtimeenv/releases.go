@@ -39,7 +39,7 @@ func (m Manager) metadataJSON(ctx context.Context, address string, into any) err
 	if err != nil {
 		return err
 	}
-	req.Header.Set("User-Agent", "KapKan/1.0.6")
+	req.Header.Set("User-Agent", "KapKan/1.0.7")
 	resp, err := m.httpClient().Do(req)
 	if err != nil {
 		return fmt.Errorf("cannot reach Java download metadata: %w", err)

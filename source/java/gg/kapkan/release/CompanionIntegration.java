@@ -12,11 +12,11 @@ import java.util.jar.JarFile;
 /** Injects the selected build per process and preserves incompatible older companions as backups. */
 public final class CompanionIntegration {
     public static final Map<String,String> FILES=Map.of(
-        "26.1","KapKan-1.0.6-mc26.1-fabric.jar",
-        "26.1.1","KapKan-1.0.6-mc26.1.1-fabric.jar",
-        "26.1.2","KapKan-1.0.6-mc26.1.2-fabric.jar");
+        "26.1","KapKan-1.0.7-mc26.1-fabric.jar",
+        "26.1.1","KapKan-1.0.7-mc26.1.1-fabric.jar",
+        "26.1.2","KapKan-1.0.7-mc26.1.2-fabric.jar");
     public static final String FILE=FILES.get("26.1.2");
-    public static final String BUILD="client-1.0.6";
+    public static final String BUILD="client-1.0.7";
     private CompanionIntegration(){}
     public static LaunchPlan prepare(LaunchPlan plan,Consumer<String> log) {
         if(!"Fabric".equalsIgnoreCase(plan.loaderLabel()))return plan;
@@ -37,7 +37,7 @@ public final class CompanionIntegration {
                 if(legacy.isBlank())return plan;source=Path.of(legacy);
             } else {log.accept("KapKan badges: this version is not supported; continuing normal launch.");return plan;}
             if(!Files.isRegularFile(source)){log.accept("KapKan companion unavailable; continuing normal launch.");return plan;}
-            log.accept(FILES.containsKey(plan.baseVersion())?"KapKan companion prepared for "+plan.baseVersion()+" ("+BUILD+")":"KapKan legacy companion retained for "+plan.baseVersion()+"; the 1.0.6 client features are not supported on this version.");return withArgs(plan,source);
+            log.accept(FILES.containsKey(plan.baseVersion())?"KapKan companion prepared for "+plan.baseVersion()+" ("+BUILD+")":"KapKan legacy companion retained for "+plan.baseVersion()+"; the 1.0.7 client features are not supported on this version.");return withArgs(plan,source);
         } catch(Exception e){log.accept("KapKan companion unavailable: "+e.getClass().getSimpleName()+". Continuing normal launch.");return plan;}
     }
     static boolean supportsLoader(String version){
@@ -62,8 +62,8 @@ public final class CompanionIntegration {
             var meta=MiniJson.object(MiniJson.parse(new String(bytes,java.nio.charset.StandardCharsets.UTF_8)));
             String target=MiniJson.string(MiniJson.object(meta.get("depends")).get("minecraft")).strip();
             if(target.startsWith("="))target=target.substring(1).strip();
-            if(!"kapkan-presence".equals(MiniJson.string(meta.get("id")))||!"1.0.6".equals(MiniJson.string(meta.get("version")))||!version.equals(target))
-                throw new java.io.IOException("Companion does not match Minecraft "+version+" / KapKan 1.0.6");
+            if(!"kapkan-presence".equals(MiniJson.string(meta.get("id")))||!"1.0.7".equals(MiniJson.string(meta.get("version")))||!version.equals(target))
+                throw new java.io.IOException("Companion does not match Minecraft "+version+" / KapKan 1.0.7");
         }
     }
     private static boolean migrateManualPresence(Path game,String version,Consumer<String> log)throws Exception {
@@ -98,7 +98,14 @@ public final class CompanionIntegration {
     }
     static void retireKnownPresence(Path game)throws Exception {
         Path mods=game.resolve("mods");if(!Files.isDirectory(mods))return;mods=mods.toRealPath();
-        Map<Long,String> previous=Map.of(435165L,"14fd51171053b9c8d576205ae9c317d4515788bd407ab304b5b1dde1c4e27c8c",446371L,"14732932bf61579bd3e560b0a76626a30d16f96269cbb5b4978faea4c764d591",1364895L,"0f3f428c54b883b1f5659abbeab0a9cf1665f0c27eece73f16378dcd73fb77ff");
+        Map<Long,String> previous=Map.of(
+            435165L,"14fd51171053b9c8d576205ae9c317d4515788bd407ab304b5b1dde1c4e27c8c",
+            446371L,"14732932bf61579bd3e560b0a76626a30d16f96269cbb5b4978faea4c764d591",
+            1364895L,"0f3f428c54b883b1f5659abbeab0a9cf1665f0c27eece73f16378dcd73fb77ff",
+            // Preserve the exact public 1.0.6 companions through the next release migration.
+            1720053L,"c01579a31379f567eb19afb03969a888367bb91517d9652e9622851c1f194210",
+            1720057L,"3d447a99b1c3bf190e9af3864f1d82a3c3978e141fa16a47fa64193d9f2c75da",
+            1725921L,"a747bff50be125397a77fc4be7155f98485a049676c2a8616d8ce03aeb2f5f41");
         try(var files=Files.list(mods)){
             for(Path old:files.filter(p->p.getFileName().toString().endsWith(".jar")).toList()){
                 if(!Files.isRegularFile(old,LinkOption.NOFOLLOW_LINKS))continue;String digest=previous.get(Files.size(old));if(digest==null)continue;byte[] known=HexFormat.of().parseHex(digest);

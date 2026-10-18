@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "release": "1.0.7",
+  "utc": "2026-10-18T10:52:22.917187+00:00",
+  "launcherJarSha256": "22e170eec8f11fc6424b12a3a285fc4908bdbc38d64bf221b0e48f310b4f4253",
+  "tests": [
+    {
+      "test": "release-policy.log",
+      "exit": 0
+    },
+    {
+      "test": "companion-migration.log",
+      "exit": 0
+    },
+    {
+      "test": "performance-integration.log",
+      "exit": 0
+    }
+  ],
+  "migration": "Actual immutable published1.0.5 and1.0.6 companion bytes on all3targets, backup/user data preservation; temporary game folders only.",
+  "updateSelection": "Synthetic feed;7installed-tag cases x2platforms; version/tag constants and JAR manifest verified. No network or publication.",
+  "performanceSelection": "Unchanged ImmediatelyFast-only56argument/filesystem checks, including package-relative resources. Not gameplay/FPS measurement.",
+  "packagedOrSigned": false,
+  "assertions": {
+    "releasePolicy": 33,
+    "companionIntegration": 126,
+    "performanceIntegration": 56,
+    "updatePlatformCases": 14
+  }
+}

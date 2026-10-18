@@ -1,0 +1,68 @@
+[
+  {
+    "tag_name": "v1.0.8-beta.1",
+    "draft": true,
+    "prerelease": true,
+    "html_url": "https://github.com/h4chub/kapkan-releases/releases/tag/v1.0.8-beta.1",
+    "assets": [
+      {
+        "name": "KapKan-macOS-1.0.8.zip",
+        "browser_download_url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.8-beta.1/KapKan-macOS-1.0.8.zip",
+        "state": "uploaded",
+        "size": 1024,
+        "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      {
+        "name": "KapKan-1.0.8-Setup.exe",
+        "browser_download_url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.8-beta.1/KapKan-1.0.8-Setup.exe",
+        "state": "uploaded",
+        "size": 1024,
+        "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    ]
+  },
+  {
+    "tag_name": "v1.0.6-beta.1",
+    "draft": false,
+    "prerelease": true,
+    "html_url": "https://github.com/h4chub/kapkan-releases/releases/tag/v1.0.6-beta.1",
+    "assets": [
+      {
+        "name": "KapKan-macOS-1.0.6.zip",
+        "browser_download_url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.6-beta.1/KapKan-macOS-1.0.6.zip",
+        "state": "uploaded",
+        "size": 1024,
+        "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      {
+        "name": "KapKan-1.0.6-Setup.exe",
+        "browser_download_url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.6-beta.1/KapKan-1.0.6-Setup.exe",
+        "state": "uploaded",
+        "size": 1024,
+        "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    ]
+  },
+  {
+    "tag_name": "v1.0.7-beta.1",
+    "draft": false,
+    "prerelease": true,
+    "html_url": "https://github.com/h4chub/kapkan-releases/releases/tag/v1.0.7-beta.1",
+    "assets": [
+      {
+        "name": "KapKan-macOS-1.0.7.zip",
+        "browser_download_url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.7-beta.1/KapKan-macOS-1.0.7.zip",
+        "state": "uploaded",
+        "size": 1024,
+        "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      {
+        "name": "KapKan-1.0.7-Setup.exe",
+        "browser_download_url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.7-beta.1/KapKan-1.0.7-Setup.exe",
+        "state": "uploaded",
+        "size": 1024,
+        "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      }
+    ]
+  }
+]

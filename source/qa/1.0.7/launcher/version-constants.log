@@ -1,0 +1,13 @@
+Compiled from "UpdateChecker.java"
+public final class gg.kapkan.release.UpdateChecker {
+  public static final java.lang.String VERSION = "1.0.7";
+  public static final java.lang.String TAG = "v1.0.7-beta.1";
+  public static final java.net.URI RELEASES;
+  static final java.net.URI FEED;
+  static final int MAX_BODY = 2097152;
+  public gg.kapkan.release.UpdateChecker();
+  public gg.kapkan.release.UpdateChecker$Result check() throws java.lang.Exception;
+  static gg.kapkan.release.UpdateChecker$Result fetch(java.net.http.HttpClient, java.net.URI, java.lang.String, gg.kapkan.release.UpdateChecker$Platform, java.time.Duration) throws java.lang.Exception;
+  static gg.kapkan.release.UpdateChecker$Result select(java.lang.String, java.lang.String, gg.kapkan.release.UpdateChecker$Platform) throws java.io.IOException;
+  static {};
+}

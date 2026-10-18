@@ -1,0 +1,30 @@
+{
+  "version": "1.0.7",
+  "status": "PASS",
+  "generatedUTC": "2026-10-18T10:56:44.150607+00:00",
+  "companionTests": {
+    "26.1": {
+      "status": "PASS",
+      "checks": 1350,
+      "log": "companion/tests-26.1.log"
+    },
+    "26.1.1": {
+      "status": "PASS",
+      "checks": 1350,
+      "log": "companion/tests-26.1.1.log"
+    },
+    "26.1.2": {
+      "status": "PASS",
+      "checks": 1350,
+      "log": "companion/tests-26.1.2.log"
+    }
+  },
+  "newDurabilityChecksPerTarget": 141,
+  "nativeGameTarget": "26.1.2",
+  "nativeGameChecks": 174,
+  "nativeGameEvidence": "game/native-game-acceptance.json",
+  "companionCompatibilityAudit": "PASS all3 exact targets",
+  "launcherNativeSummary": "launcher-native-summary.json",
+  "packageSummary": "package/results.json",
+  "limits": "No new native Windows install, Intel Mac/macOS12 device acceptance, interactive microphone capture, or native games on26.1/26.1.1."
+}

@@ -1,10 +1,10 @@
-# KapKan 1.0.6 compatibility
+# KapKan 1.0.7 compatibility
 
 | Minecraft | Loader | Java | Build | Deterministic checks | Native game check |
 | --- | --- | --- | --- | --- | --- |
-| 26.1 | Fabric 0.19.5+ | 25 | KapKan-1.0.6-mc26.1-fabric.jar | 1,209 passed | Native macOS world entry with bundled modules |
-| 26.1.1 | Fabric 0.19.5+ | 25 | KapKan-1.0.6-mc26.1.1-fabric.jar | 1,209 passed | Native macOS world entry with bundled modules |
-| 26.1.2 | Fabric 0.19.5+ | 25 | KapKan-1.0.6-mc26.1.2-fabric.jar | 1,209 passed | Native macOS world entry with bundled modules |
+| 26.1 | Fabric 0.19.5+ | 25 | KapKan-1.0.7-mc26.1-fabric.jar | 1,350 passed | Not rerun for 1.0.7; historical 1.0.6 result retained |
+| 26.1.1 | Fabric 0.19.5+ | 25 | KapKan-1.0.7-mc26.1.1-fabric.jar | 1,350 passed | Not rerun for 1.0.7; historical 1.0.6 result retained |
+| 26.1.2 | Fabric 0.19.5+ | 25 | KapKan-1.0.7-mc26.1.2-fabric.jar | 1,350 passed | Native macOS arm64 equipment HUD: 174 checks, bright/dark visuals and inventory transitions |
 
 The three outputs are independently compiled against each exact official Minecraft release. Other game versions and Forge/NeoForge/Quilt are unsupported by this update. The retained 1.21.11 companion is a legacy binary. Current code directly targets the 26.1 rendering, input, avatar and mixin APIs; older versions require an actual port and verification.
 
@@ -22,4 +22,8 @@ Automatic cosmetic sharing requires the matching KapKan JAR on the Fabric server
 
 ## Reproduce
 
-Use JDK 25 with `companion/build.py`, then `companion/test.py --minecraft VERSION` for each supported target. `companion/check_compatibility.py` audits version metadata, Java level, entrypoints, mixins, embedded modules and dependency closure. Desktop/full-package instructions are in [README.md](README.md). See [QA-REPORT.md](QA-REPORT.md) for actual run scope. Historical 1.0.5 Linux runs remain in [history/1.0.5](history/1.0.5/) and are not new 1.0.6 native results.
+Use JDK 25 with `companion/build.py`, then `companion/test.py --minecraft VERSION` for each supported target. `companion/check_compatibility.py` audits version metadata, Java level, entrypoints, mixins, embedded modules and dependency closure. Desktop/full-package instructions are in [README.md](README.md). See [QA-REPORT.md](QA-REPORT.md) for actual run scope. Historical 1.0.5 Linux runs remain in [history/1.0.5](history/1.0.5/) and are not new 1.0.7 native results.
+
+## 1.0.7 equipment HUD
+
+The shared renderer compiles and passes deterministic checks on all three exact targets. Native bright/dark equipment-HUD acceptance was rerun on macOS arm64 26.1.2 only. Earlier 1.0.6 native target results remain historical evidence. Existing armor HUD/profile keys are unchanged; durable items in both hands now share that widget.

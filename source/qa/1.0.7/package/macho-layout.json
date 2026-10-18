@@ -1,0 +1,27 @@
+{
+  "bytes": 14136050,
+  "final_slice_end": 14136050,
+  "trailing_bytes": 0,
+  "slices": [
+    {
+      "cpu": 16777223,
+      "subtype": 3,
+      "bytes": 7325440,
+      "code_pages_verified": 0,
+      "linkedit_end": 7325440,
+      "offset": 16384,
+      "end": 7341824,
+      "alignment": 14
+    },
+    {
+      "cpu": 16777228,
+      "subtype": 0,
+      "bytes": 6779634,
+      "code_pages_verified": 1643,
+      "linkedit_end": 6779634,
+      "offset": 7356416,
+      "end": 14136050,
+      "alignment": 14
+    }
+  ]
+}

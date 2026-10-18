@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "release": "1.0.7",
+  "utc": "2026-10-18T10:52:23.230731+00:00",
+  "scope": "Native launcher/runtime/archive/metadata/entitlement parser/installer unit fixtures; no real user cache or installation.",
+  "log": "go-units.log",
+  "limits": [
+    "Opt-in vendor runtime archive installation and final release payload checks skipped. Candidate1.0.7 package/sign/payload tests remain for packaging stage."
+  ]
+}

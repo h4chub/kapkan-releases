@@ -1,10 +1,10 @@
 {
   "status": "PASS",
   "checks": 56,
-  "scope": "Java21-compatible filesystem/argument fixtures using the selected verified official ImmediatelyFast binary; not Minecraft gameplay or FPS benchmark.",
+  "scope": "Java 21-compatible filesystem/argument fixtures using the selected verified official ImmediatelyFast binary; not Minecraft gameplay or FPS benchmark.",
   "test": "tests/PerformanceIntegrationTest.java",
   "testSourceSha256": "490894ecb9bed33230d88415d00ecaf2a7b940e67f3e72b9bfde453a6f055e51",
-  "launcherJarSha256": "320c172e968123faf0454c9927a610f811524ef70b0401ca37a389b7e63948f1",
+  "launcherJarSha256": "22e170eec8f11fc6424b12a3a285fc4908bdbc38d64bf221b0e48f310b4f4253",
   "selectedMods": [
     "immediatelyfast"
   ],
@@ -21,8 +21,9 @@
     "mods/ImmediatelyFast-Fabric-1.15.3+26.1.jar",
     "sources/immediatelyfast-v1.15.3-source.zip"
   ],
-  "generatedUTC": "2026-10-17T17:50:10.816743+00:00",
-  "nativeRuntimeVerification": {
+  "generatedUTC": "2026-10-18T10:53:30.788971+00:00",
+  "kapkanRelease": "1.0.7",
+  "historicalNativeRuntimeVerification1_0_6": {
     "platform": "macOS arm64 native OpenGL; verified unmodified vendor Azul Zulu JRE25.0.4.1+1-LTS; Fabric0.19.5",
     "javaExecutableSha256": "038e856d3c7b8307152b5ea440f548f74fad8e0acd3d9615983173bf451290d4",
     "scope": "Final selected ImmediatelyFast-only bundle in fresh isolated single-player worlds. At least six consecutive clear-world seconds and rendered frames; kapkan-presence and immediatelyfast loaded, lithium and ferritecore absent. Boot/world smoke, not exhaustive gameplay, arbitrary modpack or native launcher installation acceptance. No FPS measurement.",
@@ -49,5 +50,6 @@
       }
     },
     "evidenceIndexSha256": "9bf4340b836e82d3bbeca8fb365c8d5f061d63ebc0f0f8d10dcbf88519074922"
-  }
+  },
+  "currentNativeVerification": "Native macOS arm64 26.1.2 equipment-HUD acceptance using this unchanged ImmediatelyFast binary; see qa/1.0.7/game. Earlier all-target evidence above remains historical 1.0.6."
 }

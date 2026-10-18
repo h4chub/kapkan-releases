@@ -13,7 +13,7 @@ import org.xml.sax.InputSource;
 
 /** Retires only positively identified older Mac distributions, using the system Trash. */
 public final class LauncherMaintenance {
-    public static final int BUILD_NUMBER=10015;
+    public static final int BUILD_NUMBER=10016;
     private static final Set<String> APP_FILES=Set.of(
         "Contents/Info.plist","Contents/PkgInfo","Contents/MacOS/KapKan",
         "Contents/Resources/BUILD-INFO.json","Contents/Resources/RELEASE-GATE.json",

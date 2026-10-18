@@ -1,0 +1,18 @@
+test_architecture_table_mismatch_is_rejected (test_macho_layout.LayoutTests.test_architecture_table_mismatch_is_rejected) ... ok
+test_no_tail_and_exact_slices (test_macho_layout.LayoutTests.test_no_tail_and_exact_slices) ... ok
+test_nonzero_gap_rejected (test_macho_layout.LayoutTests.test_nonzero_gap_rejected) ... ok
+test_out_of_range_is_rejected (test_macho_layout.LayoutTests.test_out_of_range_is_rejected) ... ok
+test_overlapping_slices_rejected (test_macho_layout.LayoutTests.test_overlapping_slices_rejected) ... ok
+test_rc1_regression_trailing_padding_is_rejected (test_macho_layout.LayoutTests.test_rc1_regression_trailing_padding_is_rejected) ... ok
+test_trailing_thin_slice_rejected (test_macho_layout.LayoutTests.test_trailing_thin_slice_rejected) ... ok
+test_truncated_file_rejected (test_macho_layout.LayoutTests.test_truncated_file_rejected) ... ok
+test_archive_can_request_microphone_consent_with_existing_identity (test_macos_microphone.MacMicrophonePackageTests.test_archive_can_request_microphone_consent_with_existing_identity) ... ok
+test_identity_change_cannot_discard_existing_player_privacy_choice (test_macos_microphone.MacMicrophonePackageTests.test_identity_change_cannot_discard_existing_player_privacy_choice) ... ok
+test_missing_hardened_runtime_entitlement_is_rejected (test_macos_microphone.MacMicrophonePackageTests.test_missing_hardened_runtime_entitlement_is_rejected) ... ok
+test_missing_usage_description_from_105_is_rejected (test_macos_microphone.MacMicrophonePackageTests.test_missing_usage_description_from_105_is_rejected) ... ok
+test_performance_binaries_sources_and_licenses_travel_together (test_macos_microphone.MacMicrophonePackageTests.test_performance_binaries_sources_and_licenses_travel_together) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.114s
+
+OK
