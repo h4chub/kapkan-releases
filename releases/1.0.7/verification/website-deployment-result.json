@@ -1,0 +1,24 @@
+{
+  "status": "READY",
+  "deploymentId": "dpl_BTVqcUSK6JcLuT8rndCCp1dbfjfz",
+  "projectId": "prj_bHurM30CwdE6Ri4P9h9NchSlwa6x",
+  "projectName": "kapkan-website",
+  "teamId": "team_WELZHK3VSmYvvKfSWGF0qPBT",
+  "target": "production",
+  "productionUrl": "https://kapkan-website.vercel.app",
+  "deploymentUrl": "https://kapkan-website-bibori922-nexushub00s-projects.vercel.app",
+  "aliases": [
+    "kapkan-website.vercel.app",
+    "kapkan-website-nexushub00s-projects.vercel.app"
+  ],
+  "kapkanRelease": "1.0.7",
+  "releaseTag": "v1.0.7-beta.1",
+  "publicReleaseId": 416394983,
+  "kapkanSourceCommit": "3ba7d7a92547f3fe37493a3d451b466f7a6dc50d",
+  "deliverySha256": "3fff84bf3b30aadef5e8a163ad1602c7f1b9f6de7641f6f939b75747249a797d",
+  "sourceFiles": 18,
+  "existingFileReferences": 15,
+  "inlineFiles": 3,
+  "previousProductionDeploymentId": "dpl_4k67GbrFn1Vg1qLaNYaP8hfwRmPt",
+  "verification": "Exact live HTML/application/config bytes; all7 public download sizes and GitHub SHA256 digests; exact public source tag; five live responsive viewports; no browser runtime errors or horizontal overflow."
+}

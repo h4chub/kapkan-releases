@@ -1,7 +1,7 @@
 {
   "version": "1.0.7",
   "tag": "v1.0.7-beta.1",
-  "status": "READY_FOR_PUBLICATION",
+  "status": "PUBLISHED",
   "assets": [
     {
       "filename": "KapKan-1.0.7-Setup.exe",
@@ -45,5 +45,7 @@
       "sha256": "db5b1027403c911db3a7a0f9f56696ba70606109602936ae7700a574c1cba40b",
       "url": "https://github.com/h4chub/kapkan-releases/releases/download/v1.0.7-beta.1/SHA256SUMS.txt"
     }
-  ]
+  ],
+  "published_at_utc": "2026-10-18T11:01:53Z",
+  "source_commit": "3ba7d7a92547f3fe37493a3d451b466f7a6dc50d"
 }

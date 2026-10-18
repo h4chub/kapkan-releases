@@ -1,0 +1,15 @@
+PASS snapshot select: MACOS / v1.0.2-beta.1 -> v1.0.7-beta.1
+PASS snapshot select: WINDOWS / v1.0.2-beta.1 -> v1.0.7-beta.1
+PASS snapshot select: MACOS / v1.0.3-beta.1 -> v1.0.7-beta.1
+PASS snapshot select: WINDOWS / v1.0.3-beta.1 -> v1.0.7-beta.1
+PASS snapshot select: MACOS / v1.0.4-beta.1 -> v1.0.7-beta.1
+PASS snapshot select: WINDOWS / v1.0.4-beta.1 -> v1.0.7-beta.1
+PASS snapshot select: MACOS / v1.0.5-beta.1 -> v1.0.7-beta.1
+PASS snapshot select: WINDOWS / v1.0.5-beta.1 -> v1.0.7-beta.1
+PASS snapshot select: MACOS / v1.0.6-beta.1 -> v1.0.7-beta.1
+PASS snapshot select: WINDOWS / v1.0.6-beta.1 -> v1.0.7-beta.1
+PASS snapshot select: MACOS / v1.0.7-beta.1 -> none
+PASS snapshot select: WINDOWS / v1.0.7-beta.1 -> none
+PASS direct live fetch: MACOS / v1.0.6-beta.1 -> v1.0.7-beta.1
+PASS actual check(): MACOS / v1.0.7-beta.1 -> none
+Live release discovery: PASS (12 platform/version cases; direct fetch and current-platform check)

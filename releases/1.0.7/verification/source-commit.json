@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "repository": "h4chub/kapkan-releases",
+  "branch": "codex/kapkan-1.0.7",
+  "commit": "3ba7d7a92547f3fe37493a3d451b466f7a6dc50d",
+  "parent": "2bf668ed2ad4966e878c751d4b57d10cdee75314",
+  "tree": "d9181b070a805697d4cb8e801d998ac60525d9d2",
+  "baseTree": "9c74f13c41fdca73877c63e36e08b0488b0e4f53",
+  "changedEntries": 119,
+  "stagedScopes": [
+    "README.md",
+    "source/",
+    "releases/1.0.7/"
+  ],
+  "verification": "Connector-created tree exactly matches git write-tree. Fresh GETs confirm branch head, sole parent and exact tree. Update used expected parent SHA and force=false. No main/old branch/tag changes.",
+  "qaScope": "1,350 deterministic checks per exact target; current native macOS arm64 equipment acceptance only Minecraft26.1.2,147 occupied+27 transition checks. No all-target native1.0.7 or FPS gain claim.",
+  "verifiedBinaryBlobs": [
+    {
+      "path": "source/app/KapKan-1.0.7-mc26.1-fabric.jar",
+      "sha": "c5c7f7d3218f1faa89d2ecce2468b386d858cc1c",
+      "size": 1721332
+    },
+    {
+      "path": "source/app/KapKan-1.0.7-mc26.1.1-fabric.jar",
+      "sha": "fc2395fc529c17d50bd587da0a0303b0f27d93de",
+      "size": 1721337
+    },
+    {
+      "path": "source/app/KapKan-1.0.7-mc26.1.2-fabric.jar",
+      "sha": "920b3391e8b497a2f31ee4d4193e1e28c7a21da0",
+      "size": 1727199
+    },
+    {
+      "path": "source/app/KapKan-Launcher.jar",
+      "sha": "a9c24b60e6cfa9677286710429157dbc1a686ab8",
+      "size": 25195351
+    },
+    {
+      "path": "source/native/cmd/installer/rsrc_windows_amd64.syso",
+      "sha": "c8d5fd9558e296705a4dbfb6aac9911cc8fc86ad",
+      "size": 26922
+    },
+    {
+      "path": "source/native/cmd/launcher/rsrc_windows_amd64.syso",
+      "sha": "c8d5fd9558e296705a4dbfb6aac9911cc8fc86ad",
+      "size": 26922
+    },
+    {
+      "path": "source/qa/1.0.7/game/equipment-transitions/KapKan-equipment-all-empty.png",
+      "sha": "081568f95060966df7dafb2ce10eb6200c25e77c",
+      "size": 576500
+    },
+    {
+      "path": "source/qa/1.0.7/game/equipment-transitions/KapKan-equipment-editor-empty-hint.png",
+      "sha": "c189b52128272c073a9d80115d22b0189b3893c5",
+      "size": 592548
+    },
+    {
+      "path": "source/qa/1.0.7/game/occupied-equipment/KapKan-equipment-bright.png",
+      "sha": "32b0bdd749231439a30aaa24e8fc9fb18cff68cf",
+      "size": 584527
+    },
+    {
+      "path": "source/qa/1.0.7/game/occupied-equipment/KapKan-equipment-dark.png",
+      "sha": "5719e5131fa7c940970f28fffa8afbfec9c05f61",
+      "size": 450994
+    }
+  ]
+}

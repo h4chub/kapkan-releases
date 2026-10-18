@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "deploymentId": "dpl_BTVqcUSK6JcLuT8rndCCp1dbfjfz",
+  "projectId": "prj_bHurM30CwdE6Ri4P9h9NchSlwa6x",
+  "environment": "production",
+  "levels": [
+    "error",
+    "fatal"
+  ],
+  "window": "5m ending2026-10-18T11:04:01.840Z",
+  "result": "No logs found for the specified criteria.",
+  "scope": "Bounded Vercel runtime log scan for this static deployment. Browser JavaScript errors are checked separately in live-verification.json."
+}

@@ -1,1 +1,1 @@
-KapKan 1.0.7 equipment HUD: all three builds/tests, native Mac 26.1.2 visual acceptance, desktop/native build and migration checks PASS. Package/payload/public delivery checks precede publication; see PUBLICATION.json and qa/1.0.7.
+KapKan 1.0.7 Public Beta published. Exact source tag, all seven asset digests/sizes/public ranges and actual published updater PASS. Three exact builds/tests, native Mac26.1.2 equipment-HUD visuals/transitions and final package/payload checks PASS. See PUBLICATION.json and QA-REPORT.md.

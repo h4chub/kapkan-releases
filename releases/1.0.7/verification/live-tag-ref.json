@@ -1,0 +1,10 @@
+{
+  "ref": "refs/tags/v1.0.7-beta.1",
+  "node_id": "REF_kwDOUzOMD7dyZWZzL3RhZ3MvdjEuMC43LWJldGEuMQ",
+  "url": "https://api.github.com/repos/h4chub/kapkan-releases/git/refs/tags/v1.0.7-beta.1",
+  "object": {
+    "sha": "3ba7d7a92547f3fe37493a3d451b466f7a6dc50d",
+    "type": "commit",
+    "url": "https://api.github.com/repos/h4chub/kapkan-releases/git/commits/3ba7d7a92547f3fe37493a3d451b466f7a6dc50d"
+  }
+}

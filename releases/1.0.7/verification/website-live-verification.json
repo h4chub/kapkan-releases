@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "release": "1.0.7",
+  "publicationReady": true,
+  "deliveryPath": "/Users/homefolder/.codex/.chatgpt-projects/g-p-6ab96274aeec81919ee1071ebc66f27e/development106/releases/1.0.7/Delivery.json",
+  "siteUrl": "https://kapkan-website.vercel.app/",
+  "checks": [
+    "Release config and artifact metadata",
+    "Platform-selected hero links",
+    "All primary download URLs",
+    "Final rendering optimization wording",
+    "Gallery tabs and modal Escape",
+    "No horizontal overflow",
+    "Local assets exist",
+    "No JavaScript runtime errors"
+  ],
+  "viewports": [
+    {
+      "name": "mac-desktop",
+      "status": "PASS",
+      "horizontalOverflow": false,
+      "javascriptErrors": [],
+      "downloadSelection": "KapKan-macOS-1.0.7.zip"
+    },
+    {
+      "name": "windows-desktop",
+      "status": "PASS",
+      "horizontalOverflow": false,
+      "javascriptErrors": [],
+      "downloadSelection": "KapKan-1.0.7-Setup.exe"
+    },
+    {
+      "name": "tablet",
+      "status": "PASS",
+      "horizontalOverflow": false,
+      "javascriptErrors": [],
+      "downloadSelection": "platform choices"
+    },
+    {
+      "name": "mobile-small",
+      "status": "PASS",
+      "horizontalOverflow": false,
+      "javascriptErrors": [],
+      "downloadSelection": "platform choices"
+    },
+    {
+      "name": "mobile",
+      "status": "PASS",
+      "horizontalOverflow": false,
+      "javascriptErrors": [],
+      "downloadSelection": "platform choices"
+    }
+  ]
+}

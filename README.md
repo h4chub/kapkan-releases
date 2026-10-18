@@ -2,7 +2,7 @@
 
 KapKan is a Fabric client mod and desktop launcher with a searchable menu, configurable HUD, smooth zoom, toggle sprint and optional server-assisted cosmetics.
 
-The current public release is [1.0.6](https://github.com/h4chub/kapkan-releases/releases/tag/v1.0.6-beta.1). This branch prepares [1.0.7](releases/1.0.7/README.md), with a transparent equipment HUD, colored durability and held-item support. The exact builds, tests, native visual checks and final packages pass; public delivery is verified separately before publication. See [PUBLICATION.json](source/PUBLICATION.json).
+The current public release is [1.0.7](https://github.com/h4chub/kapkan-releases/releases/tag/v1.0.7-beta.1): a transparent equipment HUD, colored durability and held-item support. All seven public download digests/sizes/ranges and actual published updater discovery pass. The [public website](https://kapkan-website.vercel.app/#download) serves this release. See [release files and receipts](releases/1.0.7/README.md).
 
 - [Install, controls and build](source/README.md)
 - [Compatibility](source/COMPATIBILITY.md)
